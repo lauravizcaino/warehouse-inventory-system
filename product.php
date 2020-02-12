@@ -1,5 +1,5 @@
 <?php
-  $page_title = 'All Product';
+  $page_title = 'Inventario';
   require_once('includes/load.php');
   // Checkin What level user has permission to view this page
    page_require_level(2);
@@ -14,7 +14,7 @@
       <div class="panel panel-default">
         <div class="panel-heading clearfix">
          <div class="pull-right">
-           <a href="add_product.php" class="btn btn-primary">Add New</a>
+           <a href="add_product.php" class="btn btn-primary">Añadir nuevo</a>
          </div>
         </div>
         <div class="panel-body">
@@ -22,7 +22,7 @@
             <thead>
               <tr>
                 <th class="text-center" style="width: 50px;">#</th>
-                <th> Photo</th>
+                <!--<th> Photo</th>-->
                 <th> Product Title </th>
                 <th class="text-center" style="width: 10%;"> Categorie </th>
                 <th class="text-center" style="width: 10%;"> Instock </th>
