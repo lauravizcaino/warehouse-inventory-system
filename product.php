@@ -49,6 +49,17 @@
                 <td class="text-center"> <?php echo remove_junk($product['buy_price']); ?></td>
                 <td class="text-center"> <?php echo remove_junk($product['sale_price']); ?></td>
                 <td class="text-center"> <?php echo read_date($product['date']); ?></td>
+                <td class="text-center"> <?php echo remove_junk($product['codigo_nfc']); ?></td>
+                <td class="text-center"> <?php echo remove_junk($product['serial']); ?></td>
+                <td class="text-center"> <?php echo remove_junk($product['codigo_inventario']); ?></td>
+                <td class="text-center"> <?php echo remove_junk($product['custodio']); ?></td>
+                <td class="text-center"> <?php echo remove_junk($product['ubicacion']); ?></td>
+                <td class="text-center"> <?php echo read_date($product['fecha_ingreso']); ?></td>
+                <td class="text-center"> <?php echo read_date($product['fecha_compra']); ?></td>
+                <td class="text-center"> <?php echo read_date($product['fecha_ultimo_mantenimiento']); ?></td>
+                <td class="text-center"> <?php echo read_date($product['fecha_grantia']); ?></td>
+                <td class="text-center"> <?php echo remove_junk($product['marca']); ?></td>
+                <td class="text-center"> <?php echo remove_junk($product['procesador']); ?></td>
                 <td class="text-center">
                   <div class="btn-group">
                     <a href="edit_product.php?id=<?php echo (int)$product['id'];?>" class="btn btn-info btn-xs"  title="Edit" data-toggle="tooltip">
