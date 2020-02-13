@@ -161,6 +161,32 @@
                       <input type="number" class="form-control" name="codigo_inventario" placeholder="Codigo de inventario">
                       <span class="input-group-addon"></span>
                     </div>
+                  </div>
+                  <div class="col-md-4">
+                    <div class="input-group">
+                      <span class="input-group-addon">
+                        <i class="glyphicon glyphicon-shopping-cart"></i>
+                      </span>
+                      <input type="text" class="form-control" name="custodio" placeholder="Nombre del custodio">
+                      <span class="input-group-addon"></span>
+                    </div>
+                  </div>
+                  <div class="col-md-4">
+                    <div class="input-group">
+                      <span class="input-group-addon">
+                        <i class="glyphicon glyphicon-shopping-cart"></i>
+                      </span>
+                      <input type="text" class="form-control" name="ubicacion" placeholder="Ubicación del bien">
+                      <span class="input-group-addon"></span>
+                    </div>
+                  </div>
+                  <div class="col-md-4">
+                    <div class="input-group">
+                      <span class="input-group-addon">
+                        <i class="glyphicon glyphicon-shopping-cart"></i>
+                      </span>
+                      <input type="date" class="form-control" name="fecha_ingreso" placeholder="Fecha de ingreso">
+                      <span class="input-group-addon"></span>
                     </div>
                   </div>
                </div>
