@@ -189,6 +189,51 @@
                       <span class="input-group-addon"></span>
                     </div>
                   </div>
+                  <div class="col-md-4">
+                    <div class="input-group">
+                      <span class="input-group-addon">
+                        <i class="glyphicon glyphicon-shopping-cart"></i>
+                      </span>
+                      <input type="date" class="form-control" name="fecha_compra" placeholder="Fecha de la compra">
+                      <span class="input-group-addon"></span>
+                    </div>
+                  </div>
+                  <div class="col-md-4">
+                    <div class="input-group">
+                      <span class="input-group-addon">
+                        <i class="glyphicon glyphicon-shopping-cart"></i>
+                      </span>
+                      <input type="date" class="form-control" name="fecha_ultimo_mantenimiento" placeholder="Fecha del último mantenimiento">
+                      <span class="input-group-addon"></span>
+                    </div>
+                  </div>
+                  <div class="col-md-4">
+                    <div class="input-group">
+                      <span class="input-group-addon">
+                        <i class="glyphicon glyphicon-shopping-cart"></i>
+                      </span>
+                      <input type="date" class="form-control" name="'fecha_garantia" placeholder="Fecha de la garantía">
+                      <span class="input-group-addon"></span>
+                    </div>
+                  </div>
+                  <div class="col-md-4">
+                    <div class="input-group">
+                      <span class="input-group-addon">
+                        <i class="glyphicon glyphicon-shopping-cart"></i>
+                      </span>
+                      <input type="text" class="form-control" name="marca" placeholder="Marca">
+                      <span class="input-group-addon"></span>
+                    </div>
+                  </div>
+                  <div class="col-md-4">
+                    <div class="input-group">
+                      <span class="input-group-addon">
+                        <i class="glyphicon glyphicon-shopping-cart"></i>
+                      </span>
+                      <input type="text" class="form-control" name="procesador" placeholder="Procesador">
+                      <span class="input-group-addon"></span>
+                    </div>
+                  </div>
                </div>
               </div>
               <button type="submit" name="add_product" class="btn btn-danger">Añadir</button>
