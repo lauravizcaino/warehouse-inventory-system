@@ -149,7 +149,7 @@
                       <span class="input-group-addon">
                         <i class="glyphicon glyphicon-shopping-cart"></i>
                       </span>
-                      <input type="number" class="form-control" name="Serial" placeholder="Número de serial">
+                      <input type="number" class="form-control" name="serial" placeholder="Número de serial">
                       <span class="input-group-addon"></span>
                     </div>
                   </div>

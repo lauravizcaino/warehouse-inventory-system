@@ -1,5 +1,5 @@
 <?php
-  $page_title = 'Edit product';
+  $page_title = 'Editar producto';
   require_once('includes/load.php');
   // Checkin What level user has permission to view this page
    page_require_level(2);
@@ -15,23 +15,36 @@ if(!$product){
 ?>
 <?php
  if(isset($_POST['product'])){
-    $req_fields = array('product-title','product-categorie','product-quantity','buying-price', 'saleing-price' );
+    /*$req_fields = array('product-title','product-categorie','product-quantity','buying-price', 'saleing-price' );*/
+    $req_fields = array('product-title','product-categorie','codigo_nfc','serial', 'codigo_inventario', 'custodio', 'ubicacion', 'fecha_ingreso', 'fecha_compra', 'fecha_ultimo_mantenimiento', 'fecha_garantia', 'marca','procesador' );
     validate_fields($req_fields);
 
    if(empty($errors)){
        $p_name  = remove_junk($db->escape($_POST['product-title']));
        $p_cat   = (int)$_POST['product-categorie'];
-       $p_qty   = remove_junk($db->escape($_POST['product-quantity']));
+       /*$p_qty   = remove_junk($db->escape($_POST['product-quantity']));
        $p_buy   = remove_junk($db->escape($_POST['buying-price']));
-       $p_sale  = remove_junk($db->escape($_POST['saleing-price']));
+       $p_sale  = remove_junk($db->escape($_POST['saleing-price']));*/
+       $p_nfc   = remove_junk($db->escape($_POST['codigo_nfc']));
+       $p_ser   = remove_junk($db->escape($_POST['serial']));
+       $p_cod   = remove_junk($db->escape($_POST['codigo_inventario']));
+       $p_cus   = remove_junk($db->escape($_POST['custodio']));
+       $p_ubi   = remove_junk($db->escape($_POST['ubicacion']));
+       $p_ing   = remove_junk($db->escape($_POST['fecha_ingreso']));
+       $p_com   = remove_junk($db->escape($_POST['fecha_compra']));
+       $p_man   = remove_junk($db->escape($_POST['fecha_ultimo_mantenimiento']));
+       $p_gar   = remove_junk($db->escape($_POST['fecha_garantia']));
+       $p_mar   = remove_junk($db->escape($_POST['marca']));
+       $p_pro   = remove_junk($db->escape($_POST['procesador']));
        if (is_null($_POST['product-photo']) || $_POST['product-photo'] === "") {
          $media_id = '0';
        } else {
          $media_id = remove_junk($db->escape($_POST['product-photo']));
        }
        $query   = "UPDATE products SET";
-       $query  .=" name ='{$p_name}', quantity ='{$p_qty}',";
-       $query  .=" buy_price ='{$p_buy}', sale_price ='{$p_sale}', categorie_id ='{$p_cat}',media_id='{$media_id}'";
+       /*$query  .=" name ='{$p_name}', quantity ='{$p_qty}',";
+       $query  .=" buy_price ='{$p_buy}', sale_price ='{$p_sale}', categorie_id ='{$p_cat}',media_id='{$media_id}'";*/
+       $query   .= " name ='{$p_name}', categorie_id ='{$p_cat}', codigo_nfc='{$p_nfc }', serial='{$p_ser}', codigo_inventario='{$p_cod}', custodio='{$p_cus}', ubicacion='{$p_ubi}', fecha_ingreso='{$p_ing}', fecha_compra='{$p_com}', fecha_ultimo_mantenimiento='{$p_man}', fecha_garantia='{$p_gar}', marca='{$p_mar}', procesador='{$p_pro}'";
        $query  .=" WHERE id ='{$product['id']}'";
        $result = $db->query($query);
                if($result && $db->affected_rows() === 1){
