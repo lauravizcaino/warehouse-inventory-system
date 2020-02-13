@@ -212,7 +212,7 @@
                       <span class="input-group-addon">
                         <i class="glyphicon glyphicon-shopping-cart"></i>
                       </span>
-                      <input type="date" class="form-control" name="'fecha_garantia" placeholder="Fecha de la garantía">
+                      <input type="date" class="form-control" name="fecha_garantia" placeholder="Fecha de la garantía">
                       <span class="input-group-addon"></span>
                     </div>
                   </div>
