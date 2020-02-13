@@ -17,8 +17,8 @@
            <a href="add_product.php" class="btn btn-primary">Añadir nuevo</a>
          </div>
         </div>
-        <div class="panel-body">
-          <table class="table table-bordered" style="overflow: scroll;">
+        <div class="panel-body"  style="overflow: scroll;">
+          <table class="table table-bordered">
             <thead>
               <tr>
                 <th class="text-center" style="width: 50px;">#</th>
