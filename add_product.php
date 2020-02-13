@@ -1,5 +1,5 @@
 <?php
-  $page_title = 'Add Product';
+  $page_title = 'Añadir bien';
   require_once('includes/load.php');
   // Checkin What level user has permission to view this page
   page_require_level(2);
@@ -8,14 +8,26 @@
 ?>
 <?php
  if(isset($_POST['add_product'])){
-   $req_fields = array('product-title','product-categorie','product-quantity','buying-price', 'saleing-price' );
+   /*$req_fields = array('product-title','product-categorie','product-quantity','buying-price', 'saleing-price' );*/
+   $req_fields = array('product-title','product-categorie','codigo_nfc','serial', 'codigo_inventario', 'custodio', 'ubicacion', 'fecha_ingreso', 'fecha_compra', 'fecha_ultimo_mantenimiento', 'fecha_garantia', 'marca','procesador' );
    validate_fields($req_fields);
    if(empty($errors)){
      $p_name  = remove_junk($db->escape($_POST['product-title']));
      $p_cat   = remove_junk($db->escape($_POST['product-categorie']));
-     $p_qty   = remove_junk($db->escape($_POST['product-quantity']));
+     /*$p_qty   = remove_junk($db->escape($_POST['product-quantity']));
      $p_buy   = remove_junk($db->escape($_POST['buying-price']));
-     $p_sale  = remove_junk($db->escape($_POST['saleing-price']));
+     $p_sale  = remove_junk($db->escape($_POST['saleing-price']));*/
+     $p_nfc   = remove_junk($db->escape($_POST['codigo_nfc']));
+     $p_ser   = remove_junk($db->escape($_POST['serial']));
+     $p_cod   = remove_junk($db->escape($_POST['codigo_inventario']));
+     $p_cus   = remove_junk($db->escape($_POST['custodio']));
+     $p_ubi   = remove_junk($db->escape($_POST['ubicacion']));
+     $p_ing   = remove_junk($db->escape($_POST['fecha_ingreso']));
+     $p_com   = remove_junk($db->escape($_POST['fecha_compra']));
+     $p_man   = remove_junk($db->escape($_POST['fecha_ultimo_mantenimiento']));
+     $p_gar   = remove_junk($db->escape($_POST['fecha_garantia']));
+     $p_mar   = remove_junk($db->escape($_POST['marca']));
+     $p_pro   = remove_junk($db->escape($_POST['procesador']));
      if (is_null($_POST['product-photo']) || $_POST['product-photo'] === "") {
        $media_id = '0';
      } else {
@@ -23,9 +35,11 @@
      }
      $date    = make_date();
      $query  = "INSERT INTO products (";
-     $query .=" name,quantity,buy_price,sale_price,categorie_id,media_id,date";
+     /*$query .=" name,quantity,buy_price,sale_price,categorie_id,media_id,date";*/
+     $query .=" name,categorie_id,codigo_nfc,serial,codigo_inventario,custodio,ubicacion,fecha_ingreso,fecha_compra,fecha_ultimo_mantenimiento,fecha_garantia,marca,procesador";
      $query .=") VALUES (";
-     $query .=" '{$p_name}', '{$p_qty}', '{$p_buy}', '{$p_sale}', '{$p_cat}', '{$media_id}', '{$date}'";
+     /*$query .=" '{$p_name}', '{$p_qty}', '{$p_buy}', '{$p_sale}', '{$p_cat}', '{$media_id}', '{$date}'";*/
+     $query .=" '{$p_name}', '{$p_cat}', '{$p_nfc}', '{$p_ser}', '{$p_cod}', '{$p_cus}', '{$p_ubi}','{$p_ing}','{$p_com}', '{$p_man}', '{$p_gar}', '{$p_mar}','{$p_pro}";
      $query .=")";
      $query .=" ON DUPLICATE KEY UPDATE name='{$p_name}'";
      if($db->query($query)){
