@@ -5,6 +5,7 @@
   page_require_level(2);
   $all_categories = find_all('categories');
   $all_photo = find_all('media');
+  $all_users=find_all('users');
 ?>
 <?php
  if(isset($_POST['add_product'])){
@@ -167,9 +168,23 @@
                       <span class="input-group-addon">
                         <i class="glyphicon glyphicon-shopping-cart"></i>
                       </span>
-                      <input type="text" class="form-control" name="custodio" placeholder="Nombre del custodio">
+                      <input type="text" class="form-control" name="custodiofgbfgb" placeholder="Nombre del custodio">
                       <span class="input-group-addon"></span>
                     </div>
+
+                    
+                    <select class="form-control" name="custodio">
+                      <option value="">Select Product uuu</option>
+                    <?php  foreach ($all_users as $user): ?>
+                      <option value="<?php echo (int)$user['id'] ?>">
+                        <?php echo $user['name'] ?></option>
+                    <?php endforeach; ?>
+                    </select>
+                 
+
+
+
+
                   </div>
                   <div class="col-md-4">
                     <div class="input-group">
