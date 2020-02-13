@@ -70,7 +70,7 @@
         <div class="panel-heading">
           <strong>
             <span class="glyphicon glyphicon-th"></span>
-            <span>Add New Product</span>
+            <span>Añadir nuevo bien</span>
          </strong>
         </div>
         <div class="panel-body">
@@ -95,21 +95,21 @@
                     <?php endforeach; ?>
                     </select>
                   </div>
-                  <div class="col-md-6">
+                  <!--<div class="col-md-6">
                     <select class="form-control" name="product-photo">
                       <option value="">Select Product Photo</option>
-                    <?php  foreach ($all_photo as $photo): ?>
-                      <option value="<?php echo (int)$photo['id'] ?>">
-                        <?php echo $photo['file_name'] ?></option>
-                    <?php endforeach; ?>
+                    <?php  /*foreach ($all_photo as $photo): */?>
+                      <option value="<?php /*echo (int)$photo['id'] */?>">
+                        <?php /*echo $photo['file_name'] **/?></option>
+                    <?php /*endforeach;*/ ?>
                     </select>
-                  </div>
+                  </div>-->
                 </div>
               </div>
 
               <div class="form-group">
                <div class="row">
-                 <div class="col-md-4">
+                 <!--<div class="col-md-4">
                    <div class="input-group">
                      <span class="input-group-addon">
                       <i class="glyphicon glyphicon-shopping-cart"></i>
@@ -134,10 +134,35 @@
                       <input type="number" class="form-control" name="saleing-price" placeholder="Selling Price">
                       <span class="input-group-addon">.00</span>
                    </div>
+                  </div>-->
+                  <div class="col-md-4">
+                    <div class="input-group">
+                      <span class="input-group-addon">
+                        <i class="glyphicon glyphicon-usd"></i>
+                      </span>
+                      <input type="number" class="form-control" name="codigo_nfc" placeholder="Código NFC">
+                      <span class="input-group-addon">.00</span>
+                   </div>
+                   <div class="col-md-4">
+                    <div class="input-group">
+                      <span class="input-group-addon">
+                        <i class="glyphicon glyphicon-usd"></i>
+                      </span>
+                      <input type="number" class="form-control" name="Serial" placeholder="Número de serial">
+                      <span class="input-group-addon">.00</span>
+                   </div>
+                   <div class="col-md-4">
+                    <div class="input-group">
+                      <span class="input-group-addon">
+                        <i class="glyphicon glyphicon-usd"></i>
+                      </span>
+                      <input type="number" class="form-control" name="codigo_inventario" placeholder="Codigo de inventario">
+                      <span class="input-group-addon">.00</span>
+                   </div>
                   </div>
                </div>
               </div>
-              <button type="submit" name="add_product" class="btn btn-danger">Add product</button>
+              <button type="submit" name="add_product" class="btn btn-danger">Añadir</button>
           </form>
          </div>
         </div>
