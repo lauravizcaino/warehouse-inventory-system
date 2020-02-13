@@ -39,7 +39,7 @@
      $query .=" name,categorie_id,codigo_nfc,serial,codigo_inventario,custodio,ubicacion,fecha_ingreso,fecha_compra,fecha_ultimo_mantenimiento,fecha_garantia,marca,procesador";
      $query .=") VALUES (";
      /*$query .=" '{$p_name}', '{$p_qty}', '{$p_buy}', '{$p_sale}', '{$p_cat}', '{$media_id}', '{$date}'";*/
-     $query .=" '{$p_name}', '{$p_cat}', '{$p_nfc}', '{$p_ser}', '{$p_cod}', '{$p_cus}', '{$p_ubi}','{$p_ing}','{$p_com}', '{$p_man}', '{$p_gar}', '{$p_mar}','{$p_pro}";
+     $query .=" '{$p_name}', '{$p_cat}', '{$p_nfc}', '{$p_ser}', '{$p_cod}', '{$p_cus}', '{$p_ubi}','{$p_ing}','{$p_com}', '{$p_man}', '{$p_gar}', '{$p_mar}','{$p_pro}'";
      $query .=")";
      $query .=" ON DUPLICATE KEY UPDATE name='{$p_name}'";
      if($db->query($query)){
