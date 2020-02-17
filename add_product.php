@@ -92,7 +92,7 @@
                       <option value="">Seleccione el tipo de bien</option>
                     <?php  foreach ($all_categories as $cat): ?>
                       <option value="<?php echo (int)$cat['id'] ?>">
-                        <?php echo $cat['name'] ?></option>
+                        <?php echo $cat['categorie'] ?></option>
                     <?php endforeach; ?>
                     </select>
                   </div>
