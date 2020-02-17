@@ -23,8 +23,8 @@
               <tr>
                 <th class="text-center" style="width: 50px;">#</th>
                 <!--<th> Photo</th>-->
-                <th> Product Title </th>
-                <th class="text-center" style="width: 10%;"> Categorie </th>
+                <th> Nombre</th>
+                <th class="text-center" style="width: 10%;"> Tipo de bien </th>
                 <!--<th class="text-center" style="width: 10%;"> Instock </th>
                 <th class="text-center" style="width: 10%;"> Buying Price </th>
                 <th class="text-center" style="width: 10%;"> Saleing Price </th>
@@ -40,8 +40,7 @@
                 <th class="text-center" style="width: 10%;"> Fecha de garantía </th>
                 <th class="text-center" style="width: 10%;"> Marca </th>
                 <th class="text-center" style="width: 10%;"> Procesador </th>
-                <th class="text-center" style="width: 100px;"> Actions </th>
-                
+                <th class="text-center" style="width: 100px;"> Actions </th>               
 
               </tr>
             </thead>
