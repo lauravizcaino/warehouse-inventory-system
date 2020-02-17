@@ -72,7 +72,7 @@
                 <td class="text-center"> <?php echo read_date($product['fecha_ingreso']); ?></td>
                 <td class="text-center"> <?php echo read_date($product['fecha_compra']); ?></td>
                 <td class="text-center"> <?php echo read_date($product['fecha_ultimo_mantenimiento']); ?></td>
-                <td class="text-center"> <?php echo read_date($product['fecha_grantia']); ?></td>
+                <td class="text-center"> <?php echo read_date($product['fecha_garantia']); ?></td>
                 <td class="text-center"> <?php echo remove_junk($product['marca']); ?></td>
                 <td class="text-center"> <?php echo remove_junk($product['procesador']); ?></td>
                 <td class="text-center">
