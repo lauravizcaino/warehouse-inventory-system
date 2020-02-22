@@ -18,7 +18,7 @@
     <header id="header">
       <div class="logo pull-left">  
         <p>Opciones</p>
-        <img src="https://upload.wikimedia.org/wikipedia/commons/8/8c/Escudo_de_la_Escuela_Polit%C3%A9cnica_Nacional.png" alt="Escudo">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/8/8c/Escudo_de_la_Escuela_Polit%C3%A9cnica_Nacional.png" alt="Escudo" style={width: 5%, heigth: 5%}>
       </div>
       <div class="header-content">
       <div class="header-date pull-left">
