@@ -31,7 +31,7 @@
        <li><a href="add_product.php">Add product</a> </li>
    </ul>
   </li>
-  <li>
+  <!--<li>
     <a href="media.php" >
       <i class="glyphicon glyphicon-picture"></i>
       <span>Meadias</span>
@@ -47,7 +47,7 @@
          <li><a href="add_sale.php">Add Sale</a> </li>
      </ul>
   </li>
- <!-- <li>
+     <li>
     <a href="#" class="submenu-toggle">
       <i class="glyphicon glyphicon-signal"></i>
        <span>Sales Report</span>
