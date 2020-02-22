@@ -16,7 +16,10 @@
   <body>
   <?php  if ($session->isUserLoggedIn(true)): ?>
     <header id="header">
-      <div class="logo pull-left"> Opciones </div>
+      <div class="logo pull-left">  
+        <p>Opciones</p>
+        <img src="https://upload.wikimedia.org/wikipedia/commons/8/8c/Escudo_de_la_Escuela_Polit%C3%A9cnica_Nacional.png" alt="Escudo">
+      </div>
       <div class="header-content">
       <div class="header-date pull-left">
         <strong><?php echo date("F j, Y, g:i a");?></strong>

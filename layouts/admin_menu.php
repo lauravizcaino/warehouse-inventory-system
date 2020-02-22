@@ -2,33 +2,33 @@
   <li>
     <a href="admin.php">
       <i class="glyphicon glyphicon-home"></i>
-      <span>Dashboard</span>
+      <span>Resumen</span>
     </a>
   </li>
   <li>
     <a href="#" class="submenu-toggle">
       <i class="glyphicon glyphicon-user"></i>
-      <span>User Management</span>
+      <span>Administración de Usuarios</span>
     </a>
     <ul class="nav submenu">
-      <li><a href="group.php">Manage Groups</a> </li>
-      <li><a href="users.php">Manage Users</a> </li>
+      <li><a href="group.php">Administrar grupos</a> </li>
+      <li><a href="users.php">Administrar usuarios</a> </li>
    </ul>
   </li>
   <li>
     <a href="categorie.php" >
       <i class="glyphicon glyphicon-indent-left"></i>
-      <span>Categories</span>
+      <span>Tipos de bien</span>
     </a>
   </li>
   <li>
     <a href="#" class="submenu-toggle">
       <i class="glyphicon glyphicon-th-large"></i>
-      <span>Products</span>
+      <span>Bienes</span>
     </a>
     <ul class="nav submenu">
-       <li><a href="product.php">Manage products</a> </li>
-       <li><a href="add_product.php">Add product</a> </li>
+       <li><a href="product.php">Administrar bienes</a> </li>
+       <li><a href="add_product.php">Añadir bien</a> </li>
    </ul>
   </li>
   <!--<li>
