@@ -56,13 +56,13 @@
                 <?php /*endif; */?>
                 </td>-->
                 <td class="text-center"> <?php echo remove_junk($product['name']); ?></td>
-                <td class="text-center"> <?php echo remove_junk($product['name']); ?></td>
+                <td class="text-center"> <?php echo remove_junk($product['categorie']); ?></td>
                 <!--<td class="text-center"> <?php /*echo remove_junk($product['quantity']);*/ ?></td>
                 <td class="text-center"> <?php /*echo remove_junk($product['buy_price']); */?></td>
                 <td class="text-center"> <?php /*echo remove_junk($product['sale_price']);*/ ?></td>
                 <td class="text-center"> <?php /*echo read_date($product['date']); */?></td>
                 -->
-                <td class="text-center"> <?php echo remove_junk($product['name']); ?></td>
+                
                 <td class="text-center"> <?php echo remove_junk($product['codigo_nfc']); ?></td>
                 <td class="text-center"> <?php echo remove_junk($product['serial']); ?></td>
                 <td class="text-center"> <?php echo remove_junk($product['codigo_inventario']); ?></td>
