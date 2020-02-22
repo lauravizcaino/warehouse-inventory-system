@@ -210,7 +210,7 @@ function tableExists($table){
    /*--------------------------------------------------------------*/
   function join_product_table(){
      global $db;
-     $sql  =" SELECT *,";
+     $sql  =" SELECT *";
     /*$sql  .=" c.name AS categorie,m.file_name AS image";*/
     $sql  .=" AS categorie,m.file_name AS image";
     $sql  .=" FROM products p";
