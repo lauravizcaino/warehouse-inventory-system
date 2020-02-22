@@ -211,7 +211,7 @@ function tableExists($table){
   function join_product_table(){
      global $db;
      $sql  =" SELECT *";
-    $sql  .=" c.name AS name,m.file_name AS image";
+    $sql  .=" c.name AS categorie,m.file_name AS image";
     /*$sql  .=" AS categorie,m.file_name AS image";*/
     $sql  .=" FROM products p";
     $sql  .=" LEFT JOIN categories c ON c.id = p.categorie_id";
