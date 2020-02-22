@@ -61,8 +61,7 @@
                 <td class="text-center"> <?php /*echo remove_junk($product['sale_price']);*/ ?></td>
                 <td class="text-center"> <?php /*echo read_date($product['date']); */?></td>
                 -->
-                <td class="text-center"> <?php echo remove_junk($product['categorie']); ?></td>
-                <td class="text-center"> <?php echo remove_junk($product['name']); ?></td>
+
                 <td class="text-center"> <?php echo remove_junk($product['codigo_nfc']); ?></td>
                 <td class="text-center"> <?php echo remove_junk($product['serial']); ?></td>
                 <td class="text-center"> <?php echo remove_junk($product['codigo_inventario']); ?></td>
@@ -74,6 +73,8 @@
                 <td class="text-center"> <?php echo read_date($product['fecha_garantia']); ?></td>
                 <td class="text-center"> <?php echo remove_junk($product['marca']); ?></td>
                 <td class="text-center"> <?php echo remove_junk($product['procesador']); ?></td>
+                <td class="text-center"> <?php echo remove_junk($product['categorie']); ?></td>
+                <td class="text-center"> <?php echo remove_junk($product['name']); ?></td>
                 <td class="text-center">
                   <div class="btn-group">
                     <a href="edit_product.php?id=<?php echo (int)$product['id'];?>" class="btn btn-info btn-xs"  title="Edit" data-toggle="tooltip">
