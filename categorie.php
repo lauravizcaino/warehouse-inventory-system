@@ -74,7 +74,7 @@
               <?php foreach ($all_categories as $cat):?>
                 <tr>
                     <td class="text-center"><?php echo count_id();?></td>
-                    <td><?php echo remove_junk(ucfirst($cat['categorie'])); ?></td>
+                    <td><?php echo remove_junk(ucfirst($cat['name'])); ?></td>
                     <td class="text-center">
                       <div class="btn-group">
                         <a href="edit_categorie.php?id=<?php echo (int)$cat['id'];?>"  class="btn btn-xs btn-warning" data-toggle="tooltip" title="Editar">
