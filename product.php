@@ -55,7 +55,7 @@
                   <img class="img-avatar img-circle" src="uploads/products/<?php /*echo $product['image']; */?>" alt="">
                 <?php /*endif; */?>
                 </td>-->
-                <td class="text-center"> <?php echo remove_junk($product['categorie']); ?></td>
+                <td class="text-center"> <?php echo remove_junk($product['name']); ?></td>
                 <td class="text-center"> <?php echo remove_junk($product['name']); ?></td>
                 <!--<td class="text-center"> <?php /*echo remove_junk($product['quantity']);*/ ?></td>
                 <td class="text-center"> <?php /*echo remove_junk($product['buy_price']); */?></td>
