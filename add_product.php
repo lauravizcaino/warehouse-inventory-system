@@ -4,7 +4,7 @@
   // Checkin What level user has permission to view this page
   page_require_level(2);
   $all_categories = find_all('categories');
-  $all_photo = find_all('media');
+  /*$all_photo = find_all('media');*/
   $all_users=find_all('users');
 ?>
 <?php
