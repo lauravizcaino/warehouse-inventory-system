@@ -17,40 +17,40 @@
   <?php  if ($session->isUserLoggedIn(true)): ?>
     <header id="header">
       <div class="logo pull-left"> Opciones</div>      
-      <div class="header-content">
-      <div class="header-date pull-left">
-        <strong><?php echo date("F j, Y");?></strong>
-      </div>
-      <div class="pull-right clearfix">
-        <ul class="info-menu list-inline list-unstyled">
-          <li class="profile">
-            <a href="#" data-toggle="dropdown" class="toggle" aria-expanded="false">
-              <img src="uploads/users/<?php echo $user['image'];?>" alt="user-image" class="img-circle img-inline">
-              <span><?php echo remove_junk(ucfirst($user['name'])); ?> <i class="caret"></i></span>
-            </a>
-            <ul class="dropdown-menu">
-              <li>
-                  <a href="profile.php?id=<?php echo (int)$user['id'];?>">
-                      <i class="glyphicon glyphicon-user"></i>
-                      Perfil
-                  </a>
+        <div class="header-content space">
+            <div class="header-date pull-left">
+              <strong><?php echo date("F j, Y");?></strong>
+            </div>
+          <div class="pull-right clearfix">
+            <ul class="info-menu list-inline list-unstyled">
+              <li class="profile">
+                <a href="#" data-toggle="dropdown" class="toggle" aria-expanded="false">
+                  <img src="uploads/users/<?php echo $user['image'];?>" alt="user-image" class="img-circle img-inline">
+                  <span><?php echo remove_junk(ucfirst($user['name'])); ?> <i class="caret"></i></span>
+                </a>
+                <ul class="dropdown-menu">
+                  <li>
+                      <a href="profile.php?id=<?php echo (int)$user['id'];?>">
+                          <i class="glyphicon glyphicon-user"></i>
+                          Perfil
+                      </a>
+                  </li>
+                <li>
+                    <a href="edit_account.php" title="edit account">
+                        <i class="glyphicon glyphicon-cog"></i>
+                        Ajustes
+                    </a>
+                </li>
+                <li class="last">
+                    <a href="logout.php">
+                        <i class="glyphicon glyphicon-off"></i>
+                        Salir
+                    </a>
+                </li>
+              </ul>
               </li>
-             <li>
-                 <a href="edit_account.php" title="edit account">
-                     <i class="glyphicon glyphicon-cog"></i>
-                     Ajustes
-                 </a>
-             </li>
-             <li class="last">
-                 <a href="logout.php">
-                     <i class="glyphicon glyphicon-off"></i>
-                     Salir
-                 </a>
-             </li>
-           </ul>
-          </li>
-        </ul>
-      </div>
+            </ul>
+        </div>
      </div>
     </header>
     <div class="sidebar">

@@ -449,6 +449,6 @@ img.img-size-2 {
     height: 125px;
 }
 
-.space {
-    margin-bottom: 10px;
+header>.space {
+    margin-right: 40px;
 }
