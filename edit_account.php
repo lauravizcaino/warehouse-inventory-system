@@ -79,7 +79,7 @@
     <div class="panel panel-default">
       <div class="panel-heading clearfix">
         <span class="glyphicon glyphicon-edit"></span>
-        <span>Editar mi cuentat</span>
+        <span>Editar mi cuenta</span>
       </div>
       <div class="panel-body">
           <form method="post" action="edit_account.php?id=<?php echo (int)$user['id'];?>" class="clearfix">

@@ -28,7 +28,7 @@
         </div>
         <div class="panel-value pull-right">
           <h2 class="margin-top"> <?php  echo $c_user['total']; ?> </h2>
-          <p class="text-muted">Users</p>
+          <p class="text-muted">Usuarios</p>
         </div>
        </div>
     </div>
@@ -39,7 +39,7 @@
         </div>
         <div class="panel-value pull-right">
           <h2 class="margin-top"> <?php  echo $c_categorie['total']; ?> </h2>
-          <p class="text-muted">Categories</p>
+          <p class="text-muted">Tipos de bien</p>
         </div>
        </div>
     </div>
@@ -50,7 +50,7 @@
         </div>
         <div class="panel-value pull-right">
           <h2 class="margin-top"> <?php  echo $c_product['total']; ?> </h2>
-          <p class="text-muted">Products</p>
+          <p class="text-muted">Bienes</p>
         </div>
        </div>
     </div>
@@ -59,10 +59,10 @@
          <div class="panel-icon pull-left bg-yellow">
           <i class="glyphicon glyphicon-usd"></i>
         </div>
-        <div class="panel-value pull-right">
-          <h2 class="margin-top"> <?php  echo $c_sale['total']; ?></h2>
+        <!--<div class="panel-value pull-right">
+          <h2 class="margin-top"> <?php  /*echo $c_sale['total'];*/ ?></h2>
           <p class="text-muted">Sales</p>
-        </div>
+        </div>-->
        </div>
     </div>
 </div>
@@ -70,16 +70,16 @@
    <div class="col-md-12">
       <div class="panel">
         <div class="jumbotron text-center">
-           <h1>Thank You! for your support and love.</h1>
-           <p> <strong>OSWA-INV v2</strong> way more better then <strong> v1 </strong>.
-           </br>If you have a question regarding the usage of this applications, please ask on <a href="https://www.facebook.com/oswapp" title="Facebook" target="_blank">Facebook</a> OSWA Fan page.</p>
+           <!--<h1>Thank You! for your support and love.</h1>-->
+           <p> <strong>Sistema de Inventario</strong>
+           <!--</br>If you have a question regarding the usage of this applications, please ask on <a href="https://www.facebook.com/oswapp" title="Facebook" target="_blank">Facebook</a> OSWA Fan page.</p>-->
 
         </div>
       </div>
    </div>
   </div>
   <div class="row">
-   <div class="col-md-4">
+   <!--<div class="col-md-4">
      <div class="panel panel-default">
        <div class="panel-heading">
          <strong>
@@ -97,7 +97,7 @@
            <tr>
           </thead>
           <tbody>
-            <?php foreach ($products_sold as  $product_sold): ?>
+            <?php /*foreach ($products_sold as  $product_sold): ?>
               <tr>
                 <td><?php echo remove_junk(first_character($product_sold['name'])); ?></td>
                 <td><?php echo (int)$product_sold['totalSold']; ?></td>
@@ -140,18 +140,18 @@
            <td>$<?php echo remove_junk(first_character($recent_sale['price'])); ?></td>
         </tr>
 
-       <?php endforeach; ?>
+       <?php endforeach; */?>
        </tbody>
      </table>
     </div>
    </div>
-  </div>
+  </div>-->
   <div class="col-md-4">
     <div class="panel panel-default">
       <div class="panel-heading">
         <strong>
           <span class="glyphicon glyphicon-th"></span>
-          <span>Recently Added Products</span>
+          <span>Bienes añadidos recientemente</span>
         </strong>
       </div>
       <div class="panel-body">
@@ -166,9 +166,9 @@
                   <img class="img-avatar img-circle" src="uploads/products/<?php echo $recent_product['image'];?>" alt="" />
                 <?php endif;?>
                 <?php echo remove_junk(first_character($recent_product['name']));?>
-                  <span class="label label-warning pull-right">
-                 $<?php echo (int)$recent_product['sale_price']; ?>
-                  </span>
+                  <!--<span class="label label-warning pull-right">
+                 $<?/*php echo (int)$recent_product['sale_price'];*/ ?>
+                  </span>-->
                 </h4>
                 <span class="list-group-item-text pull-right">
                 <?php echo remove_junk(first_character($recent_product['categorie'])); ?>
