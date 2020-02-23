@@ -448,3 +448,7 @@ img.img-size-2 {
     width: 125px;
     height: 125px;
 }
+
+.col-md-4 {
+    margin-bottom: 10px;
+}
