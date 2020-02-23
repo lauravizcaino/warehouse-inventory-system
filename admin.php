@@ -54,17 +54,17 @@
         </div>
        </div>
     </div>
-    <div class="col-md-3">
+    <!--<div class="col-md-3">
        <div class="panel panel-box clearfix">
          <div class="panel-icon pull-left bg-yellow">
           <i class="glyphicon glyphicon-usd"></i>
         </div>
-        <!--<div class="panel-value pull-right">
+        <div class="panel-value pull-right">
           <h2 class="margin-top"> <?php  /*echo $c_sale['total'];*/ ?></h2>
           <p class="text-muted">Sales</p>
-        </div>-->
+        </div>
        </div>
-    </div>
+    </div>-->
 </div>
   <div class="row">
    <div class="col-md-12">
