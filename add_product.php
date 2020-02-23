@@ -138,35 +138,22 @@
                   </div>-->
                   <div class="col-md-4">
                     <div class="input-group">
-                        <input type="number" class="form-control" name="codigo_nfc" placeholder="Código NFC">
-                      
+                        <input type="number" class="form-control" name="codigo_nfc" placeholder="Código NFC">                      
                     </div>
                   </div>
                    <div class="col-md-4">
-                    <div class="input-group">
-                      <span class="input-group-addon">
-                        <i class="glyphicon glyphicon-shopping-cart"></i>
-                      </span>
-                      <input type="number" class="form-control" name="serial" placeholder="Número de serial">
-                      <span class="input-group-addon"></span>
+                    <div class="input-group">                     
+                      <input type="number" class="form-control" name="serial" placeholder="Número de serial">                      
                     </div>
                   </div>
                   <div class="col-md-4">
-                    <div class="input-group">
-                      <span class="input-group-addon">
-                        <i class="glyphicon glyphicon-shopping-cart"></i>
-                      </span>
-                      <input type="number" class="form-control" name="codigo_inventario" placeholder="Codigo de inventario">
-                      <span class="input-group-addon"></span>
+                    <div class="input-group">                      
+                      <input type="number" class="form-control" name="codigo_inventario" placeholder="Codigo de inventario">                      
                     </div>
                   </div>
                   <div class="col-md-4">
-                    <div class="input-group">
-                      <span class="input-group-addon">
-                        <i class="glyphicon glyphicon-shopping-cart"></i>
-                      </span>
-                      <input type="text" class="form-control" name="custodiofgbfgb" placeholder="Nombre del custodio">
-                      <span class="input-group-addon"></span>
+                    <div class="input-group">                      
+                      <input type="text" class="form-control" name="custodiofgbfgb" placeholder="Nombre del custodio">                      
                     </div>
 
                     
@@ -185,65 +172,37 @@
                   </div>
                   <div class="col-md-4">
                     <div class="input-group">
-                      <span class="input-group-addon">
-                        <i class="glyphicon glyphicon-shopping-cart"></i>
-                      </span>
-                      <input type="text" class="form-control" name="ubicacion" placeholder="Ubicación del bien">
-                      <span class="input-group-addon"></span>
+                         <input type="text" class="form-control" name="ubicacion" placeholder="Ubicación del bien">                      
                     </div>
                   </div>
                   <div class="col-md-4">
                     <div class="input-group">
-                      <span class="input-group-addon">
-                        <i class="glyphicon glyphicon-shopping-cart"></i>
-                      </span>
-                      <input type="date" class="form-control" name="fecha_ingreso" placeholder="Fecha de ingreso">
-                      <span class="input-group-addon"></span>
+                       <input type="date" class="form-control" name="fecha_ingreso" placeholder="Fecha de ingreso">                      
                     </div>
                   </div>
                   <div class="col-md-4">
-                    <div class="input-group">
-                      <span class="input-group-addon">
-                        <i class="glyphicon glyphicon-shopping-cart"></i>
-                      </span>
-                      <input type="date" class="form-control" name="fecha_compra" placeholder="Fecha de la compra">
-                      <span class="input-group-addon"></span>
+                    <div class="input-group">                     
+                      <input type="date" class="form-control" name="fecha_compra" placeholder="Fecha de la compra">                      
                     </div>
                   </div>
                   <div class="col-md-4">
-                    <div class="input-group">
-                      <span class="input-group-addon">
-                        <i class="glyphicon glyphicon-shopping-cart"></i>
-                      </span>
-                      <input type="date" class="form-control" name="fecha_ultimo_mantenimiento" placeholder="Fecha del último mantenimiento">
-                      <span class="input-group-addon"></span>
+                    <div class="input-group">                      
+                      <input type="date" class="form-control" name="fecha_ultimo_mantenimiento" placeholder="Fecha del último mantenimiento">                      
                     </div>
                   </div>
                   <div class="col-md-4">
-                    <div class="input-group">
-                      <span class="input-group-addon">
-                        <i class="glyphicon glyphicon-shopping-cart"></i>
-                      </span>
-                      <input type="date" class="form-control" name="fecha_garantia" placeholder="Fecha de la garantía">
-                      <span class="input-group-addon"></span>
+                    <div class="input-group">                      
+                      <input type="date" class="form-control" name="fecha_garantia" placeholder="Fecha de la garantía">                      
                     </div>
                   </div>
                   <div class="col-md-4">
-                    <div class="input-group">
-                      <span class="input-group-addon">
-                        <i class="glyphicon glyphicon-shopping-cart"></i>
-                      </span>
-                      <input type="text" class="form-control" name="marca" placeholder="Marca">
-                      <span class="input-group-addon"></span>
+                    <div class="input-group">                      
+                      <input type="text" class="form-control" name="marca" placeholder="Marca">                      
                     </div>
                   </div>
                   <div class="col-md-4">
-                    <div class="input-group">
-                      <span class="input-group-addon">
-                        <i class="glyphicon glyphicon-shopping-cart"></i>
-                      </span>
-                      <input type="text" class="form-control" name="procesador" placeholder="Procesador">
-                      <span class="input-group-addon"></span>
+                    <div class="input-group">                      
+                      <input type="text" class="form-control" name="procesador" placeholder="Procesador">                      
                     </div>
                   </div>
                </div>
