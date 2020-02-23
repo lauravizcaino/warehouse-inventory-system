@@ -137,7 +137,7 @@
                    </div>
                   </div>-->
                   <div class="col-md-4">
-                    <div class="input-group">
+                    <div class="input-group space">
                         <input type="number" class="form-control" name="codigo_nfc" placeholder="Código NFC">                      
                     </div>
                   </div>
