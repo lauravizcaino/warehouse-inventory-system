@@ -82,7 +82,7 @@
                   <span class="input-group-addon">
                    <i class="glyphicon glyphicon-th-large"></i>
                   </span>
-                  <input type="text" class="form-control" name="product-title" placeholder="Product Title">
+                  <input type="text" class="form-control" name="product-title" placeholder="Nombre">
                </div>
               </div>
               <div class="form-group">
@@ -139,7 +139,7 @@
                   <div class="col-md-4">
                     <div class="input-group">
                       <span class="input-group-addon">
-                        <i class="glyphicon glyphicon-shopping-cart"></i>
+                        <i class="glyphicon"></i>
                       </span>
                       <input type="number" class="form-control" name="codigo_nfc" placeholder="Código NFC">
                       <span class="input-group-addon"></span>
