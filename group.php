@@ -1,5 +1,5 @@
 <?php
-  $page_title = 'All Group';
+  $page_title = 'Grupos';
   require_once('includes/load.php');
   // Checkin What level user has permission to view this page
    page_require_level(1);
@@ -17,19 +17,19 @@
     <div class="panel-heading clearfix">
       <strong>
         <span class="glyphicon glyphicon-th"></span>
-        <span>Groups</span>
+        <span>Grupos</span>
      </strong>
-       <a href="add_group.php" class="btn btn-info pull-right btn-sm"> Add New Group</a>
+       <a href="add_group.php" class="btn btn-info pull-right btn-sm"> Añadir nuevo grupo</a>
     </div>
      <div class="panel-body">
       <table class="table table-bordered">
         <thead>
           <tr>
             <th class="text-center" style="width: 50px;">#</th>
-            <th>Group Name</th>
-            <th class="text-center" style="width: 20%;">Group Level</th>
-            <th class="text-center" style="width: 15%;">Status</th>
-            <th class="text-center" style="width: 100px;">Actions</th>
+            <th>Nombre del grupo</th>
+            <th class="text-center" style="width: 20%;">Nivel</th>
+            <th class="text-center" style="width: 15%;">Estado</th>
+            <th class="text-center" style="width: 100px;">Acciones</th>
           </tr>
         </thead>
         <tbody>
@@ -49,10 +49,10 @@
            </td>
            <td class="text-center">
              <div class="btn-group">
-                <a href="edit_group.php?id=<?php echo (int)$a_group['id'];?>" class="btn btn-xs btn-warning" data-toggle="tooltip" title="Edit">
+                <a href="edit_group.php?id=<?php echo (int)$a_group['id'];?>" class="btn btn-xs btn-warning" data-toggle="tooltip" title="Editar">
                   <i class="glyphicon glyphicon-pencil"></i>
                </a>
-                <a href="delete_group.php?id=<?php echo (int)$a_group['id'];?>" class="btn btn-xs btn-danger" data-toggle="tooltip" title="Remove">
+                <a href="delete_group.php?id=<?php echo (int)$a_group['id'];?>" class="btn btn-xs btn-danger" data-toggle="tooltip" title="Borrar">
                   <i class="glyphicon glyphicon-remove"></i>
                 </a>
                 </div>

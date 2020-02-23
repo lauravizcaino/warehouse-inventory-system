@@ -1,5 +1,5 @@
 <?php
-  $page_title = 'Add User';
+  $page_title = 'Añadir usuario';
   require_once('includes/load.php');
   // Checkin What level user has permission to view this page
   page_require_level(1);
@@ -24,11 +24,11 @@
         $query .=")";
         if($db->query($query)){
           //sucess
-          $session->msg('s',"User account has been creted! ");
+          $session->msg('s',"¡Se ha creado la cuenta de usuario! ");
           redirect('add_user.php', false);
         } else {
           //failed
-          $session->msg('d',' Sorry failed to create account!');
+          $session->msg('d','No se pudo crear la cuenta.');
           redirect('add_user.php', false);
         }
    } else {
@@ -44,26 +44,26 @@
       <div class="panel-heading">
         <strong>
           <span class="glyphicon glyphicon-th"></span>
-          <span>Add New User</span>
+          <span>Añadir nuevo usuario</span>
        </strong>
       </div>
       <div class="panel-body">
         <div class="col-md-6">
           <form method="post" action="add_user.php">
             <div class="form-group">
-                <label for="name">Name</label>
-                <input type="text" class="form-control" name="full-name" placeholder="Full Name">
+                <label for="name">Nombre</label>
+                <input type="text" class="form-control" name="full-name" placeholder="Nombre">
             </div>
             <div class="form-group">
-                <label for="username">Username</label>
-                <input type="text" class="form-control" name="username" placeholder="Username">
+                <label for="username">Usuario</label>
+                <input type="text" class="form-control" name="username" placeholder="Usuario">
             </div>
             <div class="form-group">
-                <label for="password">Password</label>
-                <input type="password" class="form-control" name ="password"  placeholder="Password">
+                <label for="password">Contraseña</label>
+                <input type="password" class="form-control" name ="password"  placeholder="Contraseña">
             </div>
             <div class="form-group">
-              <label for="level">User Role</label>
+              <label for="level">Rol de usuario</label>
                 <select class="form-control" name="level">
                   <?php foreach ($groups as $group ):?>
                    <option value="<?php echo $group['group_level'];?>"><?php echo ucwords($group['group_name']);?></option>
@@ -71,7 +71,7 @@
                 </select>
             </div>
             <div class="form-group clearfix">
-              <button type="submit" name="add_user" class="btn btn-primary">Add User</button>
+              <button type="submit" name="add_user" class="btn btn-primary">Añadir Usuario</button>
             </div>
         </form>
         </div>
