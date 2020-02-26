@@ -1,5 +1,5 @@
 <?php
-  $page_title = 'Edit Group';
+  $page_title = 'Editar Grupo';
   require_once('includes/load.php');
   // Checkin What level user has permission to view this page
    page_require_level(1);
@@ -7,7 +7,7 @@
 <?php
   $e_group = find_by_id('user_groups',(int)$_GET['id']);
   if(!$e_group){
-    $session->msg("d","Missing Group id.");
+    $session->msg("d","Falta la identificación del grupo.");
     redirect('group.php');
   }
 ?>
@@ -27,11 +27,11 @@
         $result = $db->query($query);
          if($result && $db->affected_rows() === 1){
           //sucess
-          $session->msg('s',"Group has been updated! ");
+          $session->msg('s',"¡El grupo ha sido actualizado!");
           redirect('edit_group.php?id='.(int)$e_group['id'], false);
         } else {
           //failed
-          $session->msg('d',' Sorry failed to updated Group!');
+          $session->msg('d','No se pudo actualizar el grupo.');
           redirect('edit_group.php?id='.(int)$e_group['id'], false);
         }
    } else {
@@ -43,27 +43,27 @@
 <?php include_once('layouts/header.php'); ?>
 <div class="login-page">
     <div class="text-center">
-       <h3>Edit Group</h3>
+       <h3>Editar Grupo</h3>
      </div>
      <?php echo display_msg($msg); ?>
       <form method="post" action="edit_group.php?id=<?php echo (int)$e_group['id'];?>" class="clearfix">
         <div class="form-group">
-              <label for="name" class="control-label">Group Name</label>
+              <label for="name" class="control-label">Nombre de grupo</label>
               <input type="name" class="form-control" name="group-name" value="<?php echo remove_junk(ucwords($e_group['group_name'])); ?>">
         </div>
         <div class="form-group">
-              <label for="level" class="control-label">Group Level</label>
+              <label for="level" class="control-label">Nivel</label>
               <input type="number" class="form-control" name="group-level" value="<?php echo (int)$e_group['group_level']; ?>">
         </div>
         <div class="form-group">
-          <label for="status">Status</label>
+          <label for="status">Estado</label>
               <select class="form-control" name="status">
-                <option <?php if($e_group['group_status'] === '1') echo 'selected="selected"';?> value="1"> Active </option>
-                <option <?php if($e_group['group_status'] === '0') echo 'selected="selected"';?> value="0">Deactive</option>
+                <option <?php if($e_group['group_status'] === '1') echo 'selected="selected"';?> value="1"> Activo </option>
+                <option <?php if($e_group['group_status'] === '0') echo 'selected="selected"';?> value="0">Inactivo</option>
               </select>
         </div>
         <div class="form-group clearfix">
-                <button type="submit" name="update" class="btn btn-info">Update</button>
+                <button type="submit" name="update" class="btn btn-info">Actualizar</button>
         </div>
     </form>
 </div>
