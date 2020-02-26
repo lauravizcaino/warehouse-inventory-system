@@ -16,7 +16,10 @@
   <body>
   <?php  if ($session->isUserLoggedIn(true)): ?>
     <header id="header">
-      <div class="logo pull-left"> Opciones</div>      
+      <div class="logo pull-left"> Opciones
+        <a href="home.php"></a>
+        </div> 
+            
         <div class="header-content ">
             <div class="header-date pull-left">
               <strong><?php echo date("F j, Y");?></strong>
