@@ -210,27 +210,27 @@ function tableExists($table){
    /*--------------------------------------------------------------*/
   function join_product_table(){
      global $db;
-     $sql  =" SELECT `products`.`id`,
-     `products`.`name`,
-     `products`.`quantity`,
-     `products`.`buy_price`,
-     `products`.`sale_price`,
-     `products`.`categorie_id`,
-     `products`.`media_id`,
-     `products`.`date`,
-     `products`.`codigo_nfc`,
-     `products`.`serial`,
-     `products`.`codigo_inventario`,
-     `products`.`custodio`,
-     `products`.`fecha_ingreso`,
-     `products`.`fecha_compra`,
-     `products`.`ubicacion`,
-     `products`.`fecha_ultimo_mantenimiento`,
-     `products`.`fecha_garantia`,
-     `products`.`marca`,
-     `products`.`procesador`,
-     `products`.`estado`,
-     `products`.`caracteristica`,";
+     $sql  =" SELECT p.`id`,
+     p.`name`,
+     p.`quantity`,
+     p.`buy_price`,
+     p.`sale_price`,
+     p.`categorie_id`,
+     p.`media_id`,
+     p.`date`,
+     p.`codigo_nfc`,
+     p.`serial`,
+     p.`codigo_inventario`,
+     p.`custodio`,
+     p.`fecha_ingreso`,
+     p.`fecha_compra`,
+     p.`ubicacion`,
+     p.`fecha_ultimo_mantenimiento`,
+     p.`fecha_garantia`,
+     p.`marca`,
+     p.`procesador`,
+     p.`estado`,
+     p.`caracteristica`,";
     $sql  .=" c.name AS categorie,m.file_name AS image";
     /*$sql  .=" AS categorie,m.file_name AS image";*/
     $sql  .=" FROM products p";
