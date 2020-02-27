@@ -153,22 +153,10 @@
                   </div>
                   <div class="col-md-4">
                     <div class="input-group">                      
-                      <input type="text" class="form-control" name="custodiofgbfgb" placeholder="Nombre del custodio">                      
-                    </div>
-
-                    
-                    <select class="form-control" name="custodio">
-                      <option value="">Select Product uuu</option>
-                    <?php  foreach ($all_users as $user): ?>
-                      <option value="<?php echo (int)$user['id'] ?>">
-                        <?php echo $user['name'] ?></option>
-                    <?php endforeach; ?>
-                    </select>
+                      <input type="text" class="form-control" name="custodio" placeholder="Nombre del custodio">                      
+                    </div>              
+                  
                  
-
-
-
-
                   </div>
                   <div class="col-md-4">
                     <div class="input-group">
