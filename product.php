@@ -47,7 +47,7 @@
             <tbody>
               <?php foreach ($products as $product):?>
               <tr>
-                <td class="text-center"><?php echo count_id();   echo $product['id'];  ?></td>
+                <td class="text-center"><?php echo count_id(); ?></td>
                 <!--<td>
 
                   <?php /*if($product['media_id'] === '0'): */?>
