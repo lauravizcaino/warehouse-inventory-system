@@ -47,8 +47,9 @@
             <tbody>
               <?php foreach ($products as $product):?>
               <tr>
-                <td class="text-center"><?php echo count_id();?></td>
+                <td class="text-center"><?php echo count_id();   echo $product['id'];  ?></td>
                 <!--<td>
+
                   <?php /*if($product['media_id'] === '0'): */?>
                     <img class="img-avatar img-circle" src="uploads/products/no_image.jpg" alt="">
                   <?php /*else:*/ ?>
@@ -77,10 +78,10 @@
                 
                 <td class="text-center">
                   <div class="btn-group">
-                    <a href="edit_product.php?id=<?php echo (int)$product['id'];?>" class="btn btn-info btn-xs"  title="Edit" data-toggle="tooltip">
+                    <a href="edit_product.php?id=<?php echo $product['id'];?>" class="btn btn-info btn-xs"  title="Edit" data-toggle="tooltip">
                       <span class="glyphicon glyphicon-edit"></span>
                     </a>
-                    <a href="delete_product.php?id=<?php echo (int)$product['id'];?>" class="btn btn-danger btn-xs"  title="Delete" data-toggle="tooltip">
+                    <a href="delete_product.php?id=<?php echo $product['id'];?>" class="btn btn-danger btn-xs"  title="Delete" data-toggle="tooltip">
                       <span class="glyphicon glyphicon-trash"></span>
                     </a>
                   </div>
