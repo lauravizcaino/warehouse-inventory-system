@@ -16,13 +16,13 @@ $password = remove_junk($_POST['password']);
            updateLastLogIn($user['id']);
            // redirect user to group home page by user level
            if($user['user_level'] === '1'):
-             $session->msg("s", "Hola ".$user['username'].", Bienvenido");
+             $session->msg("s", "Hola ".$user['username'].", Bienvenido, navegue en el menú de la izquierda para mirar usuarios e inventario ");
              redirect('admin.php',false);
            elseif ($user['user_level'] === '2'):
-              $session->msg("s", "Hola ".$user['username'].", Bienvenido");
+              $session->msg("s", "Hola ".$user['username'].", Bienvenido, navegue en el menú de la izquierda para mirar usuarios e inventario ");
              redirect('special.php',false);
            else:
-              $session->msg("s", "Hola ".$user['username'].", Bienvenido");
+              $session->msg("s", "Hola ".$user['username'].", Bienvenido, navegue en el menú de la izquierda para mirar usuarios e inventario ");
              redirect('home.php',false);
            endif;
 

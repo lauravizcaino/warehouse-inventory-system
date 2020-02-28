@@ -104,8 +104,8 @@ if(!$product){
               </div>
 
               <div class="form-group">
-               <div class="row">
-                 <div class="col-md-4">
+               <div class="row row-cols-2">
+                 <div class="col-md-6">
                     <div class="form-group">
                       <label for="qty">Código NFC</label>
                       <div class="input-group">
@@ -113,7 +113,7 @@ if(!$product){
                       </div>
                     </div>
                  </div>
-                 <div class="col-md-4">
+                 <div class="col-md-6">
                     <div class="form-group">
                       <label for="qty">Serial</label>
                       <div class="input-group">
@@ -121,7 +121,7 @@ if(!$product){
                       </div>
                     </div>
                  </div>
-                 <div class="col-md-4">
+                 <div class="col-md-6">
                     <div class="form-group">
                       <label for="qty">Código de Inventario</label>
                       <div class="input-group">
@@ -129,7 +129,7 @@ if(!$product){
                       </div>
                     </div>
                  </div>
-                 <div class="col-md-4">
+                 <div class="col-md-6">
                     <div class="form-group">
                       <label for="qty">Nombre del Custodio</label>
                       <div class="input-group">
@@ -137,7 +137,7 @@ if(!$product){
                       </div>
                     </div>
                  </div>
-                 <div class="col-md-4">
+                 <div class="col-md-6">
                     <div class="form-group">
                       <label for="qty">Fecha de ingreso</label>
                       <div class="input-group">
@@ -145,7 +145,7 @@ if(!$product){
                       </div>
                     </div>
                  </div>
-                 <div class="col-md-4">
+                 <div class="col-md-6">
                     <div class="form-group">
                       <label for="qty">Fecha de la compra</label>
                       <div class="input-group">
@@ -153,7 +153,7 @@ if(!$product){
                       </div>
                     </div>
                  </div>
-                 <div class="col-md-4">
+                 <div class="col-md-6">
                     <div class="form-group">
                       <label for="qty">Ubicación</label>
                       <div class="input-group">
@@ -161,7 +161,7 @@ if(!$product){
                       </div>
                     </div>
                  </div>
-                 <div class="col-md-4">
+                 <div class="col-md-6">
                     <div class="form-group">
                       <label for="qty">Fecha del último mantenimiento</label>
                       <div class="input-group">
@@ -169,7 +169,7 @@ if(!$product){
                       </div>
                     </div>
                  </div>
-                 <div class="col-md-4">
+                 <div class="col-md-6">
                     <div class="form-group">
                       <label for="qty">Fecha de la garantía</label>
                       <div class="input-group">
@@ -177,7 +177,7 @@ if(!$product){
                       </div>
                     </div>
                  </div>
-                 <div class="col-md-4">
+                 <div class="col-md-6">
                     <div class="form-group">
                       <label for="qty">Marca</label>
                       <div class="input-group">
@@ -185,7 +185,7 @@ if(!$product){
                       </div>
                     </div>
                  </div>
-                 <div class="col-md-4">
+                 <div class="col-md-6">
                     <div class="form-group">
                       <label for="qty">Procesador</label>
                       <div class="input-group">
