@@ -113,13 +113,13 @@
                   </div>
                 </div>
                 <div class="row">
-                  <div class="col-md-12">
+                  <div class="col-md-6">
                     <div class="input-group">                      
                       <input type="number" class="form-control" name="codigo_inventario" placeholder="Codigo de inventario">                      
                     </div>
 
                   </div>
-                  <div class="col-md-4">
+                  <div class="col-md-6">
                     <div class="input-group">                      
                       <input type="text" class="form-control" name="custodio" placeholder="Nombre del custodio">                      
                     </div>            
@@ -127,43 +127,43 @@
                   </div>
                 </div>  
                 <div class="row">
-                  <div class="col-md-4">
+                  <div class="col-md-6">
                     <div class="input-group">
                          <input type="text" class="form-control" name="ubicacion" placeholder="Ubicación del bien">                      
                     </div>
                   </div>
-                  <div class="col-md-4">
+                  <div class="col-md-6">
                     <div class="input-group">
                        <input type="date" class="form-control" name="fecha_ingreso" placeholder="Fecha de ingreso">                      
                     </div>
                   </div>
                 </div>
                 <div class="row">
-                  <div class="col-md-4">
+                  <div class="col-md-6">
                     <div class="input-group">                     
                       <input type="date" class="form-control" name="fecha_compra" placeholder="Fecha de la compra">                      
                     </div>
                   </div>
-                  <div class="col-md-4">
+                  <div class="col-md-6">
                     <div class="input-group">                      
                       <input type="date" class="form-control" name="fecha_ultimo_mantenimiento" placeholder="Fecha del último mantenimiento">                      
                     </div>
                   </div>
                 </div>
                 <div class="row">
-                  <div class="col-md-4">
+                  <div class="col-md-6">
                     <div class="input-group">                      
                       <input type="date" class="form-control" name="fecha_garantia" placeholder="Fecha de la garantía">                      
                     </div>
                   </div>
-                  <div class="col-md-4">
+                  <div class="col-md-6">
                     <div class="input-group">                      
                       <input type="text" class="form-control" name="marca" placeholder="Marca">                      
                     </div>
                   </div>
                 </div>
                 <div class="row">
-                  <div class="col-md-4">
+                  <div class="col-md-6">
                     <div class="input-group">                      
                       <input type="text" class="form-control" name="procesador" placeholder="Procesador">                      
                     </div>
