@@ -111,7 +111,7 @@
                       <input type="number" class="form-control" name="serial" placeholder="Número de serial">                      
                     </div>
                   </div>
-                
+                  <br/>    
                 
                   <div class="col-md-6">
                     <div class="input-group">                      
@@ -124,9 +124,8 @@
                       <input type="text" class="form-control" name="custodio" placeholder="Nombre del custodio">                      
                     </div>            
               
-                  </div>
-                
-                
+                  </div>               
+                  <br/> 
                   <div class="col-md-6">
                     <div class="input-group">
                          <input type="text" class="form-control" name="ubicacion" placeholder="Ubicación del bien">                      
@@ -137,7 +136,7 @@
                        <input type="date" class="form-control" name="fecha_ingreso" placeholder="Fecha de ingreso">                      
                     </div>
                   </div>
-                
+                  <br/> 
                 
                   <div class="col-md-6">
                     <div class="input-group">                     
@@ -149,7 +148,7 @@
                       <input type="date" class="form-control" name="fecha_ultimo_mantenimiento" placeholder="Fecha del último mantenimiento">                      
                     </div>
                   </div>
-                
+                  <br/> 
                 
                   <div class="col-md-6">
                     <div class="input-group">                      
@@ -161,7 +160,7 @@
                       <input type="text" class="form-control" name="marca" placeholder="Marca">                      
                     </div>
                   </div>
-                
+                  <br/> 
                 
                   <div class="col-md-6">
                     <div class="input-group">                      
