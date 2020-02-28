@@ -44,10 +44,10 @@
      $query .=")";
      $query .=" ON DUPLICATE KEY UPDATE name='{$p_name}'";
      if($db->query($query)){
-       $session->msg('s',"Product added ");
+       $session->msg('s',"Añadido");
        redirect('add_product.php', false);
      } else {
-       $session->msg('d',' Sorry failed to added!');
+       $session->msg('d',' No se pudo agregar!');
        redirect('product.php', false);
      }
 
@@ -118,13 +118,12 @@
                     <div class="input-group">                      
                       <input type="number" class="form-control" name="codigo_inventario" placeholder="Codigo de inventario">                      
                     </div>
-
                   </div>
                   <br/>
                   <div class="col-md-6">
                     <div class="input-group">                      
                       <input type="text" class="form-control" name="custodio" placeholder="Nombre del custodio">                      
-                    </div>            
+                    </div>          
               
                   </div>               
                   <br/> 

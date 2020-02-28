@@ -74,7 +74,7 @@ if(!$product){
         <div class="panel-heading">
           <strong>
             <span class="glyphicon glyphicon-th"></span>
-            <span>Añadir nuevo bien</span>
+            <span>Editar</span>
          </strong>
         </div>
         <div class="panel-body">
@@ -92,63 +92,108 @@ if(!$product){
                 <div class="row">
                   <div class="col-md-6">
                     <select class="form-control" name="product-categorie">
-                    <option value=""> Select a categorie</option>
-                   <?php  foreach ($all_categories as $cat): ?>
-                     <option value="<?php echo (int)$cat['id']; ?>" <?php if($product['categorie_id'] === $cat['id']): echo "selected"; endif; ?> >
-                       <?php echo remove_junk($cat['name']); ?></option>
-                   <?php endforeach; ?>
-                 </select>
-                  </div>
-                  <div class="col-md-6">
-                    <select class="form-control" name="product-photo">
-                      <option value=""> No image</option>
-                      <?php  foreach ($all_photo as $photo): ?>
-                        <option value="<?php echo (int)$photo['id'];?>" <?php if($product['media_id'] === $photo['id']): echo "selected"; endif; ?> >
-                          <?php echo $photo['file_name'] ?></option>
+                      <option value="">Seleccione el tipo de bien</option>
+                      <?php  foreach ($all_categories as $cat): ?>
+                      <option value="<?php echo (int)$cat['id']; ?>" <?php if($product['categorie_id'] === $cat['id']): echo "selected"; endif; ?> >
+                      <?php echo remove_junk($cat['name']); ?></option>
                       <?php endforeach; ?>
                     </select>
                   </div>
+                  
                 </div>
               </div>
 
               <div class="form-group">
                <div class="row">
                  <div class="col-md-4">
-                  <div class="form-group">
-                    <label for="qty">Quantity</label>
-                    <div class="input-group">
-                      <span class="input-group-addon">
-                       <i class="glyphicon glyphicon-shopping-cart"></i>
-                      </span>
-                      <input type="number" class="form-control" name="product-quantity" value="<?php echo remove_junk($product['quantity']); ?>">
-                   </div>
-                  </div>
+                    <div class="form-group">
+                      <label for="qty">Código NFC</label>
+                      <div class="input-group">
+                        <input type="number" class="form-control" name="codigo_nfc" value="<?php echo remove_junk($product['codigo_nfc']); ?>">
+                      </div>
+                    </div>
                  </div>
                  <div class="col-md-4">
-                  <div class="form-group">
-                    <label for="qty">Buying price</label>
-                    <div class="input-group">
-                      <span class="input-group-addon">
-                        <i class="glyphicon glyphicon-usd"></i>
-                      </span>
-                      <input type="number" class="form-control" name="buying-price" value="<?php echo remove_junk($product['buy_price']);?>">
-                      <span class="input-group-addon">.00</span>
-                   </div>
-                  </div>
-                 </div>
-                  <div class="col-md-4">
-                   <div class="form-group">
-                     <label for="qty">Selling price</label>
-                     <div class="input-group">
-                       <span class="input-group-addon">
-                         <i class="glyphicon glyphicon-usd"></i>
-                       </span>
-                       <input type="number" class="form-control" name="saleing-price" value="<?php echo remove_junk($product['sale_price']);?>">
-                       <span class="input-group-addon">.00</span>
+                    <div class="form-group">
+                      <label for="qty">Serial</label>
+                      <div class="input-group">
+                        <input type="number" class="form-control" name="serial" value="<?php echo remove_junk($product['serial']); ?>">
+                      </div>
                     </div>
-                   </div>
-                  </div>
-               </div>
+                 </div>
+                 <div class="col-md-4">
+                    <div class="form-group">
+                      <label for="qty">Código de Inventario</label>
+                      <div class="input-group">
+                        <input type="number" class="form-control" name="codigo_inventario" value="<?php echo remove_junk($product['codigo_inventario']); ?>">
+                      </div>
+                    </div>
+                 </div>
+                 <div class="col-md-4">
+                    <div class="form-group">
+                      <label for="qty">Nombre del Custodio</label>
+                      <div class="input-group">
+                        <input type="number" class="form-control" name="custodio" value="<?php echo remove_junk($product['custodio']); ?>">
+                      </div>
+                    </div>
+                 </div>
+                 <div class="col-md-4">
+                    <div class="form-group">
+                      <label for="qty">Fecha de ingreso</label>
+                      <div class="input-group">
+                        <input type="number" class="form-control" name="fecha_ingreso" value="<?php echo remove_junk($product['fecha_ingreso']); ?>">
+                      </div>
+                    </div>
+                 </div>
+                 <div class="col-md-4">
+                    <div class="form-group">
+                      <label for="qty">Fecha de la compra</label>
+                      <div class="input-group">
+                        <input type="number" class="form-control" name="fecha_compra" value="<?php echo remove_junk($product['fecha_compra']); ?>">
+                      </div>
+                    </div>
+                 </div>
+                 <div class="col-md-4">
+                    <div class="form-group">
+                      <label for="qty">Ubicación</label>
+                      <div class="input-group">
+                        <input type="number" class="form-control" name="ubicacion" value="<?php echo remove_junk($product['ubicacion']); ?>">
+                      </div>
+                    </div>
+                 </div>
+                 <div class="col-md-4">
+                    <div class="form-group">
+                      <label for="qty">Fecha del último mantenimiento</label>
+                      <div class="input-group">
+                        <input type="number" class="form-control" name="fecha_ultimo_mantenimiento" value="<?php echo remove_junk($product['fecha_ultimo_mantenimiento']); ?>">
+                      </div>
+                    </div>
+                 </div>
+                 <div class="col-md-4">
+                    <div class="form-group">
+                      <label for="qty">Fecha de la garantía</label>
+                      <div class="input-group">
+                        <input type="number" class="form-control" name="fecha_garantia" value="<?php echo remove_junk($product['fecha_garantia']); ?>">
+                      </div>
+                    </div>
+                 </div>
+                 <div class="col-md-4">
+                    <div class="form-group">
+                      <label for="qty">Marca</label>
+                      <div class="input-group">
+                        <input type="number" class="form-control" name="marca" value="<?php echo remove_junk($product['marca']); ?>">
+                      </div>
+                    </div>
+                 </div>
+                 <div class="col-md-4">
+                    <div class="form-group">
+                      <label for="qty">Procesador</label>
+                      <div class="input-group">
+                        <input type="number" class="form-control" name="procesador" value="<?php echo remove_junk($product['procesador']); ?>">
+                      </div>
+                    </div>
+                 </div>
+                </div>
               </div>
               <button type="submit" name="product" class="btn btn-danger">Update</button>
           </form>
