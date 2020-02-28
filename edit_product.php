@@ -36,11 +36,11 @@ if(!$product){
        $p_gar   = remove_junk($db->escape($_POST['fecha_garantia']));
        $p_mar   = remove_junk($db->escape($_POST['marca']));
        $p_pro   = remove_junk($db->escape($_POST['procesador']));
-       if (is_null($_POST['product-photo']) || $_POST['product-photo'] === "") {
+       /*if (is_null($_POST['product-photo']) || $_POST['product-photo'] === "") {
          $media_id = '0';
        } else {
          $media_id = remove_junk($db->escape($_POST['product-photo']));
-       }
+       }*/
        $query   = "UPDATE products SET";
        /*$query  .=" name ='{$p_name}', quantity ='{$p_qty}',";
        $query  .=" buy_price ='{$p_buy}', sale_price ='{$p_sale}', categorie_id ='{$p_cat}',media_id='{$media_id}'";*/
@@ -195,7 +195,7 @@ if(!$product){
                  </div>
                 </div>
               </div>
-              <button type="submit" name="product" class="btn btn-danger">Update</button>
+              <button type="submit" name="product" class="btn btn-danger">Actualizar</button>
           </form>
          </div>
         </div>
