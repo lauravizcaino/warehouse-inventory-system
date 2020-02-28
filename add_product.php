@@ -76,7 +76,7 @@
         </div>
         <div class="panel-body">
          <div class="col-md-12">
-          <form method="post" action="add_product.php" class="clearfix">
+            <form method="post" action="add_product.php" class="clearfix">
               <div class="form-group">
                 <div class="input-group">
                   <span class="input-group-addon">
@@ -96,57 +96,23 @@
                     <?php endforeach; ?>
                     </select>
                   </div>
-                  <!--<div class="col-md-6">
-                    <select class="form-control" name="product-photo">
-                      <option value="">Select Product Photo</option>
-                    <?php  /*foreach ($all_photo as $photo): */?>
-                      <option value="<?php /*echo (int)$photo['id'] */?>">
-                        <?php /*echo $photo['file_name'] **/?></option>
-                    <?php /*endforeach;*/ ?>
-                    </select>
-                  </div>-->
                 </div>
               </div>
 
               <div class="form-group">
-               <div class="row">
-                 <!--<div class="col-md-4">
-                   <div class="input-group">
-                     <span class="input-group-addon">
-                      <i class="glyphicon glyphicon-shopping-cart"></i>
-                     </span>
-                     <input type="number" class="form-control" name="product-quantity" placeholder="Product Quantity">
-                  </div>
-                 </div>
-                 <div class="col-md-4">
-                   <div class="input-group">
-                     <span class="input-group-addon">
-                       <i class="glyphicon glyphicon-usd"></i>
-                     </span>
-                     <input type="number" class="form-control" name="buying-price" placeholder="Buying Price">
-                     <span class="input-group-addon">.00</span>
-                  </div>
-                 </div>
-                  <div class="col-md-4">
-                    <div class="input-group">
-                      <span class="input-group-addon">
-                        <i class="glyphicon glyphicon-usd"></i>
-                      </span>
-                      <input type="number" class="form-control" name="saleing-price" placeholder="Selling Price">
-                      <span class="input-group-addon">.00</span>
-                   </div>
-                  </div>-->
-
-                  <div class="col-md-12">
+               <div class="row">                
+                  <div class="col-md">
                     <div class="input-group ">
                         <input type="number" class="form-control" name="codigo_nfc" placeholder="Código NFC">                      
                     </div>
                   </div>
-                   <div class="col-md-12">
+                  <div class="col-md">
                     <div class="input-group">                     
                       <input type="number" class="form-control" name="serial" placeholder="Número de serial">                      
                     </div>
                   </div>
+                </div>
+                <div class="row">
                   <div class="col-md-12">
                     <div class="input-group">                      
                       <input type="number" class="form-control" name="codigo_inventario" placeholder="Codigo de inventario">                      
@@ -156,10 +122,11 @@
                   <div class="col-md-4">
                     <div class="input-group">                      
                       <input type="text" class="form-control" name="custodio" placeholder="Nombre del custodio">                      
-                    </div>              
-                  
-                 
+                    </div>            
+              
                   </div>
+                </div>  
+                <div class="row">
                   <div class="col-md-4">
                     <div class="input-group">
                          <input type="text" class="form-control" name="ubicacion" placeholder="Ubicación del bien">                      
@@ -170,6 +137,8 @@
                        <input type="date" class="form-control" name="fecha_ingreso" placeholder="Fecha de ingreso">                      
                     </div>
                   </div>
+                </div>
+                <div class="row">
                   <div class="col-md-4">
                     <div class="input-group">                     
                       <input type="date" class="form-control" name="fecha_compra" placeholder="Fecha de la compra">                      
@@ -180,6 +149,8 @@
                       <input type="date" class="form-control" name="fecha_ultimo_mantenimiento" placeholder="Fecha del último mantenimiento">                      
                     </div>
                   </div>
+                </div>
+                <div class="row">
                   <div class="col-md-4">
                     <div class="input-group">                      
                       <input type="date" class="form-control" name="fecha_garantia" placeholder="Fecha de la garantía">                      
@@ -190,15 +161,18 @@
                       <input type="text" class="form-control" name="marca" placeholder="Marca">                      
                     </div>
                   </div>
+                </div>
+                <div class="row">
                   <div class="col-md-4">
                     <div class="input-group">                      
                       <input type="text" class="form-control" name="procesador" placeholder="Procesador">                      
                     </div>
                   </div>
+                </div>
                </div>
               </div>
               <button type="submit" name="add_product" class="btn btn-danger">Añadir</button>
-          </form>
+            </form>
          </div>
         </div>
       </div>
