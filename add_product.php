@@ -106,6 +106,7 @@
                         <input type="number" class="form-control" name="codigo_nfc" placeholder="Código NFC">                      
                     </div>
                   </div>
+                  <br/>
                   <div class="col-md-6">
                     <div class="input-group">                     
                       <input type="number" class="form-control" name="serial" placeholder="Número de serial">                      
@@ -119,6 +120,7 @@
                     </div>
 
                   </div>
+                  <br/>
                   <div class="col-md-6">
                     <div class="input-group">                      
                       <input type="text" class="form-control" name="custodio" placeholder="Nombre del custodio">                      
@@ -131,6 +133,7 @@
                          <input type="text" class="form-control" name="ubicacion" placeholder="Ubicación del bien">                      
                     </div>
                   </div>
+                  <br/>
                   <div class="col-md-6">
                     <div class="input-group">
                        <input type="date" class="form-control" name="fecha_ingreso" placeholder="Fecha de ingreso">                      
@@ -143,6 +146,7 @@
                       <input type="date" class="form-control" name="fecha_compra" placeholder="Fecha de la compra">                      
                     </div>
                   </div>
+                  <br/>
                   <div class="col-md-6">
                     <div class="input-group">                      
                       <input type="date" class="form-control" name="fecha_ultimo_mantenimiento" placeholder="Fecha del último mantenimiento">                      
@@ -155,6 +159,7 @@
                       <input type="date" class="form-control" name="fecha_garantia" placeholder="Fecha de la garantía">                      
                     </div>
                   </div>
+                  <br/>
                   <div class="col-md-6">
                     <div class="input-group">                      
                       <input type="text" class="form-control" name="marca" placeholder="Marca">                      
