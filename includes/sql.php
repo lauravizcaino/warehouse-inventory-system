@@ -8,7 +8,25 @@ function find_all($table) {
    global $db;
    if(tableExists($table))
    {
-     return find_by_sql("SELECT * FROM ".$db->escape($table));
+     return find_by_sql("SELECT p.`id`,
+     p.`name`,
+     p.`quantity`,
+     p.`buy_price`,
+     p.`sale_price`,
+     p.`categorie_id`,
+     p.`media_id`,
+     p.`date`,
+     p.`codigo_nfc`,
+     p.`serial`,
+     p.`codigo_inventario`,
+     p.`custodio`,
+     p.`fecha_ingreso`,
+     p.`fecha_compra`,
+     p.`ubicacion`,
+     p.`fecha_ultimo_mantenimiento`,
+     p.`fecha_garantia`,
+     p.`marca`,
+     p.`procesador` FROM ".$db->escape($table));
    }
 }
 /*--------------------------------------------------------------*/
@@ -29,7 +47,25 @@ function find_by_id($table,$id)
   global $db;
   $id = (int)$id;
     if(tableExists($table)){
-          $sql = $db->query("SELECT * FROM {$db->escape($table)} WHERE id='{$db->escape($id)}' LIMIT 1");
+          $sql = $db->query("SELECT p.`id`,
+          p.`name`,
+          p.`quantity`,
+          p.`buy_price`,
+          p.`sale_price`,
+          p.`categorie_id`,
+          p.`media_id`,
+          p.`date`,
+          p.`codigo_nfc`,
+          p.`serial`,
+          p.`codigo_inventario`,
+          p.`custodio`,
+          p.`fecha_ingreso`,
+          p.`fecha_compra`,
+          p.`ubicacion`,
+          p.`fecha_ultimo_mantenimiento`,
+          p.`fecha_garantia`,
+          p.`marca`,
+          p.`procesador` FROM {$db->escape($table)} WHERE id='{$db->escape($id)}' LIMIT 1");
           if($result = $db->fetch_assoc($sql))
             return $result;
           else

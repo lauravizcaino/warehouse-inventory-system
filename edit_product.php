@@ -56,7 +56,7 @@ if(!$product){
                }
 
    } else{
-       $session->msg("d", "no " $errors);
+       $session->msg("d", $errors);
        redirect('edit_product.php?id='.$product['id'], false);
    }
 
