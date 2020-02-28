@@ -133,7 +133,7 @@ if(!$product){
                     <div class="form-group">
                       <label for="qty">Nombre del Custodio</label>
                       <div class="input-group">
-                        <input type="number" class="form-control" name="custodio" value="<?php echo remove_junk($product['custodio']); ?>">
+                        <input type="text" class="form-control" name="custodio" value="<?php echo remove_junk($product['custodio']); ?>">
                       </div>
                     </div>
                  </div>
@@ -141,7 +141,7 @@ if(!$product){
                     <div class="form-group">
                       <label for="qty">Fecha de ingreso</label>
                       <div class="input-group">
-                        <input type="number" class="form-control" name="fecha_ingreso" value="<?php echo remove_junk($product['fecha_ingreso']); ?>">
+                        <input type="date" class="form-control" name="fecha_ingreso" value="<?php echo remove_junk($product['fecha_ingreso']); ?>">
                       </div>
                     </div>
                  </div>
@@ -149,7 +149,7 @@ if(!$product){
                     <div class="form-group">
                       <label for="qty">Fecha de la compra</label>
                       <div class="input-group">
-                        <input type="number" class="form-control" name="fecha_compra" value="<?php echo remove_junk($product['fecha_compra']); ?>">
+                        <input type="date" class="form-control" name="fecha_compra" value="<?php echo remove_junk($product['fecha_compra']); ?>">
                       </div>
                     </div>
                  </div>
@@ -157,7 +157,7 @@ if(!$product){
                     <div class="form-group">
                       <label for="qty">Ubicación</label>
                       <div class="input-group">
-                        <input type="number" class="form-control" name="ubicacion" value="<?php echo remove_junk($product['ubicacion']); ?>">
+                        <input type="text" class="form-control" name="ubicacion" value="<?php echo remove_junk($product['ubicacion']); ?>">
                       </div>
                     </div>
                  </div>
@@ -165,7 +165,7 @@ if(!$product){
                     <div class="form-group">
                       <label for="qty">Fecha del último mantenimiento</label>
                       <div class="input-group">
-                        <input type="number" class="form-control" name="fecha_ultimo_mantenimiento" value="<?php echo remove_junk($product['fecha_ultimo_mantenimiento']); ?>">
+                        <input type="date" class="form-control" name="fecha_ultimo_mantenimiento" value="<?php echo remove_junk($product['fecha_ultimo_mantenimiento']); ?>">
                       </div>
                     </div>
                  </div>
@@ -173,7 +173,7 @@ if(!$product){
                     <div class="form-group">
                       <label for="qty">Fecha de la garantía</label>
                       <div class="input-group">
-                        <input type="number" class="form-control" name="fecha_garantia" value="<?php echo remove_junk($product['fecha_garantia']); ?>">
+                        <input type="date" class="form-control" name="fecha_garantia" value="<?php echo remove_junk($product['fecha_garantia']); ?>">
                       </div>
                     </div>
                  </div>
@@ -181,7 +181,7 @@ if(!$product){
                     <div class="form-group">
                       <label for="qty">Marca</label>
                       <div class="input-group">
-                        <input type="number" class="form-control" name="marca" value="<?php echo remove_junk($product['marca']); ?>">
+                        <input type="text" class="form-control" name="marca" value="<?php echo remove_junk($product['marca']); ?>">
                       </div>
                     </div>
                  </div>
@@ -189,7 +189,7 @@ if(!$product){
                     <div class="form-group">
                       <label for="qty">Procesador</label>
                       <div class="input-group">
-                        <input type="number" class="form-control" name="procesador" value="<?php echo remove_junk($product['procesador']); ?>">
+                        <input type="text" class="form-control" name="procesador" value="<?php echo remove_junk($product['procesador']); ?>">
                       </div>
                     </div>
                  </div>
