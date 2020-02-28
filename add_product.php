@@ -101,18 +101,18 @@
 
               <div class="form-group">
                <div class="row row-cols-2">                
-                  <div class="col">
+                  <div class="col-md-6">
                     <div class="input-group ">
                         <input type="number" class="form-control" name="codigo_nfc" placeholder="Código NFC">                      
                     </div>
                   </div>
-                  <div class="col">
+                  <div class="col-md-6">
                     <div class="input-group">                     
                       <input type="number" class="form-control" name="serial" placeholder="Número de serial">                      
                     </div>
                   </div>
-                </div>
-                <div class="row">
+                
+                
                   <div class="col-md-6">
                     <div class="input-group">                      
                       <input type="number" class="form-control" name="codigo_inventario" placeholder="Codigo de inventario">                      
@@ -125,8 +125,8 @@
                     </div>            
               
                   </div>
-                </div>  
-                <div class="row">
+                
+                
                   <div class="col-md-6">
                     <div class="input-group">
                          <input type="text" class="form-control" name="ubicacion" placeholder="Ubicación del bien">                      
@@ -137,8 +137,8 @@
                        <input type="date" class="form-control" name="fecha_ingreso" placeholder="Fecha de ingreso">                      
                     </div>
                   </div>
-                </div>
-                <div class="row">
+                
+                
                   <div class="col-md-6">
                     <div class="input-group">                     
                       <input type="date" class="form-control" name="fecha_compra" placeholder="Fecha de la compra">                      
@@ -149,8 +149,8 @@
                       <input type="date" class="form-control" name="fecha_ultimo_mantenimiento" placeholder="Fecha del último mantenimiento">                      
                     </div>
                   </div>
-                </div>
-                <div class="row">
+                
+                
                   <div class="col-md-6">
                     <div class="input-group">                      
                       <input type="date" class="form-control" name="fecha_garantia" placeholder="Fecha de la garantía">                      
@@ -161,15 +161,15 @@
                       <input type="text" class="form-control" name="marca" placeholder="Marca">                      
                     </div>
                   </div>
-                </div>
-                <div class="row">
+                
+                
                   <div class="col-md-6">
                     <div class="input-group">                      
                       <input type="text" class="form-control" name="procesador" placeholder="Procesador">                      
                     </div>
                   </div>
                 </div>
-               </div>
+               
               </div>
               <button type="submit" name="add_product" class="btn btn-danger">Añadir</button>
             </form>
