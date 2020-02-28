@@ -50,7 +50,7 @@ public function query($sql)
       }
       if (!$this->query_id)
         // only for Develope mode
-              die("Error on this Query :<pre> " . $sql ."</pre>");
+              die("Error en esta consulta:<pre> " . $sql ."</pre>");
        // For production mode
         //  die("Error on Query");
 

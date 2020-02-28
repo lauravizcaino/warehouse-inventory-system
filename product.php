@@ -78,7 +78,8 @@
                 
                 <td class="text-center">
                   <div class="btn-group">
-                    <a href="edit_product.php?id=<?php echo $product['id'];?>" class="btn btn-info btn-xs"  title="Edit" data-toggle="tooltip">
+
+                    <a href="edit_product.php?id=<?php  echo $product['id'];?>" class="btn btn-info btn-xs"  title="Edit" data-toggle="tooltip">
                       <span class="glyphicon glyphicon-edit"></span>
                     </a>
                     <a href="delete_product.php?id=<?php echo $product['id'];?>" class="btn btn-danger btn-xs"  title="Delete" data-toggle="tooltip">

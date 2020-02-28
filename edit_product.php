@@ -1,5 +1,5 @@
 <?php
-  $page_title = 'Editar bien';
+  $page_title = 'Editar';
   require_once('includes/load.php');
   // Checkin What level user has permission to view this page
    page_require_level(2);
@@ -9,12 +9,12 @@ $product = find_by_id('products',(int)$_GET['id']);
 $all_categories = find_all('categories');
 /*$all_photo = find_all('media');*/
 if(!$product){
-  $session->msg("d","Missing product id.");
+  $session->msg("d","Falta la identificación del produto");
   redirect('product.php');
 }
 ?>
 <?php
- if(isset($_POST['product'])){
+ if(isset($_POST['dsx'])){
     /*$req_fields = array('product-title','product-categorie','product-quantity','buying-price', 'saleing-price' );*/
     $req_fields = array('product-title','product-categorie','codigo_nfc','serial', 'codigo_inventario', 'custodio', 'ubicacion', 'fecha_ingreso', 'fecha_compra', 'fecha_ultimo_mantenimiento', 'fecha_garantia', 'marca','procesador' );
     validate_fields($req_fields);
@@ -48,10 +48,10 @@ if(!$product){
        $query  .=" WHERE id ='{$product['id']}'";
        $result = $db->query($query);
                if($result && $db->affected_rows() === 1){
-                 $session->msg('s',"Product updated ");
+                 $session->msg('s',"Producto actualizado");
                  redirect('product.php', false);
                } else {
-                 $session->msg('d',' Sorry failed to updated!');
+                 $session->msg('d',' No se pudo actualizar!');
                  redirect('edit_product.php?id='.$product['id'], false);
                }
 
@@ -74,7 +74,7 @@ if(!$product){
         <div class="panel-heading">
           <strong>
             <span class="glyphicon glyphicon-th"></span>
-            <span>Add New Product</span>
+            <span>Añadir nuevo bien</span>
          </strong>
         </div>
         <div class="panel-body">

@@ -136,6 +136,7 @@
                       <span class="input-group-addon">.00</span>
                    </div>
                   </div>-->
+
                   <div class="col-md-12">
                     <div class="input-group ">
                         <input type="number" class="form-control" name="codigo_nfc" placeholder="Código NFC">                      
@@ -150,7 +151,7 @@
                     <div class="input-group">                      
                       <input type="number" class="form-control" name="codigo_inventario" placeholder="Codigo de inventario">                      
                     </div>
-                    
+
                   </div>
                   <div class="col-md-4">
                     <div class="input-group">                      
