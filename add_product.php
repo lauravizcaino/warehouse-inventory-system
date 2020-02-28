@@ -100,13 +100,13 @@
               </div>
 
               <div class="form-group">
-               <div class="row">                
-                  <div class="col-md-6">
+               <div class="row row-cols-2">                
+                  <div class="col">
                     <div class="input-group ">
                         <input type="number" class="form-control" name="codigo_nfc" placeholder="Código NFC">                      
                     </div>
                   </div>
-                  <div class="col-md-6">
+                  <div class="col">
                     <div class="input-group">                     
                       <input type="number" class="form-control" name="serial" placeholder="Número de serial">                      
                     </div>
