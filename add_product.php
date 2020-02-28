@@ -102,73 +102,103 @@
               <div class="form-group">
                <div class="row row-cols-2">                
                   <div class="col-md-6">
-                    <div class="input-group ">
-                        <input type="number" class="form-control" name="codigo_nfc" placeholder="Código NFC">                      
+                    <div class="form-group">
+                      <label for="qty">Código NFC</label>
+                      <div class="input-group ">
+                       <input type="number" class="form-control" name="codigo_nfc" placeholder="Código NFC" id="qty">                      
+                      </div>
                     </div>
                   </div>
-                  <br/>
+                  
                   <div class="col-md-6">
-                    <div class="input-group">                     
-                      <input type="number" class="form-control" name="serial" placeholder="Número de serial">                      
+                    <div class="form-group">
+                      <label for="qty">Serial</label>
+                      <div class="input-group">                     
+                        <input type="number" class="form-control" name="serial" placeholder="Número de serial">                      
+                      </div>
                     </div>
                   </div>
-                  <br/>    
-                
+                                        
                   <div class="col-md-6">
-                    <div class="input-group">                      
-                      <input type="number" class="form-control" name="codigo_inventario" placeholder="Codigo de inventario">                      
-                    </div>
+                    <div class="form-group">
+                      <label for="qty">Código de Inventario</label>
+                      <div class="input-group">                      
+                        <input type="number" class="form-control" name="codigo_inventario" placeholder="Codigo de inventario">                      
+                      </div>
+                    </div>  
                   </div>
-                  <br/>
+                  
                   <div class="col-md-6">
-                    <div class="input-group">                      
-                      <input type="text" class="form-control" name="custodio" placeholder="Nombre del custodio">                      
-                    </div>          
-              
+                    <div class="form-group">
+                      <label for="qty">Nombre del Custodio</label>
+                      <div class="input-group">                      
+                        <input type="text" class="form-control" name="custodio" placeholder="Nombre del custodio">                      
+                      </div>          
+                    </div>
                   </div>               
-                  <br/> 
+                   
                   <div class="col-md-6">
-                    <div class="input-group">
-                         <input type="text" class="form-control" name="ubicacion" placeholder="Ubicación del bien">                      
+                    <div class="form-group">
+                      <label for="qty">Ubicación</label>
+                      <div class="input-group">
+                          <input type="text" class="form-control" name="ubicacion" placeholder="Ubicación del bien">                      
+                      </div>
                     </div>
                   </div>
-                  <br/>
+                  
                   <div class="col-md-6">
-                    <div class="input-group">
-                       <input type="date" class="form-control" name="fecha_ingreso" placeholder="Fecha de ingreso">                      
+                    <div class="form-group">
+                      <label for="qty">Fecha de ingreso</label>
+                      <div class="input-group">
+                        <input type="date" class="form-control" name="fecha_ingreso" placeholder="Fecha de ingreso">                      
+                      </div>
                     </div>
                   </div>
-                  <br/> 
+                   
                 
                   <div class="col-md-6">
-                    <div class="input-group">                     
-                      <input type="date" class="form-control" name="fecha_compra" placeholder="Fecha de la compra">                      
+                    <div class="form-group">
+                      <label for="qty">Fecha de la compra</label>
+                      <div class="input-group">                     
+                        <input type="date" class="form-control" name="fecha_compra" placeholder="Fecha de la compra">                      
+                      </div>
                     </div>
                   </div>
-                  <br/>
+                  
                   <div class="col-md-6">
-                    <div class="input-group">                      
-                      <input type="date" class="form-control" name="fecha_ultimo_mantenimiento" placeholder="Fecha del último mantenimiento">                      
+                    <div class="form-group">
+                      <label for="qty">Fecha del último mantenimiento</label>
+                      <div class="input-group">                      
+                        <input type="date" class="form-control" name="fecha_ultimo_mantenimiento" placeholder="Fecha del último mantenimiento">                      
+                      </div>
                     </div>
                   </div>
-                  <br/> 
+                                   
+                  <div class="col-md-6">
+                    <div class="form-group">
+                      <label for="qty">Fecha de la garantía</label>
+                      <div class="input-group">                      
+                        <input type="date" class="form-control" name="fecha_garantia" placeholder="Fecha de la garantía">                      
+                      </div>
+                    </div>
+                  </div>
+                  
+                  <div class="col-md-6">
+                    <div class="form-group">
+                      <label for="qty">Marca</label>
+                      <div class="input-group">                      
+                        <input type="text" class="form-control" name="marca" placeholder="Marca">                      
+                      </div>
+                    </div>
+                  </div>
+                   
                 
                   <div class="col-md-6">
-                    <div class="input-group">                      
-                      <input type="date" class="form-control" name="fecha_garantia" placeholder="Fecha de la garantía">                      
-                    </div>
-                  </div>
-                  <br/>
-                  <div class="col-md-6">
-                    <div class="input-group">                      
-                      <input type="text" class="form-control" name="marca" placeholder="Marca">                      
-                    </div>
-                  </div>
-                  <br/> 
-                
-                  <div class="col-md-6">
-                    <div class="input-group">                      
-                      <input type="text" class="form-control" name="procesador" placeholder="Procesador">                      
+                    <div class="form-group">
+                      <label for="qty">Procesador</label>
+                      <div class="input-group">                      
+                        <input type="text" class="form-control" name="procesador" placeholder="Procesador">                      
+                      </div>
                     </div>
                   </div>
                 </div>
