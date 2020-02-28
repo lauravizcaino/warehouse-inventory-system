@@ -14,7 +14,7 @@ if(!$product){
 }
 ?>
 <?php
- if(isset($_POST['dsx'])){
+ if(isset($_POST['product'])){
     /*$req_fields = array('product-title','product-categorie','product-quantity','buying-price', 'saleing-price' );*/
     $req_fields = array('product-title','product-categorie','codigo_nfc','serial', 'codigo_inventario', 'custodio', 'ubicacion', 'fecha_ingreso', 'fecha_compra', 'fecha_ultimo_mantenimiento', 'fecha_garantia', 'marca','procesador' );
     validate_fields($req_fields);
