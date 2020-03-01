@@ -22,7 +22,8 @@
             
         <div class="header-content ">
             <div class="header-date pull-left">
-              <strong><?php echo date("F j, Y");?></strong>
+              <strong><?php $fecha  = date("d-m-Y");
+              echo fechaCastellano($fecha); ?></strong>
             </div>
           <div class="pull-right clearfix">
             <ul class="info-menu list-inline list-unstyled">
