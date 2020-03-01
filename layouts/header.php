@@ -1,4 +1,6 @@
-<?php $user = current_user(); ?>
+<?php $user = current_user(); 
+  include_once('includes/load.php')
+?>
 <!DOCTYPE html>
   <html lang="en">
     <head>
