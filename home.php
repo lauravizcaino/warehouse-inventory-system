@@ -15,16 +15,7 @@
          <h2>Facultad de Ingeniería Eléctrica y Electrónica</h2>
          <h3>Laboratorio de Informática</h3>
          <img src="https://www.epn.edu.ec/wp-content/uploads/2014/05/EPN_logo-250x152.jpg" alt="Escudo EPN">
-         
-         <?php
-            setlocale(LC_TIME, "spanish");
-            $mi_fecha = '2018/04/16';
-            $mi_fecha = str_replace("/", "-", $mi_fecha);			
-            $Nueva_Fecha = date("d-m-Y", strtotime($mi_fecha));				
-            $Mes_Anyo = strftime("%A, %d de %B de %Y", strtotime($Nueva_Fecha));
-            //devuelve: lunes, 16 de abril de 2018 
-            echo $Mes_Anyo;
-          ?>
+        
       </div>
     </div>
  </div>
