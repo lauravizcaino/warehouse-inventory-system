@@ -1,4 +1,5 @@
 <?php
+ setlocale(LC_TIME, "spanish");
  $errors = array();
 
  /*--------------------------------------------------------------*/
@@ -86,8 +87,9 @@ function total_price($totals){
 /* Function for Readable date time
 /*--------------------------------------------------------------*/
 function read_date($str){
+      
      if($str)
-      return date('F j, Y, g:i:s a', strtotime($str));
+      return date('F j, Y', strtotime($str));
      else
       return null;
   }
@@ -95,7 +97,8 @@ function read_date($str){
 /* Function for  Readable Make date time
 /*--------------------------------------------------------------*/
 function make_date(){
-  return strftime("%Y-%m-%d %H:%M:%S", time());
+  
+  return strftime("%A,%d de %B de %Y", time());
 }
 /*--------------------------------------------------------------*/
 /* Function for  Readable date time

@@ -189,17 +189,17 @@ function tableExists($table){
      $login_level = find_by_groupLevel($current_user['user_level']);
      //if user not login
      if (!$session->isUserLoggedIn(true)):
-            $session->msg('d','Please login...');
+            $session->msg('d','Por favor ingrese...');
             redirect('index.php', false);
       //if Group status Deactive
      elseif($login_level['group_status'] === '0'):
-           $session->msg('d','This level user has been band!');
+           $session->msg('d','¡Este nivel de usuario ha sido prohibido!!');
            redirect('home.php',false);
       //cheackin log in User level and Require level is Less than or equal to
      elseif($current_user['user_level'] <= (int)$require_level):
               return true;
       else:
-            $session->msg("d", "Sorry! you dont have permission to view the page.");
+            $session->msg("d", "No tiene permiso para mirar esta página");
             redirect('home.php', false);
         endif;
 
