@@ -24,8 +24,8 @@
             
         <div class="header-content ">
             <div class="header-date pull-left">
-              <strong><?php $fecha  = date("d-m-Y");
-              echo fechaCastellano($fecha); ?></strong>
+              <strong><?php $actual_date = date("d-m-Y");
+              echo fechaCastellano($actual_date); ?></strong>
             </div>
           <div class="pull-right clearfix">
             <ul class="info-menu list-inline list-unstyled">
