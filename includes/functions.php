@@ -1,5 +1,6 @@
 <?php
- setlocale(LC_TIME, "spanish");
+ 	
+ date_default_timezone_set("America/Lima");
  $errors = array();
 
  /*--------------------------------------------------------------*/
@@ -87,7 +88,7 @@ function total_price($totals){
 /* Function for Readable date time
 /*--------------------------------------------------------------*/
 function read_date($str){
-      
+     
      if($str)
       return date('d-m-Y', strtotime($str));
      else
