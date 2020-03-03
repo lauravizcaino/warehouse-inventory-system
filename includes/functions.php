@@ -1,5 +1,5 @@
 <?php
- 	
+ 	date_default_timezone_set("America/Lima");
  //date_default_timezone_set("America/Lima");
  $errors = array();
 
@@ -99,7 +99,7 @@ function read_date($str){
 /*--------------------------------------------------------------*/
 function make_date(){
       
-  return strftime("%Y-%m-%d", time());
+  return strftime("%Y-%m-%d %H:%M:%S", time());
 }
 /*--------------------------------------------------------------*/
 /* Function for  Readable date time
