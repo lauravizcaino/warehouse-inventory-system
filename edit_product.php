@@ -30,10 +30,10 @@ if(!$product){
        $p_cod   = remove_junk($db->escape($_POST['codigo_inventario']));
        $p_cus   = remove_junk($db->escape($_POST['custodio']));
        $p_ubi   = remove_junk($db->escape($_POST['ubicacion']));
-       $p_ing   = read_date($db->escape($_POST['fecha_ingreso']));
-       $p_com   = read_date($db->escape($_POST['fecha_compra']));
-       $p_man   = read_date($db->escape($_POST['fecha_ultimo_mantenimiento']));
-       $p_gar   = read_date($db->escape($_POST['fecha_garantia']));
+       $p_ing   = remove_junk($db->escape($_POST['fecha_ingreso']));
+       $p_com   = remove_junk($db->escape($_POST['fecha_compra']));
+       $p_man   = remove_junk($db->escape($_POST['fecha_ultimo_mantenimiento']));
+       $p_gar   = remove_junk($db->escape($_POST['fecha_garantia']));
        $p_mar   = remove_junk($db->escape($_POST['marca']));
        $p_pro   = remove_junk($db->escape($_POST['procesador']));
        /*if (is_null($_POST['product-photo']) || $_POST['product-photo'] === "") {
