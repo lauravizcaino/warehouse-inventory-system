@@ -15,12 +15,7 @@
          <h2>Facultad de Ingeniería Eléctrica y Electrónica</h2>
          <h3>Laboratorio de Informática</h3>
          <img src="https://www.epn.edu.ec/wp-content/uploads/2014/05/EPN_logo-250x152.jpg" alt="Escudo EPN">
-          <?php
-          date_default_timezone_set("America/Lima");
-          echo date_default_timezone_get();
-          echo date ('d-m-Y H-i-s')
-          ?>
-      </div>
+          </div>
     </div>
  </div>
 </div>
