@@ -1,5 +1,5 @@
 <?php
-  $page_title = 'Edit User';
+  $page_title = 'Editar Usuario';
   require_once('includes/load.php');
   // Checkin What level user has permission to view this page
    page_require_level(1);
@@ -51,10 +51,10 @@ if(isset($_POST['update-pass'])) {
           $sql = "UPDATE users SET password='{$h_pass}' WHERE id='{$db->escape($id)}'";
        $result = $db->query($sql);
         if($result && $db->affected_rows() === 1){
-          $session->msg('s',"User password has been updated ");
+          $session->msg('s',"La acontraseña ha sido actualizada ");
           redirect('edit_user.php?id='.(int)$e_user['id'], false);
         } else {
-          $session->msg('d',' Sorry failed to updated user password!');
+          $session->msg('d',' No se pudo actualizar la contraseña');
           redirect('edit_user.php?id='.(int)$e_user['id'], false);
         }
   } else {
@@ -72,21 +72,21 @@ if(isset($_POST['update-pass'])) {
        <div class="panel-heading">
         <strong>
           <span class="glyphicon glyphicon-th"></span>
-          Update <?php echo remove_junk(ucwords($e_user['name'])); ?> Account
+          Actualizar la cuenta de  <?php echo remove_junk(ucwords($e_user['name'])); ?> 
         </strong>
        </div>
        <div class="panel-body">
           <form method="post" action="edit_user.php?id=<?php echo (int)$e_user['id'];?>" class="clearfix">
             <div class="form-group">
-                  <label for="name" class="control-label">Name</label>
+                  <label for="name" class="control-label">Nombre</label>
                   <input type="name" class="form-control" name="name" value="<?php echo remove_junk(ucwords($e_user['name'])); ?>">
             </div>
             <div class="form-group">
-                  <label for="username" class="control-label">Username</label>
+                  <label for="username" class="control-label">Usuario</label>
                   <input type="text" class="form-control" name="username" value="<?php echo remove_junk(ucwords($e_user['username'])); ?>">
             </div>
             <div class="form-group">
-              <label for="level">User Role</label>
+              <label for="level">Role de Usuario</label>
                 <select class="form-control" name="level">
                   <?php foreach ($groups as $group ):?>
                    <option <?php if($group['group_level'] === $e_user['user_level']) echo 'selected="selected"';?> value="<?php echo $group['group_level'];?>"><?php echo ucwords($group['group_name']);?></option>
@@ -94,36 +94,36 @@ if(isset($_POST['update-pass'])) {
                 </select>
             </div>
             <div class="form-group">
-              <label for="status">Status</label>
+              <label for="status">Estado</label>
                 <select class="form-control" name="status">
-                  <option <?php if($e_user['status'] === '1') echo 'selected="selected"';?>value="1">Active</option>
-                  <option <?php if($e_user['status'] === '0') echo 'selected="selected"';?> value="0">Deactive</option>
+                  <option <?php if($e_user['status'] === '1') echo 'selected="selected"';?>value="1">Activo</option>
+                  <option <?php if($e_user['status'] === '0') echo 'selected="selected"';?> value="0">Inactivo</option>
                 </select>
             </div>
             <div class="form-group clearfix">
-                    <button type="submit" name="update" class="btn btn-info">Update</button>
+                    <button type="submit" name="update" class="btn btn-info">Actualizar</button>
             </div>
         </form>
        </div>
      </div>
   </div>
-  <!-- Change password form -->
+  <!-- Chambiar contraseña-->
   <div class="col-md-6">
     <div class="panel panel-default">
       <div class="panel-heading">
         <strong>
           <span class="glyphicon glyphicon-th"></span>
-          Change <?php echo remove_junk(ucwords($e_user['name'])); ?> password
+          Cambiar contraseña de <?php echo remove_junk(ucwords($e_user['name'])); ?>
         </strong>
       </div>
       <div class="panel-body">
         <form action="edit_user.php?id=<?php echo (int)$e_user['id'];?>" method="post" class="clearfix">
           <div class="form-group">
-                <label for="password" class="control-label">Password</label>
-                <input type="password" class="form-control" name="password" placeholder="Type user new password">
+                <label for="password" class="control-label">Contraseña</label>
+                <input type="password" class="form-control" name="password" placeholder="Escriba la nueva contraseña">
           </div>
           <div class="form-group clearfix">
-                  <button type="submit" name="update-pass" class="btn btn-danger pull-right">Change</button>
+                  <button type="submit" name="update-pass" class="btn btn-danger pull-right">Cambiar</button>
           </div>
         </form>
       </div>
