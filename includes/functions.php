@@ -90,7 +90,7 @@ function total_price($totals){
 function read_date($str){
      
      if($str)
-      return date('d-m-Y H-i-s', strtotime($str));
+      return date('d-m-Y ', strtotime($str));
      else
       return null;
   }
