@@ -15,12 +15,12 @@
       <li><a href="users.php">Administrar usuarios</a> </li>
    </ul>
   </li>
-  <li>
+  <!--<li>
     <a href="categorie.php" >
       <i class="glyphicon glyphicon-indent-left"></i>
       <span>Tipos de bien</span>
     </a>
-  </li>
+  </li>-->
   <li>
     <a href="#" class="submenu-toggle">
       <i class="glyphicon glyphicon-th-large"></i>
