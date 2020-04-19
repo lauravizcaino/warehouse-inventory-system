@@ -230,7 +230,8 @@ function tableExists($table){
      p.`marca`,
      p.`procesador`,
      p.`estado`,
-     p.`caracteristica`,";
+     p.`caracteristica`,
+     p.`tipo`,";
     $sql  .=" c.name AS categorie,m.file_name AS image";
     /*$sql  .=" AS categorie,m.file_name AS image";*/
     $sql  .=" FROM products p";
