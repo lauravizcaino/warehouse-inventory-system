@@ -16,15 +16,16 @@ if(!$product){
 <?php
  if(isset($_POST['product'])){
     /*$req_fields = array('product-title','product-categorie','product-quantity','buying-price', 'saleing-price' );*/
-    $req_fields = array('product-title','product-categorie','codigo_nfc','serial', 'codigo_inventario', 'custodio', 'ubicacion', 'fecha_ingreso', 'fecha_compra', 'fecha_ultimo_mantenimiento', 'fecha_garantia', 'marca','procesador' );
+    $req_fields = array('product-title','tipo','codigo_nfc','serial', 'codigo_inventario', 'custodio', 'ubicacion', 'fecha_ingreso', 'fecha_compra', 'fecha_ultimo_mantenimiento', 'fecha_garantia', 'marca','procesador' );
     validate_fields($req_fields);
 
    if(empty($errors)){
        $p_name  = remove_junk($db->escape($_POST['product-title']));
-       $p_cat   = (int)$_POST['product-categorie'];
-       /*$p_qty   = remove_junk($db->escape($_POST['product-quantity']));
+       /*$p_cat   = (int)$_POST['product-categorie'];
+       $p_qty   = remove_junk($db->escape($_POST['product-quantity']));
        $p_buy   = remove_junk($db->escape($_POST['buying-price']));
        $p_sale  = remove_junk($db->escape($_POST['saleing-price']));*/
+       $p_tipo   = remove_junk($db->escape($_POST['tipo']));
        $p_nfc   = remove_junk($db->escape($_POST['codigo_nfc']));
        $p_ser   = remove_junk($db->escape($_POST['serial']));
        $p_cod   = remove_junk($db->escape($_POST['codigo_inventario']));
@@ -44,7 +45,7 @@ if(!$product){
        $query   = "UPDATE products SET";
        /*$query  .=" name ='{$p_name}', quantity ='{$p_qty}',";
        $query  .=" buy_price ='{$p_buy}', sale_price ='{$p_sale}', categorie_id ='{$p_cat}',media_id='{$media_id}'";*/
-       $query   .= " name ='{$p_name}', categorie_id ='{$p_cat}', codigo_nfc='{$p_nfc }', serial='{$p_ser}', codigo_inventario='{$p_cod}', custodio='{$p_cus}', ubicacion='{$p_ubi}', fecha_ingreso='{$p_ing}', fecha_compra='{$p_com}', fecha_ultimo_mantenimiento='{$p_man}', fecha_garantia='{$p_gar}', marca='{$p_mar}', procesador='{$p_pro}'";
+       $query   .= " name ='{$p_name}', tipo ='{$p_tipo}', codigo_nfc='{$p_nfc }', serial='{$p_ser}', codigo_inventario='{$p_cod}', custodio='{$p_cus}', ubicacion='{$p_ubi}', fecha_ingreso='{$p_ing}', fecha_compra='{$p_com}', fecha_ultimo_mantenimiento='{$p_man}', fecha_garantia='{$p_gar}', marca='{$p_mar}', procesador='{$p_pro}'";
        $query  .=" WHERE id ='{$product['id']}'";
        $result = $db->query($query);
                if($result && $db->affected_rows() === 1){
@@ -88,20 +89,20 @@ if(!$product){
                   <input type="text" class="form-control" name="product-title" value="<?php echo remove_junk($product['name']);?>">
                </div>
               </div>
-              <div class="form-group">
+              <!--<div class="form-group">
                 <div class="row">
                   <div class="col-md-6">
                     <select class="form-control" name="product-categorie">
                       <option value="">Seleccione el tipo de bien</option>
-                      <?php  foreach ($all_categories as $cat): ?>
-                      <option value="<?php echo (int)$cat['id']; ?>" <?php if($product['categorie_id'] === $cat['id']): echo "selected"; endif; ?> >
-                      <?php echo remove_junk($cat['name']); ?></option>
-                      <?php endforeach; ?>
+                      <?php /* foreach ($all_categories as $cat):*/ ?>
+                      <option value="<?php /*echo (int)$cat['id']; ?>" <?php if($product['categorie_id'] === $cat['id']): echo "selected"; endif;*/ ?> >
+                      <?php /*echo remove_junk($cat['name']);*/ ?></option>
+                      <?php /*endforeach;*/ ?>
                     </select>
                   </div>
                   
                 </div>
-              </div>
+              </div>-->
 
               <div class="form-group">
                <div class="row row-cols-2">
@@ -110,6 +111,14 @@ if(!$product){
                       <label for="qty">Código NFC</label>
                       <div class="input-group">
                         <input type="number" class="form-control" name="codigo_nfc" value="<?php echo remove_junk($product['codigo_nfc']); ?>">
+                      </div>
+                    </div>
+                 </div>
+                 <div class="col-md-6">
+                    <div class="form-group">
+                      <label for="qty">Tipo de bien</label>
+                      <div class="input-group">
+                        <input type="number" class="form-control" name="tipo" value="<?php echo remove_junk($product['tipo']); ?>">
                       </div>
                     </div>
                  </div>
