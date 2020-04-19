@@ -114,7 +114,7 @@
                     <div class="form-group">
                       <label for="qty">Tipo de bien</label>
                       <div class="input-group ">
-                       <input type="number" class="form-control" name="tipo" placeholder="Tipo de bien" id="qty">                      
+                       <input type="text" class="form-control" name="tipo" placeholder="Tipo de bien" id="qty">                      
                       </div>
                     </div>
                   </div>
