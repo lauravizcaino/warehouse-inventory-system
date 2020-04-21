@@ -70,9 +70,7 @@
    <div class="col-md-12">
       <div class="panel">
         <div class="jumbotron text-center">
-           <!--<h1>Thank You! for your support and love.</h1>-->
            <p> <strong>Sistema de Inventario</strong>
-           <!--</br>If you have a question regarding the usage of this applications, please ask on <a href="https://www.facebook.com/oswapp" title="Facebook" target="_blank">Facebook</a> OSWA Fan page.</p>-->
 
         </div>
       </div>
@@ -163,7 +161,7 @@
                  <!--<?php /*if($recent_product['media_id'] === '0'): */?>
                     <img class="img-avatar img-circle" src="uploads/products/no_image.jpg" alt="">
                   <?php /*else: */?>
-                  <img class="img-avatar img-circle" src="uploads/products/<?php echo $recent_product['image'];?>" alt="" />
+                  <img class="img-avatar img-circle" src="uploads/products/<?php/* echo $recent_product['image'];*/?>" alt="" />
                 <?php/* endif;*/?>-->
                 <?php echo remove_junk(first_character($recent_product['name']));?>
                   <!--<span class="label label-warning pull-right">
