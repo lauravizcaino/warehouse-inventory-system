@@ -207,7 +207,7 @@ function tableExists($table){
    /*--------------------------------------------------------------*/
    /* Función para encontrar todos los nombres de la tabla products
    /*--------------------------------------------------------------*/
-  /*function join_product_table(){
+  function join_product_table(){
      global $db;
      $sql  =" SELECT p.`id`,
      p.`name`,    
@@ -226,15 +226,15 @@ function tableExists($table){
      p.`estado`,
      p.`caracteristica`,
      p.`tipo`,";
-    $sql  .=" c.name AS categorie,m.file_name AS image";*/
+    $sql  .=" c.name AS categorie,m.file_name AS image";
     /*$sql  .=" AS categorie,m.file_name AS image";*/
-    /*$sql  .=" FROM products p";
+    $sql  .=" FROM products p";
     $sql  .=" LEFT JOIN categories c ON c.id = p.categorie_id";
     $sql  .=" LEFT JOIN media m ON m.id = p.media_id";
     $sql  .=" ORDER BY p.id ASC";
-    return find_by_sql($sql);*/
+    return find_by_sql($sql);
 
-   }*/
+   }
   /*--------------------------------------------------------------*/
   /* Function for Finding all product name
   /* Request coming from ajax.php for auto suggest
