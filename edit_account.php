@@ -3,7 +3,7 @@
   require_once('includes/load.php');
    page_require_level(3);
 ?>
-<?php
+<?/*php
 //update user image
   if(isset($_POST['submit'])) {
   $photo = new Media();
@@ -17,20 +17,20 @@
       redirect('edit_account.php');
     }
   }
-?>
+*/?>
 <?php
- //update user other info
+ //Actualizar información
   if(isset($_POST['update'])){
     $req_fields = array('name','username' );
     validate_fields($req_fields);
     if(empty($errors)){
              $id = (int)$_SESSION['user_id'];
            $name = remove_junk($db->escape($_POST['name']));
-       $username = remove_junk($db->escape($_POST['username']));
+           $username = remove_junk($db->escape($_POST['username']));
             $sql = "UPDATE users SET name ='{$name}', username ='{$username}' WHERE id='{$id}'";
-    $result = $db->query($sql);
+          $result = $db->query($sql);
           if($result && $db->affected_rows() === 1){
-            $session->msg('s',"Acount updated ");
+            $session->msg('s',"Cuenta actualizada");
             redirect('edit_account.php', false);
           } else {
             $session->msg('d',' No se pudo actualizar');
@@ -47,7 +47,7 @@
   <div class="col-md-12">
     <?php echo display_msg($msg); ?>
   </div>
-  <div class="col-md-6">
+  <!--<div class="col-md-6">
       <div class="panel panel-default">
         <div class="panel-heading">
           <div class="panel-heading clearfix">
@@ -74,7 +74,7 @@
           </div>
         </div>
       </div>
-  </div>
+  </div>-->
   <div class="col-md-6">
     <div class="panel panel-default">
       <div class="panel-heading clearfix">
