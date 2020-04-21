@@ -31,17 +31,17 @@
             <ul class="info-menu list-inline list-unstyled">
               <li class="profile">
                 <a href="#" data-toggle="dropdown" class="toggle" aria-expanded="false">
-                  <img src="uploads/users/<?php echo $user['image'];?>" alt="user-image" class="img-circle img-inline">
+                  <!--<img src="uploads/users/<?php /*echo $user['image'];*/?>" alt="user-image" class="img-circle img-inline">-->
                   <span><?php echo remove_junk(ucfirst($user['name'])); ?> <i class="caret"></i></span>
                 </a>
                 <ul class="dropdown-menu">
-                  <li>
-                      <a href="profile.php?id=<?php echo (int)$user['id'];?>">
+                  <!--<li>
+                      <a href="profile.php?id=<?php/* echo (int)$user['id'];*/?>">
                           <i class="glyphicon glyphicon-user"></i>
                           Perfil
                       </a>
-                  </li>
-                <li>
+                  </li>-->
+                  <li>
                     <a href="edit_account.php" title="edit account">
                         <i class="glyphicon glyphicon-cog"></i>
                         Ajustes
@@ -67,10 +67,6 @@
       <?php elseif($user['user_level'] === '2'): ?>
         <!-- Special user -->
       <?php include_once('special_menu.php');?>
-
-      <?php elseif($user['user_level'] === '3'): ?>
-        <!-- User menu -->
-      <?php include_once('user_menu.php');?>
 
       <?php endif;?>
 

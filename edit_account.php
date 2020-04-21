@@ -3,21 +3,7 @@
   require_once('includes/load.php');
    page_require_level(3);
 ?>
-<?/*php
-//update user image
-  if(isset($_POST['submit'])) {
-  $photo = new Media();
-  $user_id = (int)$_POST['user_id'];
-  $photo->upload($_FILES['file_upload']);
-  if($photo->process_user($user_id)){
-    $session->msg('s','La foto ha sido subida');
-    redirect('edit_account.php');
-    } else{
-      $session->msg('d',join($photo->errors));
-      redirect('edit_account.php');
-    }
-  }
-*/?>
+
 <?php
  //Actualizar información
   if(isset($_POST['update'])){
@@ -47,34 +33,7 @@
   <div class="col-md-12">
     <?php echo display_msg($msg); ?>
   </div>
-  <!--<div class="col-md-6">
-      <div class="panel panel-default">
-        <div class="panel-heading">
-          <div class="panel-heading clearfix">
-            <span class="glyphicon glyphicon-camera"></span>
-            <span>Cambiar mi foto</span>
-          </div>
-        </div>
-        <div class="panel-body">
-          <div class="row">
-            <div class="col-md-4">
-                <img class="img-circle img-size-2" src="uploads/users/<?php echo $user['image'];?>" alt="">
-            </div>
-            <div class="col-md-8">
-              <form class="form" action="edit_account.php" method="POST" enctype="multipart/form-data">
-              <div class="form-group">
-                <input type="file" name="file_upload" multiple="multiple" class="btn btn-default btn-file"/>
-              </div>
-              <div class="form-group">
-                <input type="hidden" name="user_id" value="<?php echo $user['id'];?>">
-                 <button type="submit" name="submit" class="btn btn-warning">Cambiar</button>
-              </div>
-             </form>
-            </div>
-          </div>
-        </div>
-      </div>
-  </div>-->
+  
   <div class="col-md-6">
     <div class="panel panel-default">
       <div class="panel-heading clearfix">
