@@ -1,8 +1,8 @@
 <?php
 
-  define( 'DB_HOST', 'localhost' );          // Set database host
-  define( 'DB_USER', 'laura' );             // Set database user
-  define( 'DB_PASS', 'flor.123' );             // Set database password
-  define( 'DB_NAME', 'inventario' );        // Set database name
+  define( 'DB_HOST', 'localhost' );          // Host Base de datos
+  define( 'DB_USER', 'laura' );             // Usuario Base de Datos
+  define( 'DB_PASS', 'flor.123' );             // Password
+  define( 'DB_NAME', 'inventario' );        // Nombre Base de Datos
 
 ?>

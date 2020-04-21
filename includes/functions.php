@@ -4,8 +4,8 @@
  $errors = array();
 
  /*--------------------------------------------------------------*/
- /* Function for Remove escapes special
- /* characters in a string for use in an SQL statement
+ /* Función para eliminar caracteres especiales en un string 
+ /* para usar en una sentencia SQL
  /*--------------------------------------------------------------*/
 function real_escape($str){
   global $con;
@@ -13,7 +13,7 @@ function real_escape($str){
   return $escape;
 }
 /*--------------------------------------------------------------*/
-/* Function for Remove html characters
+/* Función para eliminar caracteres html
 /*--------------------------------------------------------------*/
 function remove_junk($str){
   $str = nl2br($str);
@@ -21,7 +21,7 @@ function remove_junk($str){
   return $str;
 }
 /*--------------------------------------------------------------*/
-/* Function for Uppercase first character
+/* Función primer carácter en mayúscula
 /*--------------------------------------------------------------*/
 function first_character($str){
   $val = str_replace('-'," ",$str);
@@ -29,20 +29,20 @@ function first_character($str){
   return $val;
 }
 /*--------------------------------------------------------------*/
-/* Function for Checking input fields not empty
+/* Función para verificar que los campos de entrada no estén vacíos
 /*--------------------------------------------------------------*/
 function validate_fields($var){
   global $errors;
   foreach ($var as $field) {
     $val = remove_junk($_POST[$field]);
     if(isset($val) && $val==''){
-      $errors = $field ." No puede estar en blanco.";
+      $errors = $field ." El campo no puede estar en blanco.";
       return $errors;
     }
   }
 }
 /*--------------------------------------------------------------*/
-/* Function for Display Session Message
+/* Función para mostrar mensaje de sesión
    Ex echo displayt_msg($message);
 /*--------------------------------------------------------------*/
 function display_msg($msg =''){
@@ -60,7 +60,7 @@ function display_msg($msg =''){
    }
 }
 /*--------------------------------------------------------------*/
-/* Function for redirect
+/* Función para redirigir
 /*--------------------------------------------------------------*/
 function redirect($url, $permanent = false)
 {
@@ -85,7 +85,7 @@ function total_price($totals){
    return array($sum,$profit);
 }
 /*--------------------------------------------------------------*/
-/* Function for Readable date time
+/* Función para fecha y hora legible
 /*--------------------------------------------------------------*/
 function read_date($str){
      
@@ -95,21 +95,21 @@ function read_date($str){
       return null;
   }
 /*--------------------------------------------------------------*/
-/* Function for  Readable Make date time
+/* Función para lectura legible fecha hora
 /*--------------------------------------------------------------*/
 function make_date(){
       
   return strftime("%Y-%m-%d %H:%M:%S", time());
 }
 /*--------------------------------------------------------------*/
-/* Function for  Readable date time
+/* Función para fecha y hora legible
 /*--------------------------------------------------------------*/
 function count_id(){
   static $count = 1;
   return $count++;
 }
 /*--------------------------------------------------------------*/
-/* Function for Creting random string
+/* Función para crear un string aleatorio
 /*--------------------------------------------------------------*/
 function randString($length = 5)
 {
@@ -120,7 +120,9 @@ function randString($length = 5)
    $str .= $cha[mt_rand(0,strlen($cha))];
   return $str;
 }
-
+/*--------------------------------------------------------------*/
+/* Función para cambiar la fecha a español
+/*--------------------------------------------------------------*/
 function fechaCastellano ($fecha) {
   $fecha = substr($fecha, 0, 10);
   $numeroDia = date('d', strtotime($fecha));

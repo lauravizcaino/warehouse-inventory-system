@@ -1,17 +1,17 @@
 <?php
-  $page_title = 'Admin Home Page';
+  $page_title = 'Admin Home';
   require_once('includes/load.php');
-  // Checkin What level user has permission to view this page
+  // Comprobar qué nivel de usuario tiene permiso para ver esta página
    page_require_level(1);
 ?>
 <?php
- $c_categorie     = count_by_id('categories');
+ //$c_categorie     = count_by_id('categories');
  $c_product       = count_by_id('products');
- $c_sale          = count_by_id('sales');
+ //$c_sale          = count_by_id('sales');
  $c_user          = count_by_id('users');
- $products_sold   = find_higest_saleing_product('10');
- $recent_products = find_recent_product_added('5');
- $recent_sales    = find_recent_sale_added('5')
+ //$products_sold   = find_higest_saleing_product('10');
+ //$recent_products = find_recent_product_added('5');
+ //$recent_sales    = find_recent_sale_added('5')
 ?>
 <?php include_once('layouts/header.php'); ?>
 
@@ -160,18 +160,18 @@
       <?php foreach ($recent_products as  $recent_product): ?>
             <a class="list-group-item clearfix" href="edit_product.php?id=<?php echo    (int)$recent_product['id'];?>">
                 <h4 class="list-group-item-heading">
-                 <?php if($recent_product['media_id'] === '0'): ?>
+                 <!--<?php /*if($recent_product['media_id'] === '0'): */?>
                     <img class="img-avatar img-circle" src="uploads/products/no_image.jpg" alt="">
-                  <?php else: ?>
+                  <?php /*else: */?>
                   <img class="img-avatar img-circle" src="uploads/products/<?php echo $recent_product['image'];?>" alt="" />
-                <?php endif;?>
+                <?php/* endif;*/?>-->
                 <?php echo remove_junk(first_character($recent_product['name']));?>
                   <!--<span class="label label-warning pull-right">
                  $<?/*php echo (int)$recent_product['sale_price'];*/ ?>
                   </span>-->
                 </h4>
                 <span class="list-group-item-text pull-right">
-                <?php echo remove_junk(first_character($recent_product['categorie'])); ?>
+                <?php /*echo remove_junk(first_character($recent_product['categorie'])); */?>
               </span>
           </a>
       <?php endforeach; ?>
