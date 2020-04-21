@@ -11,7 +11,7 @@ class MySqli_DB {
     }
 
 /*--------------------------------------------------------------*/
-/* Function for Open database connection
+/* Función para abrir la conexión de la base de datos
 /*--------------------------------------------------------------*/
 public function db_connect()
 {
@@ -28,7 +28,7 @@ public function db_connect()
          }
 }
 /*--------------------------------------------------------------*/
-/* Function for Close database connection
+/* Función para cerrar la conexión a la base de datos
 /*--------------------------------------------------------------*/
 
 public function db_disconnect()
@@ -40,7 +40,7 @@ public function db_disconnect()
   }
 }
 /*--------------------------------------------------------------*/
-/* Function for mysqli query
+/* Función para mysqli query
 /*--------------------------------------------------------------*/
 public function query($sql)
    {
@@ -49,17 +49,15 @@ public function query($sql)
           $this->query_id = $this->con->query($sql);
       }
       if (!$this->query_id)
-        // only for Develope mode
+        
               die("Error en esta consulta:<pre> " . $sql ."</pre>");
-       // For production mode
-        //  die("Error on Query");
-
+       
        return $this->query_id;
 
    }
 
 /*--------------------------------------------------------------*/
-/* Function for Query Helper
+/* Funciones para Query
 /*--------------------------------------------------------------*/
 public function fetch_array($statement)
 {
@@ -86,14 +84,14 @@ public function affected_rows()
   return mysqli_affected_rows($this->con);
 }
 /*--------------------------------------------------------------*/
- /* Function for Remove escapes special
- /* characters in a string for use in an SQL statement
+ /* Función para Eliminar caracteres especiales en un string
+ /* para usar en una sentencia SQL
  /*--------------------------------------------------------------*/
  public function escape($str){
    return $this->con->real_escape_string($str);
  }
 /*--------------------------------------------------------------*/
-/* Function for while loop
+/* Función para lazo while 
 /*--------------------------------------------------------------*/
 public function while_loop($loop){
  global $db;

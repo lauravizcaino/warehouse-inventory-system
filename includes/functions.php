@@ -102,24 +102,13 @@ function make_date(){
   return strftime("%Y-%m-%d %H:%M:%S", time());
 }
 /*--------------------------------------------------------------*/
-/* Función para fecha y hora legible
+/* Función contador
 /*--------------------------------------------------------------*/
 function count_id(){
   static $count = 1;
   return $count++;
 }
-/*--------------------------------------------------------------*/
-/* Función para crear un string aleatorio
-/*--------------------------------------------------------------*/
-function randString($length = 5)
-{
-  $str='';
-  $cha = "0123456789abcdefghijklmnopqrstuvwxyz";
 
-  for($x=0; $x<$length; $x++)
-   $str .= $cha[mt_rand(0,strlen($cha))];
-  return $str;
-}
 /*--------------------------------------------------------------*/
 /* Función para cambiar la fecha a español
 /*--------------------------------------------------------------*/
