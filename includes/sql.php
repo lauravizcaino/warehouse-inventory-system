@@ -2,7 +2,7 @@
   require_once('includes/load.php');
 
 /*--------------------------------------------------------------*/
-/* Function for find all database table rows by table name
+/* Función para buscar todas las filas de las tabla de la base de datos por el nombre de la tabla
 /*--------------------------------------------------------------*/
 function find_all($table) {
    global $db;
@@ -12,7 +12,7 @@ function find_all($table) {
    }
 }
 /*--------------------------------------------------------------*/
-/* Function for Perform queries
+/* Función para realizar consultas
 /*--------------------------------------------------------------*/
 function find_by_sql($sql)
 {
@@ -22,7 +22,7 @@ function find_by_sql($sql)
  return $result_set;
 }
 /*--------------------------------------------------------------*/
-/*  Function for Find data from table by id
+/* Función para buscar información de una tabla por su id
 /*--------------------------------------------------------------*/
 function find_by_id($table,$id)
 {
@@ -37,7 +37,7 @@ function find_by_id($table,$id)
      }
 }
 /*--------------------------------------------------------------*/
-/* Function for Delete data from table by id
+/* Función para borrar información de una tabla por id
 /*--------------------------------------------------------------*/
 function delete_by_id($table,$id)
 {
@@ -52,7 +52,7 @@ function delete_by_id($table,$id)
    }
 }
 /*--------------------------------------------------------------*/
-/* Function for Count id  By table name
+/* Función para contar id por el nombre de la tabla
 /*--------------------------------------------------------------*/
 
 function count_by_id($table){
@@ -65,7 +65,7 @@ function count_by_id($table){
   }
 }
 /*--------------------------------------------------------------*/
-/* Determine if database table exists
+/* Determinar si la tabla existe
 /*--------------------------------------------------------------*/
 function tableExists($table){
   global $db;
@@ -78,8 +78,8 @@ function tableExists($table){
       }
   }
  /*--------------------------------------------------------------*/
- /* Login with the data provided in $_POST,
- /* coming from the login form.
+ /* Iniciar sesión con los datos proporcionados en $ _POST,
+ /* provenientes del formulario de inicio de sesión.
 /*--------------------------------------------------------------*/
   function authenticate($username='', $password='') {
     global $db;
@@ -119,7 +119,7 @@ function tableExists($table){
 
 
   /*--------------------------------------------------------------*/
-  /* Find current log in user by session id
+  /*Encuentra el registro actual en user por id de session
   /*--------------------------------------------------------------*/
   function current_user(){
       static $current_user;
@@ -133,13 +133,13 @@ function tableExists($table){
     return $current_user;
   }
   /*--------------------------------------------------------------*/
-  /* Find all user by
-  /* Joining users table and user gropus table
+  /* Buscar todos los usuarios 
+  /* uniendo la tabla de usuarios y la tabla de grupos de usuarios
   /*--------------------------------------------------------------*/
   function find_all_user(){
       global $db;
       $results = array();
-      $sql = "SELECT u.id,u.name,u.username,u.user_level,u.status,u.last_login,";
+      $sql = "SELECT u.id,u.name,u.username,u.user_level,u.status,";
       $sql .="g.group_name ";
       $sql .="FROM users u ";
       $sql .="LEFT JOIN user_groups g ";
@@ -151,17 +151,17 @@ function tableExists($table){
   /* Function to update the last log in of a user
   /*--------------------------------------------------------------*/
 
- function updateLastLogIn($user_id)
+ /*function updateLastLogIn($user_id)
 	{
 		global $db;
     $date = make_date();
     $sql = "UPDATE users SET last_login='{$date}' WHERE id ='{$user_id}' LIMIT 1";
     $result = $db->query($sql);
     return ($result && $db->affected_rows() === 1 ? true : false);
-	}
+	}*/
 
   /*--------------------------------------------------------------*/
-  /* Find all Group name
+  /* Encontrar todos los nombres del grupo
   /*--------------------------------------------------------------*/
   function find_by_groupName($val)
   {
@@ -171,7 +171,7 @@ function tableExists($table){
     return($db->num_rows($result) === 0 ? true : false);
   }
   /*--------------------------------------------------------------*/
-  /* Find group level
+  /* Encontar el nivel de grupo
   /*--------------------------------------------------------------*/
   function find_by_groupLevel($level)
   {
@@ -181,17 +181,17 @@ function tableExists($table){
     return($db->num_rows($result) === 0 ? true : false);
   }
   /*--------------------------------------------------------------*/
-  /* Function for cheaking which user level has access to page
+  /* Función para verificar qué nivel de usuario tiene acceso a la página
   /*--------------------------------------------------------------*/
    function page_require_level($require_level){
      global $session;
      $current_user = current_user();
      $login_level = find_by_groupLevel($current_user['user_level']);
-     //if user not login
+     //Si el usuario no está logeado
      if (!$session->isUserLoggedIn(true)):
             $session->msg('d','Por favor ingrese...');
             redirect('index.php', false);
-      //if Group status Deactive
+      //Si el estado es inactivo
      elseif($login_level['group_status'] === '0'):
            $session->msg('d','¡Este nivel de usuario ha sido prohibido!!');
            redirect('home.php',false);
@@ -205,18 +205,12 @@ function tableExists($table){
 
      }
    /*--------------------------------------------------------------*/
-   /* Function for Finding all product name
-   /* JOIN with categorie  and media database table
+   /* Función para encontrar todos los nombres de la tabla products
    /*--------------------------------------------------------------*/
-  function join_product_table(){
+  /*function join_product_table(){
      global $db;
      $sql  =" SELECT p.`id`,
-     p.`name`,
-     p.`quantity`,
-     p.`buy_price`,
-     p.`sale_price`,
-     p.`categorie_id`,
-     p.`media_id`,
+     p.`name`,    
      p.`date`,
      p.`codigo_nfc`,
      p.`serial`,
@@ -232,15 +226,15 @@ function tableExists($table){
      p.`estado`,
      p.`caracteristica`,
      p.`tipo`,";
-    $sql  .=" c.name AS categorie,m.file_name AS image";
+    $sql  .=" c.name AS categorie,m.file_name AS image";*/
     /*$sql  .=" AS categorie,m.file_name AS image";*/
-    $sql  .=" FROM products p";
+    /*$sql  .=" FROM products p";
     $sql  .=" LEFT JOIN categories c ON c.id = p.categorie_id";
     $sql  .=" LEFT JOIN media m ON m.id = p.media_id";
     $sql  .=" ORDER BY p.id ASC";
-    return find_by_sql($sql);
+    return find_by_sql($sql);*/
 
-   }
+   }*/
   /*--------------------------------------------------------------*/
   /* Function for Finding all product name
   /* Request coming from ajax.php for auto suggest
