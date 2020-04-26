@@ -1,7 +1,7 @@
 <?php
   $page_title = 'Grupos';
   require_once('includes/load.php');
-  // Checkin What level user has permission to view this page
+  // Comprobar qué nivel de usuario tiene permiso para ver esta página
    page_require_level(1);
   $all_groups = find_all('user_groups');
 ?>

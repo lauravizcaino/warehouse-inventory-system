@@ -1,7 +1,7 @@
 <?php
   $page_title = 'Inventario';
   require_once('includes/load.php');
-  // Checkin What level user has permission to view this page
+  // Comprobar qué nivel de usuario tiene permiso para ver esta página
    page_require_level(2);
   $products = join_product_table();
 ?>
@@ -22,13 +22,8 @@
             <thead>
               <tr>
                 <th class="text-center" style="width: 50px;">#</th>
-                <!--<th> Photo</th>-->
                 <th class="text-center" style="width: 10%;"> Nombre</th>
                 <th class="text-center" style="width: 10%;"> Tipo de bien </th>
-                <!--<th class="text-center" style="width: 10%;"> Instock </th>
-                <th class="text-center" style="width: 10%;"> Buying Price </th>
-                <th class="text-center" style="width: 10%;"> Saleing Price </th>
-                <th class="text-center" style="width: 10%;"> Product Added </th>-->
                 <th class="text-center" style="width: 10%;"> Código NFC </th>
                 <th class="text-center" style="width: 10%;"> Serial </th>
                 <th class="text-center" style="width: 10%;"> Código Inventario </th>
@@ -49,13 +44,7 @@
               <tr>
                 <td class="text-center"><?php echo count_id(); ?></td>
                 
-                <td class="text-center"> <?php echo remove_junk($product['name']); ?></td>
-                <!--<td class="text-center"> <?php/* echo remove_junk($product['categorie']);*/ ?></td>
-                <td class="text-center"> <?php /*echo remove_junk($product['quantity']);*/ ?></td>
-                <td class="text-center"> <?php /*echo remove_junk($product['buy_price']); */?></td>
-                <td class="text-center"> <?php /*echo remove_junk($product['sale_price']);*/ ?></td>
-                <td class="text-center"> <?php /*echo read_date($product['date']); */?></td>
-                -->
+                <td class="text-center"> <?php echo remove_junk($product['name']); ?></td>               
                 <td class="text-center"> <?php echo remove_junk($product['tipo']); ?></td>
                 <td class="text-center"> <?php echo remove_junk($product['codigo_nfc']); ?></td>
                 <td class="text-center"> <?php echo remove_junk($product['serial']); ?></td>

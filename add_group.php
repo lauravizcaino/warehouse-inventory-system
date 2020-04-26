@@ -1,20 +1,21 @@
 <?php
   $page_title = 'Añadir grupo';
   require_once('includes/load.php');
-  // Checkin What level user has permission to view this page
+  // Comprobar qué nivel de usuario tiene permiso para ver esta página
    page_require_level(1);
 ?>
 <?php
   if(isset($_POST['add'])){
 
    $req_fields = array('group-name','group-level');
-   validate_fields($req_fields);
+   validate_fields($req_fields);  // Comprobar qué nivel de usuario tiene permiso para ver esta página
+
 
    if(find_by_groupName($_POST['group-name']) === false ){
      $session->msg('d','El nombre del grupo ingresado ya está en la base de datos!');
      redirect('add_group.php', false);
    }elseif(find_by_groupLevel($_POST['group-level']) === false) {
-     $session->msg('d','El nombre del grupo ingresado ya está en la base de datos!');
+     $session->msg('d','El nivel del grupo ingresado ya está en la base de datos!');
      redirect('add_group.php', false);
    }
    if(empty($errors)){
@@ -27,12 +28,10 @@
         $query .=") VALUES (";
         $query .=" '{$name}', '{$level}','{$status}'";
         $query .=")";
-        if($db->query($query)){
-          //sucess
+        if($db->query($query)){          
           $session->msg('s',"El grupo ha sido creado ");
           redirect('add_group.php', false);
-        } else {
-          //failed
+        } else {         
           $session->msg('d',' No se pudo crear el grupo.');
           redirect('add_group.php', false);
         }

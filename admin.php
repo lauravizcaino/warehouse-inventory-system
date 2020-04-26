@@ -1,5 +1,5 @@
 <?php
-  $page_title = 'Admin Home';
+  $page_title = 'Administrador Home';
   require_once('includes/load.php');
   // Comprobar qué nivel de usuario tiene permiso para ver esta página
    page_require_level(1);
