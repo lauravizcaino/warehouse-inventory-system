@@ -10,10 +10,10 @@
     $req_fields = array('name','username' );
     validate_fields($req_fields);
     if(empty($errors)){
-             $id = (int)$_SESSION['user_id'];
-           $name = remove_junk($db->escape($_POST['name']));
-           $username = remove_junk($db->escape($_POST['username']));
-            $sql = "UPDATE users SET name ='{$name}', username ='{$username}' WHERE id='{$id}'";
+          $id = (int)$_SESSION['user_id'];
+          $name = remove_junk($db->escape($_POST['name']));
+          $username = remove_junk($db->escape($_POST['username']));
+          $sql = "UPDATE users SET name ='{$name}', username ='{$username}' WHERE id='{$id}'";
           $result = $db->query($sql);
           if($result && $db->affected_rows() === 1){
             $session->msg('s',"Cuenta actualizada");

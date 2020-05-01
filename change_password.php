@@ -17,11 +17,10 @@
                $session->msg('d', "Su contraseña anterior no coincide");
                redirect('change_password.php',false);
              }
-
-            $id = (int)$_POST['id'];
-            $new = remove_junk($db->escape(sha1($_POST['new-password'])));
-            $sql = "UPDATE users SET password ='{$new}' WHERE id='{$db->escape($id)}'";
-            $result = $db->query($sql);
+              $id = (int)$_POST['id'];
+              $new = remove_junk($db->escape(sha1($_POST['new-password'])));
+              $sql = "UPDATE users SET password ='{$new}' WHERE id='{$db->escape($id)}'";
+              $result = $db->query($sql);
                 if($result && $db->affected_rows() === 1):
                   $session->logout();
                   $session->msg('s',"Inicie sesión con su nueva contraseña.");
