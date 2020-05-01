@@ -226,11 +226,11 @@ function tableExists($table){
      p.`estado`,
      p.`caracteristica`,
      p.`tipo`,";
-    /*$sql  .=" c.name AS categorie,m.file_name AS image";*/
+    $sql  .=" c.name AS categorie,m.file_name AS image";
     /*$sql  .=" AS categorie,m.file_name AS image";esta no*/
     $sql  .=" FROM products p";
-    /*$sql  .=" LEFT JOIN categories c ON c.id = p.categorie_id";
-    $sql  .=" LEFT JOIN media m ON m.id = p.media_id";*/
+    $sql  .=" LEFT JOIN categories c ON c.id = p.categorie_id";
+    $sql  .=" LEFT JOIN media m ON m.id = p.media_id";
     $sql  .=" ORDER BY p.id ASC";
     return find_by_sql($sql);
 
