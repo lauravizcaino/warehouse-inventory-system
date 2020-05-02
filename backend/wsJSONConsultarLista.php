@@ -15,6 +15,6 @@ $json=array();
 			$json['products'][]=$registro;
 		}
 		mysqli_close($conexion);
-		echo json_encode($json, JSON_FORCE_OBJECT);
+		echo json_encode($json);
 ?>
 
