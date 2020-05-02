@@ -22,12 +22,12 @@
 			$marca=$_GET['marca'];
 			$procesador=$_GET['procesador'];
 			$estado=$_GET['estado'];
-			$caracteristicas=$_GET['caracteristicas'];
+			$caracteristica=$_GET['caracteristica'];
 			$tipo=$_GET['tipo'];			
 
 			$conexion=new mysqli($hostname_localhost,$username_localhost,$password_localhost,$database_localhost);
 			
-			$insert="INSERT INTO products(name, codigo_nfc, serial, fecha_garantia, codigo_inventario, custodio, fecha_ingreso, ubicacion,fecha_ultimo_mantenimiento,fecha_compra, marca , procesador, estado, caracteristicas,tipo) VALUES ('{$name}',{$codigo_nfc},'{$serial}','{$fecha_garantia}','{$codigo_inventario}','{$custodio}','{$fecha_ingreso}','{$ubicacion}','{$fecha_ultimo_mantenimiento}','{$fecha_compra}','{$marca}','{$procesador}','{$estado}','{$caracteristicas}','{$tipo}') ON DUPLICATE KEY UPDATE codigo_nfc={$codigo_nfc}";
+			$insert="INSERT INTO products(name, codigo_nfc, serial, fecha_garantia, codigo_inventario, custodio, fecha_ingreso, ubicacion,fecha_ultimo_mantenimiento,fecha_compra, marca , procesador, estado, caracteristica,tipo) VALUES ('{$name}',{$codigo_nfc},'{$serial}','{$fecha_garantia}','{$codigo_inventario}','{$custodio}','{$fecha_ingreso}','{$ubicacion}','{$fecha_ultimo_mantenimiento}','{$fecha_compra}','{$marca}','{$procesador}','{$estado}','{$caracteristica}','{$tipo}') ON DUPLICATE KEY UPDATE codigo_nfc={$codigo_nfc}";
 	
 			if($conexion->query($insert)===TRUE){
 			
