@@ -1,8 +1,8 @@
 <?PHP
 $hostname_localhost ="localhost";
 $database_localhost ="inventario";
-$username_localhost ="root";
-$password_localhost ="";
+$username_localhost ="laura";
+$password_localhost ="flor.123";
 
 $json=array();
 				
@@ -13,7 +13,6 @@ $json=array();
 		
 		while($registro=mysqli_fetch_array($resultado)){
 			$json['products'][]=$registro;
-			//echo $registro['id'].' - '.$registro['nombre'].'<br/>';
 		}
 		mysqli_close($conexion);
 		echo json_encode($json);

@@ -1,8 +1,8 @@
 <?PHP
 $hostname_localhost ="localhost";
 $database_localhost ="inventario";
-$username_localhost ="root";
-$password_localhost ="";
+$username_localhost ="laura";
+$password_localhost ="flor.123";
 
 $json=array();
 
@@ -15,12 +15,11 @@ $json=array();
 		$resultado=mysqli_query($conexion,$consulta);
 			
 		if($registro=mysqli_fetch_array($resultado)){
-			$json['products'][]=$registro;
-		//	echo $registro['id'].' - '.$registro['nombre'].' - '.$registro['profesion'].'<br/>';
+			$json['products'][]=$registro;		
 		}else{
-			$resultar["documento"]=0;
-			$resultar["nombre"]='no registra';
-			$json['usuario'][]=$resultar;
+			$resultar["codigo_nfc"]=0;
+			$resultar["name"]='no registra';
+			$json['products'][]=$resultar;
 		}
 		
 		mysqli_close($conexion);
@@ -29,7 +28,7 @@ $json=array();
 	else{
 		$resultar["success"]=0;
 		$resultar["message"]='Ws no Retorna';
-		$json['usuario'][]=$resultar;
+		$json['products'][]=$resultar;
 		echo json_encode($json);
 	}
 ?>
