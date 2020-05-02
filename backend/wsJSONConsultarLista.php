@@ -1,5 +1,5 @@
 <?PHP
-default_charset = "utf-8";
+
 $hostname_localhost ="localhost";
 $database_localhost ="inventario";
 $username_localhost ="laura";
@@ -16,6 +16,6 @@ $json=array();
 			$json['products'][]=$registro;
 		}
 		mysqli_close($conexion);
-		echo json_encode($json);
+		echo json_encode($json,JSON_UNESCAPED_UNICODE);
 ?>
 
