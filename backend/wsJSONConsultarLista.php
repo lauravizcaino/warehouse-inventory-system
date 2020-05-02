@@ -1,5 +1,5 @@
 <?PHP
-default_charset = "utf-8"
+default_charset = "utf-8";
 $hostname_localhost ="localhost";
 $database_localhost ="inventario";
 $username_localhost ="laura";
