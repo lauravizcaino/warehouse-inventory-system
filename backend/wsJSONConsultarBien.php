@@ -4,7 +4,7 @@ $database_localhost ="inventario";
 $username_localhost ="laura";
 $password_localhost ="flor.123";
 
-
+$json=array();
 
 	if(isset($_GET["codigo_nfc"])){
 		$codigo_nfc=$_GET["codigo_nfc"];
