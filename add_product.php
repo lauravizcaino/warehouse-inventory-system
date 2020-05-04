@@ -9,13 +9,13 @@
 <?php
  if(isset($_POST['add_product'])){
    
-   //$req_fields = array('product-title','tipo','serial', 'codigo_inventario', 'custodio', 'ubicacion', 'fecha_ingreso', 'fecha_compra', 'fecha_ultimo_mantenimiento', 'fecha_garantia', 'marca','procesador' );
-   //validate_fields($req_fields);
-   //if(empty($errors)){
+   $req_fields = array('product-title','tipo','serial', 'codigo_inventario', 'custodio', 'ubicacion', 'fecha_ingreso', 'fecha_compra', 'fecha_ultimo_mantenimiento', 'fecha_garantia', 'marca','procesador' );
+   validate_fields($req_fields);
+   if(empty($errors)){
      $p_name  = remove_junk($db->escape($_POST['product-title']));
      $p_tipo   = remove_junk($db->escape($_POST['tipo']));
      //$p_nfc   = remove_junk($db->escape($_POST['codigo_nfc']));
-     $p_ser   = (!empty($_POST['serial'])) ? $_POST['serial'] : $_POST['NULL'];
+     $p_ser   = remove_junk($db->escape($_POST['serial']));
      $p_cod   = remove_junk($db->escape($_POST['codigo_inventario']));
      $p_cus   = remove_junk($db->escape($_POST['custodio']));
      $p_ubi   = remove_junk($db->escape($_POST['ubicacion']));
@@ -32,7 +32,7 @@
      $query  = "INSERT INTO products (";     
      $query .=" name,tipo,serial,codigo_inventario,custodio,ubicacion,fecha_ingreso,fecha_compra,fecha_ultimo_mantenimiento,fecha_garantia,marca,procesador,estado,caracteristica";
      $query .=") VALUES (";
-     $query .=" '{$p_name}', '{$p_tipo}', ? , '{$p_cod}', '{$p_cus}', '{$p_ubi}',{$p_ing},{$p_com}, {$p_man}, {$p_gar}, '{$p_mar}','{$p_pro}','{$p_est}','{$p_car}'";
+     $query .=" '{$p_name}', '{$p_tipo}','{$p_ser}', '{$p_cod}', '{$p_cus}', '{$p_ubi}',{$p_ing},{$p_com}, {$p_man}, {$p_gar}, '{$p_mar}','{$p_pro}','{$p_est}','{$p_car}'";
      $query .=")";
      $query .=" ON DUPLICATE KEY UPDATE name='{$p_name}'";
      if($db->query($query)){
@@ -43,10 +43,10 @@
        redirect('product.php', false);
      }
 
-   //} else{
-     //$session->msg("d", $errors);
-     //redirect('add_product.php',false);
-   //}
+   } else{
+     $session->msg("d", $errors);
+     redirect('add_product.php',false);
+   }
 
  }
 
@@ -64,6 +64,7 @@
           <strong>
             <span class="glyphicon glyphicon-th"></span>
             <span>Añadir nuevo bien</span>
+            <span>Se deben completar todos los campos. En los campos donde no haya información completar con - </span>
          </strong>
         </div>
         <div class="panel-body">
@@ -138,7 +139,7 @@
                     <div class="form-group">
                       <label for="qty">Fecha de ingreso</label>
                       <div class="input-group">
-                        <input type="date" class="form-control" name="fecha_ingreso" placeholder="Fecha de ingreso">                      
+                        <input type="text" class="form-control" name="fecha_ingreso" placeholder="Fecha de ingreso">                      
                       </div>
                     </div>
                   </div>
@@ -148,7 +149,7 @@
                     <div class="form-group">
                       <label for="qty">Fecha de la compra</label>
                       <div class="input-group">                     
-                        <input type="date" class="form-control" name="fecha_compra" placeholder="Fecha de la compra">                      
+                        <input type="text" class="form-control" name="fecha_compra" placeholder="Fecha de la compra">                      
                       </div>
                     </div>
                   </div>
@@ -157,7 +158,7 @@
                     <div class="form-group">
                       <label for="qty">Fecha del último mantenimiento</label>
                       <div class="input-group">                      
-                        <input type="date" class="form-control" name="fecha_ultimo_mantenimiento" placeholder="Fecha del último mantenimiento">                      
+                        <input type="text" class="form-control" name="fecha_ultimo_mantenimiento" placeholder="Fecha del último mantenimiento">                      
                       </div>
                     </div>
                   </div>
@@ -166,7 +167,7 @@
                     <div class="form-group">
                       <label for="qty">Fecha de la garantía</label>
                       <div class="input-group">                      
-                        <input type="date" class="form-control" name="fecha_garantia" placeholder="Fecha de la garantía">                      
+                        <input type="text" class="form-control" name="fecha_garantia" placeholder="Fecha de la garantía">                      
                       </div>
                     </div>
                   </div>

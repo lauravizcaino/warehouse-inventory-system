@@ -32,11 +32,13 @@ if(!$product){
        $p_gar   = remove_junk($db->escape($_POST['fecha_garantia']));
        $p_mar   = remove_junk($db->escape($_POST['marca']));
        $p_pro   = remove_junk($db->escape($_POST['procesador']));
-       
+       $p_est   = remove_junk($db->escape($_POST['estado']));
+       $p_car   = remove_junk($db->escape($_POST['caracteristica']));
+
        $query   = "UPDATE products SET";
        /*$query  .=" name ='{$p_name}', quantity ='{$p_qty}',";
        $query  .=" buy_price ='{$p_buy}', sale_price ='{$p_sale}', categorie_id ='{$p_cat}',media_id='{$media_id}'";*/
-       $query   .= " name ='{$p_name}', tipo ='{$p_tipo}', serial='{$p_ser}', codigo_inventario='{$p_cod}', custodio='{$p_cus}', ubicacion='{$p_ubi}', fecha_ingreso='{$p_ing}', fecha_compra='{$p_com}', fecha_ultimo_mantenimiento='{$p_man}', fecha_garantia='{$p_gar}', marca='{$p_mar}', procesador='{$p_pro}'";
+       $query   .= " name ='{$p_name}', tipo ='{$p_tipo}', serial='{$p_ser}', codigo_inventario='{$p_cod}', custodio='{$p_cus}', ubicacion='{$p_ubi}', fecha_ingreso='{$p_ing}', fecha_compra='{$p_com}', fecha_ultimo_mantenimiento='{$p_man}', fecha_garantia='{$p_gar}', marca='{$p_mar}', procesador='{$p_pro}',estado='{$p_est}',caracteristica='{$p_car}'";
        $query  .=" WHERE id ='{$product['id']}'";
        $result = $db->query($query);
                if($result && $db->affected_rows() === 1){
@@ -176,6 +178,22 @@ if(!$product){
                       <label for="qty">Procesador</label>
                       <div class="input-group">
                         <input type="text" class="form-control" name="procesador" value="<?php echo remove_junk($product['procesador']); ?>">
+                      </div>
+                    </div>
+                 </div>
+                 <div class="col-md-6">
+                    <div class="form-group">
+                      <label for="qty">Estado</label>
+                      <div class="input-group">
+                        <input type="text" class="form-control" name="estado" value="<?php echo remove_junk($product['estado']); ?>">
+                      </div>
+                    </div>
+                 </div>
+                 <div class="col-md-6">
+                    <div class="form-group">
+                      <label for="qty">Características</label>
+                      <div class="input-group">
+                        <input type="text" class="form-control" name="caraceristica" value="<?php echo remove_junk($product['caracteristica']); ?>">
                       </div>
                     </div>
                  </div>
