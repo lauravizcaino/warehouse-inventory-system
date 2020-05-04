@@ -9,7 +9,7 @@
 <?php
  if(isset($_POST['add_product'])){
    
-   $req_fields = array('product-title','tipo','serial', 'codigo_inventario', 'custodio', 'ubicacion', 'fecha_ingreso', 'fecha_compra', 'fecha_ultimo_mantenimiento', 'fecha_garantia', 'marca','procesador','estado','caracteristica' );
+   $req_fields = array('product-title','tipo', 'codigo_inventario', 'custodio', 'ubicacion', 'fecha_ingreso', 'fecha_compra', 'fecha_ultimo_mantenimiento', 'fecha_garantia', 'marca','procesador','estado','caracteristica' );
    validate_fields($req_fields);
    if(empty($errors)){
      $p_name  = remove_junk($db->escape($_POST['product-title']));
