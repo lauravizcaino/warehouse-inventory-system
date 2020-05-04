@@ -25,12 +25,14 @@
      $p_gar   = remove_junk($db->escape($_POST['fecha_garantia']));
      $p_mar   = remove_junk($db->escape($_POST['marca']));
      $p_pro   = remove_junk($db->escape($_POST['procesador']));
+     $p_est   = remove_junk($db->escape($_POST['estado']));
+     $p_car   = remove_junk($db->escape($_POST['caracteristica']));
      
      $date    = make_date();
      $query  = "INSERT INTO products (";     
-     $query .=" name,tipo,serial,codigo_inventario,custodio,ubicacion,fecha_ingreso,fecha_compra,fecha_ultimo_mantenimiento,fecha_garantia,marca,procesador";
+     $query .=" name,tipo,serial,codigo_inventario,custodio,ubicacion,fecha_ingreso,fecha_compra,fecha_ultimo_mantenimiento,fecha_garantia,marca,procesador,estado,caracteristica";
      $query .=") VALUES (";
-     $query .=" '{$p_name}', '{$p_tipo}',  '{$p_ser}', '{$p_cod}', '{$p_cus}', '{$p_ubi}','{$p_ing}','{$p_com}', '{$p_man}', '{$p_gar}', '{$p_mar}','{$p_pro}'";
+     $query .=" '{$p_name}', '{$p_tipo}',  '{$p_ser}', '{$p_cod}', '{$p_cus}', '{$p_ubi}','{$p_ing}','{$p_com}', '{$p_man}', '{$p_gar}', '{$p_mar}','{$p_pro}','{$p_est},'{$p_car}";
      $query .=")";
      $query .=" ON DUPLICATE KEY UPDATE name='{$p_name}'";
      if($db->query($query)){
@@ -176,8 +178,7 @@
                         <input type="text" class="form-control" name="marca" placeholder="Marca">                      
                       </div>
                     </div>
-                  </div>
-                   
+                  </div>                   
                 
                   <div class="col-md-6">
                     <div class="form-group">
@@ -187,6 +188,25 @@
                       </div>
                     </div>
                   </div>
+
+                  <div class="col-md-6">
+                    <div class="form-group">
+                      <label for="qty">Estado</label>
+                      <div class="input-group">                      
+                        <input type="text" class="form-control" name="estado" placeholder="Estado">                      
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="col-md-6">
+                    <div class="form-group">
+                      <label for="qty">Características</label>
+                      <div class="input-group">                      
+                        <input type="text" class="form-control" name="caracteristica" placeholder="Características">                      
+                      </div>
+                    </div>
+                  </div>
+
                 </div>
                
               </div>

@@ -35,6 +35,8 @@
                 <th class="text-center" style="width: 10%;"> Fecha de garantía </th>
                 <th class="text-center" style="width: 10%;"> Marca </th>
                 <th class="text-center" style="width: 10%;"> Procesador </th>
+                <th class="text-center" style="width: 10%;"> Estado </th>
+                <th class="text-center" style="width: 10%;"> Características </th>
                 <th class="text-center" style="width: 100px;"> Acciones </th>               
 
               </tr>
@@ -57,6 +59,8 @@
                 <td class="text-center"> <?php echo read_date($product['fecha_garantia']); ?></td>
                 <td class="text-center"> <?php echo remove_junk($product['marca']); ?></td>
                 <td class="text-center"> <?php echo remove_junk($product['procesador']); ?></td>
+                <td class="text-center"> <?php echo remove_junk($product['estado']); ?></td>
+                <td class="text-center"> <?php echo remove_junk($product['caracteristica']); ?></td>
                 
                 <td class="text-center">
                   <div class="btn-group">

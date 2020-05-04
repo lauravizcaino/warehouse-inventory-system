@@ -225,7 +225,9 @@ function tableExists($table){
      p.`procesador`,
      p.`estado`,
      p.`caracteristica`,
-     p.`tipo`,";
+     p.`tipo`,
+     p.`estado`,
+     p.`caracteristica`,";
     $sql  .=" c.name AS categorie,m.file_name AS image";
     /*$sql  .=" AS categorie,m.file_name AS image";esta no*/
     $sql  .=" FROM products p";
