@@ -15,7 +15,12 @@
      $p_name  = remove_junk($db->escape($_POST['product-title']));
      $p_tipo   = remove_junk($db->escape($_POST['tipo']));
      //$p_nfc   = remove_junk($db->escape($_POST['codigo_nfc']));
-     $p_ser   = remove_junk($db->escape($_POST['serial']));
+     //$p_ser   = remove_junk($db->escape($_POST['serial']));
+     if (is_null($_POST['serial']) || $_POST['serial'] === "") {
+       $p_ser = '0';
+     } else {
+       $p_ser= remove_junk($db->escape($_POST['serial']));
+     }
      $p_cod   = remove_junk($db->escape($_POST['codigo_inventario']));
      $p_cus   = remove_junk($db->escape($_POST['custodio']));
      $p_ubi   = remove_junk($db->escape($_POST['ubicacion']));
