@@ -15,7 +15,7 @@
      $p_name  = remove_junk($db->escape($_POST['product-title']));
      $p_tipo   = remove_junk($db->escape($_POST['tipo']));
      //$p_nfc   = remove_junk($db->escape($_POST['codigo_nfc']));
-     $p_ser   = remove_junk($db->escape($_POST['serial']));
+     $p_ser   = remove_junk($db->escape(!empty($_POST['serial']))) ? $_POST['serial'] : NULL;
      $p_cod   = remove_junk($db->escape($_POST['codigo_inventario']));
      $p_cus   = remove_junk($db->escape($_POST['custodio']));
      $p_ubi   = remove_junk($db->escape($_POST['ubicacion']));
@@ -32,7 +32,7 @@
      $query  = "INSERT INTO products (";     
      $query .=" name,tipo,serial,codigo_inventario,custodio,ubicacion,fecha_ingreso,fecha_compra,fecha_ultimo_mantenimiento,fecha_garantia,marca,procesador,estado,caracteristica";
      $query .=") VALUES (";
-     $query .=" '{$p_name}', '{$p_tipo}','.(is_null($p_ser) ? 'NULL' : $p_ser).', '{$p_cod}', '{$p_cus}', '{$p_ubi}',{$p_ing},{$p_com}, {$p_man}, {$p_gar}, '{$p_mar}','{$p_pro}','{$p_est}','{$p_car}'";
+     $query .=" '{$p_name}', '{$p_tipo}','{$p_ser}', '{$p_cod}', '{$p_cus}', '{$p_ubi}',{$p_ing},{$p_com}, {$p_man}, {$p_gar}, '{$p_mar}','{$p_pro}','{$p_est}','{$p_car}'";
      $query .=")";
      $query .=" ON DUPLICATE KEY UPDATE name='{$p_name}'";
      if($db->query($query)){
