@@ -15,7 +15,6 @@ if(!$product){
 ?>
 <?php
  if(isset($_POST['product'])){
-    /*$req_fields = array('product-title','product-categorie','product-quantity','buying-price', 'saleing-price' );*/
     $req_fields = array('product-title','tipo','serial', 'codigo_inventario', 'custodio', 'ubicacion', 'fecha_ingreso', 'fecha_compra', 'fecha_ultimo_mantenimiento', 'fecha_garantia', 'marca','procesador' );
     validate_fields($req_fields);
 
@@ -81,21 +80,7 @@ if(!$product){
                   <input type="text" class="form-control" name="product-title" value="<?php echo remove_junk($product['name']);?>">
                </div>
               </div>
-              <!--<div class="form-group">
-                <div class="row">
-                  <div class="col-md-6">
-                    <select class="form-control" name="product-categorie">
-                      <option value="">Seleccione el tipo de bien</option>
-                      <?php /* foreach ($all_categories as $cat):*/ ?>
-                      <option value="<?php /*echo (int)$cat['id']; ?>" <?php if($product['categorie_id'] === $cat['id']): echo "selected"; endif;*/ ?> >
-                      <?php /*echo remove_junk($cat['name']);*/ ?></option>
-                      <?php /*endforeach;*/ ?>
-                    </select>
-                  </div>
-                  
-                </div>
-              </div>-->
-
+            
               <div class="form-group">
                <div class="row row-cols-2">
                  <div class="col-md-6">

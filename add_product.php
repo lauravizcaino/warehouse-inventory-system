@@ -9,9 +9,9 @@
 <?php
  if(isset($_POST['add_product'])){
    
-   $req_fields = array('product-title','tipo','serial', 'codigo_inventario', 'custodio', 'ubicacion', 'fecha_ingreso', 'fecha_compra', 'fecha_ultimo_mantenimiento', 'fecha_garantia', 'marca','procesador' );
-   validate_fields($req_fields);
-   if(empty($errors)){
+   //$req_fields = array('product-title','tipo','serial', 'codigo_inventario', 'custodio', 'ubicacion', 'fecha_ingreso', 'fecha_compra', 'fecha_ultimo_mantenimiento', 'fecha_garantia', 'marca','procesador' );
+   //validate_fields($req_fields);
+   //if(empty($errors)){
      $p_name  = remove_junk($db->escape($_POST['product-title']));
      $p_tipo   = remove_junk($db->escape($_POST['tipo']));
      //$p_nfc   = remove_junk($db->escape($_POST['codigo_nfc']));
@@ -41,12 +41,12 @@
        redirect('product.php', false);
      }
 
-   } else{
-     $session->msg("d", $errors);
-     redirect('add_product.php',false);
-   }
+   //} else{
+     //$session->msg("d", $errors);
+     //redirect('add_product.php',false);
+   //}
 
- }
+ //}
 
 ?>
 <?php include_once('layouts/header.php'); ?>
@@ -100,7 +100,7 @@
                     <div class="form-group">
                       <label for="qty">Serial</label>
                       <div class="input-group">                     
-                        <input type="number" class="form-control" name="serial" placeholder="Número de serial">                      
+                        <input type="text" class="form-control" name="serial" placeholder="Número de serial">                      
                       </div>
                     </div>
                   </div>
@@ -109,7 +109,7 @@
                     <div class="form-group">
                       <label for="qty">Código de Inventario</label>
                       <div class="input-group">                      
-                        <input type="number" class="form-control" name="codigo_inventario" placeholder="Codigo de inventario">                      
+                        <input type="text" class="form-control" name="codigo_inventario" placeholder="Codigo de inventario">                      
                       </div>
                     </div>  
                   </div>
