@@ -61,7 +61,7 @@ if(!$product){
 <div class="row">
   <div class="col-md-12">
     <?php echo display_msg($msg); ?>
-  </div>
+  </div> 
 </div>
   <div class="row">
       <div class="panel panel-default">
@@ -69,6 +69,8 @@ if(!$product){
           <strong>
             <span class="glyphicon glyphicon-th"></span>
             <span>Editar</span>
+            <br>
+            <span>Se deben completar todos los campos. En los campos donde no haya información completar con - </span>
          </strong>
         </div>
         <div class="panel-body">
