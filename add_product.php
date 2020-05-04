@@ -64,6 +64,7 @@
           <strong>
             <span class="glyphicon glyphicon-th"></span>
             <span>Añadir nuevo bien</span>
+            <br>
             <span>Se deben completar todos los campos. En los campos donde no haya información completar con - </span>
          </strong>
         </div>
