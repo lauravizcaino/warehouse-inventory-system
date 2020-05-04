@@ -3,7 +3,7 @@
   require_once('includes/load.php');
   // Comprobar qué nivel de usuario tiene permiso para ver esta página
   page_require_level(2);
-  $all_categories = find_all('categories');
+  //$all_categories = find_all('categories');
   $all_users=find_all('users');
 ?>
 <?php
@@ -46,7 +46,7 @@
      //redirect('add_product.php',false);
    //}
 
- //}
+ }
 
 ?>
 <?php include_once('layouts/header.php'); ?>
