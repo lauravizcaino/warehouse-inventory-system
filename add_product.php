@@ -140,7 +140,7 @@
                     <div class="form-group">
                       <label for="qty">Fecha de ingreso</label>
                       <div class="input-group">
-                        <input type="text" class="form-control" name="fecha_ingreso" placeholder="aaaa-mm-dd">                      
+                        <input type="date" class="form-control" name="fecha_ingreso" placeholder="aaaa-mm-dd">                      
                       </div>
                     </div>
                   </div>
