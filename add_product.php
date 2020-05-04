@@ -32,7 +32,7 @@
      $query  = "INSERT INTO products (";     
      $query .=" name,tipo,serial,codigo_inventario,custodio,ubicacion,fecha_ingreso,fecha_compra,fecha_ultimo_mantenimiento,fecha_garantia,marca,procesador,estado,caracteristica";
      $query .=") VALUES (";
-     $query .=" '{$p_name}', '{$p_tipo}','{$p_ser}', '{$p_cod}', '{$p_cus}', '{$p_ubi}',{$p_ing},{$p_com}, {$p_man}, {$p_gar}, '{$p_mar}','{$p_pro}','{$p_est}','{$p_car}'";
+     $query .=" '{$p_name}', '{$p_tipo}', ? , '{$p_cod}', '{$p_cus}', '{$p_ubi}',{$p_ing},{$p_com}, {$p_man}, {$p_gar}, '{$p_mar}','{$p_pro}','{$p_est}','{$p_car}'";
      $query .=")";
      $query .=" ON DUPLICATE KEY UPDATE name='{$p_name}'";
      if($db->query($query)){
