@@ -9,12 +9,12 @@
 <?php
  if(isset($_POST['add_product'])){
    
-   $req_fields = array('product-title','tipo','codigo_nfc','serial', 'codigo_inventario', 'custodio', 'ubicacion', 'fecha_ingreso', 'fecha_compra', 'fecha_ultimo_mantenimiento', 'fecha_garantia', 'marca','procesador' );
+   $req_fields = array('product-title','tipo','serial', 'codigo_inventario', 'custodio', 'ubicacion', 'fecha_ingreso', 'fecha_compra', 'fecha_ultimo_mantenimiento', 'fecha_garantia', 'marca','procesador' );
    validate_fields($req_fields);
    if(empty($errors)){
      $p_name  = remove_junk($db->escape($_POST['product-title']));
      $p_tipo   = remove_junk($db->escape($_POST['tipo']));
-     $p_nfc   = remove_junk($db->escape($_POST['codigo_nfc']));
+     //$p_nfc   = remove_junk($db->escape($_POST['codigo_nfc']));
      $p_ser   = remove_junk($db->escape($_POST['serial']));
      $p_cod   = remove_junk($db->escape($_POST['codigo_inventario']));
      $p_cus   = remove_junk($db->escape($_POST['custodio']));
@@ -28,9 +28,9 @@
      
      $date    = make_date();
      $query  = "INSERT INTO products (";     
-     $query .=" name,tipo,codigo_nfc,serial,codigo_inventario,custodio,ubicacion,fecha_ingreso,fecha_compra,fecha_ultimo_mantenimiento,fecha_garantia,marca,procesador";
+     $query .=" name,tipo,serial,codigo_inventario,custodio,ubicacion,fecha_ingreso,fecha_compra,fecha_ultimo_mantenimiento,fecha_garantia,marca,procesador";
      $query .=") VALUES (";
-     $query .=" '{$p_name}', '{$p_tipo}', '{$p_nfc}', '{$p_ser}', '{$p_cod}', '{$p_cus}', '{$p_ubi}','{$p_ing}','{$p_com}', '{$p_man}', '{$p_gar}', '{$p_mar}','{$p_pro}'";
+     $query .=" '{$p_name}', '{$p_tipo}',  '{$p_ser}', '{$p_cod}', '{$p_cus}', '{$p_ubi}','{$p_ing}','{$p_com}', '{$p_man}', '{$p_gar}', '{$p_mar}','{$p_pro}'";
      $query .=")";
      $query .=" ON DUPLICATE KEY UPDATE name='{$p_name}'";
      if($db->query($query)){
@@ -75,30 +75,17 @@
                   <input type="text" class="form-control" name="product-title" placeholder="Nombre">
                </div>
               </div>
-              <!--<div class="form-group">
-                <div class="row">
-                  <div class="col-md-6">
-                    <select class="form-control" name="product-categorie">
-                      <option value="">Seleccione el tipo de bien</option>
-                    <?php /* foreach ($all_categories as $cat): */?>
-                      <option value="<?php /*echo (int)$cat['id']*/ ?>">
-                        <?php /*echo $cat['name']*/ ?></option>
-                    <?php /*endforeach;*/ ?>
-                    </select>
-                  </div>
-                </div>
-              </div>-->
-
+             
               <div class="form-group">
                <div class="row row-cols-2">                
-                  <div class="col-md-6">
+                  <!--<div class="col-md-6">
                     <div class="form-group">
                       <label for="qty">Código NFC</label>
                       <div class="input-group ">
                        <input type="number" class="form-control" name="codigo_nfc" placeholder="Código NFC" id="qty">                      
                       </div>
                     </div>
-                  </div>
+                  </div>-->
 
                   <div class="col-md-6">
                     <div class="form-group">
