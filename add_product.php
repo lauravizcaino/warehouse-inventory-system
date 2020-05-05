@@ -108,7 +108,7 @@
                   <span class="input-group-addon">
                    <i class="glyphicon glyphicon-th-large"></i>
                   </span>
-                  <input type="text" class="form-control" name="product-title" placeholder="Nombre">
+                  <input type="text" class="form-control" name="name" placeholder="Nombre">
                </div>
               </div>
              
