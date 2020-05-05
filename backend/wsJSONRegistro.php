@@ -7,7 +7,7 @@
 
 	$json=array();
 
-		if(isset($_GET["name"]) && isset($_GET["codigo_nfc"]) && isset($_GET["serial"]) && isset($_GET["fecha_garantia"]) && isset($_GET["codigo_inventario"]) && isset($_GET["custodio"]) && isset($_GET["fecha_ingreso"]) && isset($_GET["ubicacion"]) && isset($_GET["fecha_ultimo_mantenimiento"]) && isset($_GET["fecha_compra"]) && isset($_GET["marca"]) && isset($_GET["procesador"]) && isset($_GET["estado"]) && isset($_GET["caracteristicas"]) && isset($_GET["tipo"])){ 
+		if(isset($_GET["name"]) && isset($_GET["codigo_nfc"]) && isset($_GET["serial"]) && isset($_GET["fecha_garantia"]) && isset($_GET["codigo_inventario"]) && isset($_GET["custodio"]) && isset($_GET["fecha_ingreso"]) && isset($_GET["ubicacion"]) && isset($_GET["fecha_ultimo_mantenimiento"]) && isset($_GET["fecha_compra"]) && isset($_GET["marca"]) && isset($_GET["procesador"]) && isset($_GET["estado"]) && isset($_GET["caracteristica"]) && isset($_GET["tipo"])){ 
 	
 			$name=$_GET['name'];
 			$codigo_nfc=$_GET['codigo_nfc'];

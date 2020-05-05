@@ -27,10 +27,10 @@
             $sql = "UPDATE users SET name ='{$name}', username ='{$username}',user_level='{$level}',status='{$status}' WHERE id='{$db->escape($id)}'";
          $result = $db->query($sql);
           if($result && $db->affected_rows() === 1){
-            $session->msg('s',"Acount Updated ");
+            $session->msg('s',"Cuenta actualizada ");
             redirect('edit_user.php?id='.(int)$e_user['id'], false);
           } else {
-            $session->msg('d',' Sorry failed to updated!');
+            $session->msg('d',' No se pudo actualizar');
             redirect('edit_user.php?id='.(int)$e_user['id'], false);
           }
     } else {
