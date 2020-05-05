@@ -68,9 +68,7 @@ if(!$product){
         <div class="panel-heading">
           <strong>
             <span class="glyphicon glyphicon-th"></span>
-            <span>Editar</span>
-            <br>
-            <span>Se deben completar todos los campos. En los campos donde no haya información completar con - </span>
+            <span>Editar</span>            
          </strong>
         </div>
         <div class="panel-body">
