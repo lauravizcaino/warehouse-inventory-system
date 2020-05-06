@@ -27,11 +27,11 @@
 
 			$conexion=new mysqli($hostname_localhost,$username_localhost,$password_localhost,$database_localhost);
 			
-			$insert="INSERT INTO products(name, codigo_nfc, serial, fecha_garantia, codigo_inventario, custodio, fecha_ingreso, ubicacion,fecha_ultimo_mantenimiento,fecha_compra, marca , procesador, estado, caracteristica,tipo) VALUES ('{$name}','{$codigo_nfc}','{$serial}','{$fecha_garantia}','{$codigo_inventario}','{$custodio}','{$fecha_ingreso}','{$ubicacion}','{$fecha_ultimo_mantenimiento}','{$fecha_compra}','{$marca}','{$procesador}','{$estado}','{$caracteristica}','{$tipo}') ON DUPLICATE KEY UPDATE codigo_nfc={$codigo_nfc}";
+			$insert="INSERT INTO products(name,codigo_nfc,serial, fecha_garantia, codigo_inventario, custodio, fecha_ingreso, ubicacion,fecha_ultimo_mantenimiento,fecha_compra, marca , procesador, estado, caracteristica,tipo) VALUES ('{$name}','{$serial}','{$fecha_garantia}','{$codigo_inventario}','{$custodio}','{$fecha_ingreso}','{$ubicacion}','{$fecha_ultimo_mantenimiento}','{$fecha_compra}','{$marca}','{$procesador}','{$estado}','{$caracteristica}','{$tipo}') ON DUPLICATE KEY UPDATE name='{$name}'";
 	
 			if($conexion->query($insert)===TRUE){
 			
-				$resultado = $conexion->query("SELECT * FROM products WHERE codigo_nfc = {$codigo_nfc}");
+				$resultado = $conexion->query("SELECT * FROM products WHERE codigo_nfc = '{$codigo_nfc}'");
 				
 				if($registro=mysqli_fetch_array($resultado)){
 					$json['products'][]=$registro;
