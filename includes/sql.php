@@ -227,12 +227,12 @@ function tableExists($table){
      p.`caracteristica`,
      p.`tipo`,
      p.`estado`,
-     p.`caracteristica`,";
-    $sql  .=" c.name AS categorie,m.file_name AS image";
+     p.`caracteristica`";
+    /*$sql  .=" c.name AS categorie,m.file_name AS image";*/
     /*$sql  .=" AS categorie,m.file_name AS image";esta no*/
     $sql  .=" FROM products p";
-    $sql  .=" LEFT JOIN categories c ON c.id = p.categorie_id";
-    $sql  .=" LEFT JOIN media m ON m.id = p.media_id";
+    /*$sql  .=" LEFT JOIN categories c ON c.id = p.categorie_id";
+    $sql  .=" LEFT JOIN media m ON m.id = p.media_id";*/
     $sql  .=" ORDER BY p.id ASC";
     return find_by_sql($sql);
 
