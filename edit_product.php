@@ -87,7 +87,7 @@ if(!$product){
                     <div class="form-group">
                       <label for="qty">Código NFC</label>
                       <div class="input-group">
-                        <input type="number" class="form-control" name="codigo_nfc" value="<?php echo remove_junk($product['codigo_nfc']); ?>">
+                        <input type="number" class="form-control" name="codigo_nfc" value="<?/*php echo remove_junk($product['codigo_nfc']); */?>">
                       </div>
                     </div>
                  </div>-->
@@ -191,7 +191,7 @@ if(!$product){
                     <div class="form-group">
                       <label for="qty">Características</label>
                       <div class="input-group">
-                        <input type="text" class="form-control" name="caraceristica" value="<?php echo remove_junk($product['caracteristica']); ?>">
+                        <input type="text" class="form-control" name="caracteristica" value="<?php echo remove_junk($product['caracteristica']); ?>">
                       </div>
                     </div>
                  </div>
