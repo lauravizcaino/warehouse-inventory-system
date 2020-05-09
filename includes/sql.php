@@ -228,11 +228,8 @@ function tableExists($table){
      p.`tipo`,
      p.`estado`,
      p.`caracteristica`";
-    /*$sql  .=" c.name AS categorie,m.file_name AS image";*/
-    /*$sql  .=" AS categorie,m.file_name AS image";esta no*/
-    $sql  .=" FROM products p";
-    /*$sql  .=" LEFT JOIN categories c ON c.id = p.categorie_id";
-    $sql  .=" LEFT JOIN media m ON m.id = p.media_id";*/
+    
+    $sql  .=" FROM products p";   
     $sql  .=" ORDER BY p.id ASC";
     return find_by_sql($sql);
 
@@ -268,10 +265,12 @@ function tableExists($table){
   /*--------------------------------------------------------------*/
  function find_recent_product_added($limit){
    global $db;
-   $sql   = " SELECT p.id,p.name,p.sale_price,p.media_id,c.name AS categorie,";
+   /*$sql   = " SELECT p.id,p.name,p.sale_price,p.media_id,c.name AS categorie,";
    $sql  .= "m.file_name AS image FROM products p";
    $sql  .= " LEFT JOIN categories c ON c.id = p.categorie_id";
-   $sql  .= " LEFT JOIN media m ON m.id = p.media_id";
+   $sql  .= " LEFT JOIN media m ON m.id = p.media_id";*/
+   $sql   = " SELECT p.`id`,p.`name`";
+   $sql  .= "FROM products p";
    $sql  .= " ORDER BY p.id DESC LIMIT ".$db->escape((int)$limit);
    return find_by_sql($sql);
  }

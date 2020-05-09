@@ -6,7 +6,7 @@
 ?>
 <?php
 $product = find_by_id('products',(int)$_GET['id']);
-$all_categories = find_all('categories');
+
 
 if(!$product){
   $session->msg("d","Falta la identificación del produto");
