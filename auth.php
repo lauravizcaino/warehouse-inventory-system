@@ -9,6 +9,8 @@ if(empty($errors)){
   $user_id = authenticate($username, $password);
   if($user_id){    
      $session->login($user_id);    
+     updateLastLogIn($user_id);
+
      $session->msg("s", "Bienvenido");
      redirect('home.php',false);
 

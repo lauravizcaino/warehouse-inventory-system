@@ -151,14 +151,14 @@ function tableExists($table){
   /* Function to update the last log in of a user
   /*--------------------------------------------------------------*/
 
- /*function updateLastLogIn($user_id)
+ function updateLastLogIn($user_id)
 	{
 		global $db;
     $date = make_date();
     $sql = "UPDATE users SET last_login='{$date}' WHERE id ='{$user_id}' LIMIT 1";
     $result = $db->query($sql);
     return ($result && $db->affected_rows() === 1 ? true : false);
-	}*/
+	}
 
   /*--------------------------------------------------------------*/
   /* Encontrar todos los nombres del grupo

@@ -43,7 +43,6 @@ function validate_fields($var){
 }
 /*--------------------------------------------------------------*/
 /* Función para mostrar mensaje de sesión
-   Ex echo displayt_msg($message);
 /*--------------------------------------------------------------*/
 function display_msg($msg =''){
    $output = array();

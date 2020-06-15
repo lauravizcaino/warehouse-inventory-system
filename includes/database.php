@@ -23,7 +23,7 @@ public function db_connect()
            $select_db = $this->con->select_db(DB_NAME);
              if(!$select_db)
              {
-               die("No se pudo selccionar la base de datos". mysqli_connect_error());
+               die("No se pudo seleccionar la base de datos". mysqli_connect_error());
              }
          }
 }
