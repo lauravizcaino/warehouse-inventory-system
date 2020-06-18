@@ -191,7 +191,7 @@
                     <div class="form-group">
                       <label for="qty">Fecha del último mantenimiento</label>
                       <div class="input-group">                      
-                        <input type="text" class="form-control" name="fecha_ultimo_mantenimiento" placeholder="aaaa-mm-dd">                      
+                        <input type="date" class="form-control" name="fecha_ultimo_mantenimiento" placeholder="aaaa-mm-dd">                      
                       </div>
                     </div>
                   </div>
@@ -200,7 +200,7 @@
                     <div class="form-group">
                       <label for="qty">Fecha de la garantía</label>
                       <div class="input-group">                      
-                        <input type="text" class="form-control" name="fecha_garantia" placeholder="aaaa-mm-dd">                      
+                        <input type="date" class="form-control" name="fecha_garantia" placeholder="aaaa-mm-dd">                      
                       </div>
                     </div>
                   </div>
