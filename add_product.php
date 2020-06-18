@@ -28,13 +28,13 @@
      $p_com   = remove_junk($db->escape($_POST['fecha_compra']));
      //$p_man   = remove_junk($db->escape($_POST['fecha_ultimo_mantenimiento']));
      if (is_null($_POST['fecha_ultimo_mantenimiento']) || $_POST['fecha_ultimo_mantenimiento'] === "") {
-       $p_man = '000/00/00';
+       $p_man = '-';
      } else {
        $p_man= remove_junk($db->escape($_POST['fecha_ultimo_mantenimiento']));
      }
      //$p_gar   = remove_junk($db->escape($_POST['fecha_garantia']));
      if (is_null($_POST['fecha_garantia']) || $_POST['fecha_garantia'] === "") {
-       $p_gar = '000/00/00';
+       $p_gar = '-';
      } else {
        $p_gar= remove_junk($db->escape($_POST['fecha_garantia']));
      }
@@ -191,7 +191,7 @@
                     <div class="form-group">
                       <label for="qty">Fecha del último mantenimiento</label>
                       <div class="input-group">                      
-                        <input type="date" class="form-control" name="fecha_ultimo_mantenimiento" placeholder="aaaa-mm-dd">                      
+                        <input type="text" class="form-control" name="fecha_ultimo_mantenimiento" placeholder="aaaa-mm-dd">                      
                       </div>
                     </div>
                   </div>
@@ -200,7 +200,7 @@
                     <div class="form-group">
                       <label for="qty">Fecha de la garantía</label>
                       <div class="input-group">                      
-                        <input type="date" class="form-control" name="fecha_garantia" placeholder="aaaa-mm-dd">                      
+                        <input type="text" class="form-control" name="fecha_garantia" placeholder="aaaa-mm-dd">                      
                       </div>
                     </div>
                   </div>
