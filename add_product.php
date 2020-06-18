@@ -28,9 +28,9 @@
      $p_com   = remove_junk($db->escape($_POST['fecha_compra']));
      //$p_man   = remove_junk($db->escape($_POST['fecha_ultimo_mantenimiento']));
      if (is_null($_POST['fecha_ultimo_mantenimiento']) || $_POST['fecha_ultimo_mantenimiento'] === "") {
-       $$p_man = '-';
+       $p_man = '-';
      } else {
-       $$p_man= remove_junk($db->escape($_POST['fecha_ultimo_mantenimiento']));
+       $p_man= remove_junk($db->escape($_POST['fecha_ultimo_mantenimiento']));
      }
      //$p_gar   = remove_junk($db->escape($_POST['fecha_garantia']));
      if (is_null($_POST['fecha_garantia']) || $_POST['fecha_garantia'] === "") {
