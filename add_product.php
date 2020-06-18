@@ -28,15 +28,15 @@
      $p_com   = remove_junk($db->escape($_POST['fecha_compra']));
      //$p_man   = remove_junk($db->escape($_POST['fecha_ultimo_mantenimiento']));
      if (is_null($_POST['fecha_ultimo_mantenimiento']) || $_POST['fecha_ultimo_mantenimiento'] === "") {
-       $$p_man = '-';
+       $p_man = '000/00/00';
      } else {
-       $$p_man= remove_junk($db->escape($_POST['fecha_ultimo_mantenimiento']));
+       $p_man= remove_junk($db->escape($_POST['fecha_ultimo_mantenimiento']));
      }
      //$p_gar   = remove_junk($db->escape($_POST['fecha_garantia']));
      if (is_null($_POST['fecha_garantia']) || $_POST['fecha_garantia'] === "") {
-       $$p_gar = '-';
+       $p_gar = '000/00/00';
      } else {
-       $$p_gar= remove_junk($db->escape($_POST['fecha_garantia']));
+       $p_gar= remove_junk($db->escape($_POST['fecha_garantia']));
      }
      //$p_mar   = remove_junk($db->escape($_POST['marca']));
      if (is_null($_POST['marca']) || $_POST['marca'] === "") {
