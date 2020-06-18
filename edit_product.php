@@ -15,25 +15,60 @@ if(!$product){
 ?>
 <?php
  if(isset($_POST['product'])){
-    $req_fields = array('product-title','tipo','serial', 'codigo_inventario', 'custodio', 'ubicacion', 'fecha_ingreso', 'fecha_compra', 'fecha_ultimo_mantenimiento', 'fecha_garantia', 'marca','procesador','estado','caracteristica' );
+    $req_fields = array('product-title','tipo', 'codigo_inventario', 'custodio', 'ubicacion', 'fecha_ingreso', 'fecha_compra' );
     validate_fields($req_fields);
 
    if(empty($errors)){
        $p_name  = remove_junk($db->escape($_POST['product-title']));      
        $p_tipo   = remove_junk($db->escape($_POST['tipo']));
        //$p_nfc   = remove_junk($db->escape($_POST['codigo_nfc']));
-       $p_ser   = remove_junk($db->escape($_POST['serial']));
+       //$p_ser   = remove_junk($db->escape($_POST['serial']));
+       if (is_null($_POST['serial']) || $_POST['serial'] === "") {
+       $p_ser = '0';
+       } else {
+       $p_ser= remove_junk($db->escape($_POST['serial']));
+       }
        $p_cod   = remove_junk($db->escape($_POST['codigo_inventario']));
        $p_cus   = remove_junk($db->escape($_POST['custodio']));
        $p_ubi   = remove_junk($db->escape($_POST['ubicacion']));
        $p_ing   = remove_junk($db->escape($_POST['fecha_ingreso']));
        $p_com   = remove_junk($db->escape($_POST['fecha_compra']));
-       $p_man   = remove_junk($db->escape($_POST['fecha_ultimo_mantenimiento']));
-       $p_gar   = remove_junk($db->escape($_POST['fecha_garantia']));
-       $p_mar   = remove_junk($db->escape($_POST['marca']));
-       $p_pro   = remove_junk($db->escape($_POST['procesador']));
-       $p_est   = remove_junk($db->escape($_POST['estado']));
-       $p_car   = remove_junk($db->escape($_POST['caracteristica']));
+       //$p_man   = remove_junk($db->escape($_POST['fecha_ultimo_mantenimiento']));
+       if (is_null($_POST['fecha_ultimo_mantenimiento']) || $_POST['fecha_ultimo_mantenimiento'] === "") {
+       $p_man = '-';
+       } else {
+       $p_man= remove_junk($db->escape($_POST['fecha_ultimo_mantenimiento']));
+       }
+       //$p_gar   = remove_junk($db->escape($_POST['fecha_garantia']));
+       if (is_null($_POST['fecha_garantia']) || $_POST['fecha_garantia'] === "") {
+       $p_gar = '-';
+       } else {
+       $p_gar= remove_junk($db->escape($_POST['fecha_garantia']));
+       }
+       //$p_mar   = remove_junk($db->escape($_POST['marca']));
+       if (is_null($_POST['marca']) || $_POST['marca'] === "") {
+       $p_mar = '-';
+       } else {
+       $p_mar= remove_junk($db->escape($_POST['marca']));
+       }
+       //$p_pro   = remove_junk($db->escape($_POST['procesador']));
+       if (is_null($_POST['procesador']) || $_POST['procesador'] === "") {
+       $p_pro  = '-';
+       } else {
+       $p_pro = remove_junk($db->escape($_POST['procesador']));
+       }       
+       //$p_est   = remove_junk($db->escape($_POST['estado']));
+       if (is_null($_POST['estado']) || $_POST['estado'] === "") {
+       $p_est = '-';
+       } else {
+       $p_est = remove_junk($db->escape($_POST['estado']));
+       }
+       //$p_car   = remove_junk($db->escape($_POST['caracteristica']));
+       if (is_null($_POST['caracteristica']) || $_POST['caracteristica'] === "") {
+       $p_car = '-';
+       } else {
+       $p_car = remove_junk($db->escape($_POST['caracteristica']));
+       }
 
        $query   = "UPDATE products SET";     
        $query   .= " name ='{$p_name}', tipo ='{$p_tipo}',serial='{$p_ser}', codigo_inventario='{$p_cod}', custodio='{$p_cus}', ubicacion='{$p_ubi}', fecha_ingreso='{$p_ing}', fecha_compra='{$p_com}', fecha_ultimo_mantenimiento='{$p_man}', fecha_garantia='{$p_gar}', marca='{$p_mar}', procesador='{$p_pro}',estado='{$p_est}',caracteristica='{$p_car}'";
