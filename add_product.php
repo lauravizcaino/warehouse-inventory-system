@@ -114,18 +114,62 @@
 
               <div class="form-group">
                 <div class="form-group">
-                <label for="qty">Tipo de bien</label>
+                      <label for="qty">Tipo de bien</label>
                       <select class="form-control" name="tipo">
                         <option value=""selected disabled>Seleccione el tipo de bien</option>
                         <option value="Tecnológico">Tecnológico</option>
                         <option value="Inmueble">Inmueble</option>
                         <option value="Fungible">Fungible</option>
                       </select>
-                      <!--<label for="qty">Tipo de bien</label>
-                      <div class="input-group ">
-                       <input type="text" class="form-control" name="tipo" placeholder="Tipo de bien" id="qty">                      
-                      </div>-->
-                    </div>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <div class="form-group">
+                      <label for="qty">Ubicación</label>
+                      <select class="form-control" name="ubicacion">
+                        <option value=""selected disabled>Seleccione la ubicación</option>
+                        <option value="Laboratorio 001">Laboratorio 001</option>
+                        <option value="Laboratorio 002">Laboratorio 002</option>
+                        <option value="Laboratorio 003">Laboratorio 003</option>
+                        <option value="Laboratorio 004">Laboratorio 004</option>
+                        <option value="Bodega">Bodega</option>
+                      </select>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <div class="form-group">
+                      <label for="qty">Marca</label>
+                      <select class="form-control" name="marca">
+                        <option value=""selected disabled>Seleccione la marca</option>
+                        <option value="HP">HP</option>
+                        <option value="ASUS">ASUS</option>
+                        <option value="ACER">ACER</option>
+                        <option value="LG">LG</option>
+                        <option value="Lenovo">Lenovo</option>
+                        <option value="DELL">DELL</option>
+                        <option value="Otro">Otro</option>
+                      </select>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <div class="form-group">
+                      <label for="qty">Procesador</label>
+                      <select class="form-control" name="procesador">
+                        <option value=""selected disabled>Seleccione el procesador</option>
+                        <option value="intel core i3">intel core i3</option>
+                        <option value="intel core i5">intel core i5</option>
+                        <option value="intel core i7">intel core i7</option>
+                        <option value="intel core i9">intel core i9</option>
+                        <option value="intel core m3">intel core m3</option>
+                        <option value="intel xeon">intel xeon</option>
+                        <option value="intel atom">intel atom</option>
+                        <option value="intel pentium">intel pentium</option>
+                        <option value="Otro">Otro</option>
+                      </select>
+                </div>
               </div>
              
               <div class="form-group">
@@ -139,20 +183,20 @@
                     </div>
                   </div>-->
 
-                  <div class="col-md-6">
-                    <div class="form-group">
+                  <!--<div class="col-md-6">
+                   <div class="form-group">
                       <select class="form-control" name="tipo">
                         <option value=""selected disabled>Seleccione el tipo de bien</option>
                         <option value="Tecnológico">Tecnológico</option>
                         <option value="Inmueble">Inmueble</option>
                         <option value="Fungible">Fungible</option>
                       </select>
-                      <!--<label for="qty">Tipo de bien</label>
+                      <label for="qty">Tipo de bien</label>
                       <div class="input-group ">
                        <input type="text" class="form-control" name="tipo" placeholder="Tipo de bien" id="qty">                      
-                      </div>-->
+                      </div>
                     </div>
-                  </div>
+                  </div>-->
                   
                   <div class="col-md-6">
                     <div class="form-group">
@@ -181,14 +225,14 @@
                     </div>
                   </div>               
                    
-                  <div class="col-md-6">
+                  <!--<div class="col-md-6">
                     <div class="form-group">
                       <label for="qty">Ubicación</label>
                       <div class="input-group">
                           <input type="text" class="form-control" name="ubicacion" placeholder="Ubicación del bien">                      
                       </div>
                     </div>
-                  </div>
+                  </div>-->
                   
                   <div class="col-md-6">
                     <div class="form-group">
@@ -227,23 +271,23 @@
                     </div>
                   </div>
                   
-                  <div class="col-md-6">
+                  <!--<div class="col-md-6">
                     <div class="form-group">
                       <label for="qty">Marca</label>
                       <div class="input-group">                      
                         <input type="text" class="form-control" name="marca" placeholder="Marca">                      
                       </div>
                     </div>
-                  </div>                   
+                  </div>-->                   
                 
-                  <div class="col-md-6">
+                  <!--<div class="col-md-6">
                     <div class="form-group">
                       <label for="qty">Procesador</label>
                       <div class="input-group">                      
                         <input type="text" class="form-control" name="procesador" placeholder="Procesador">                      
                       </div>
                     </div>
-                  </div>
+                  </div>-->
 
                   <div class="col-md-6">
                     <div class="form-group">
