@@ -125,10 +125,16 @@
 
                   <div class="col-md-6">
                     <div class="form-group">
-                      <label for="qty">Tipo de bien</label>
+                      <select class="form-control" name="tipo">
+                        <option value="">Seleccione el tipo de bien</option>
+                        <option value="Tecnológico">Tecnológico</option>
+                        <option value="Inmueble">Inmueble</option>
+                        <option value="Fungible">Fungible</option>
+                      </select>
+                      <!--<label for="qty">Tipo de bien</label>
                       <div class="input-group ">
                        <input type="text" class="form-control" name="tipo" placeholder="Tipo de bien" id="qty">                      
-                      </div>
+                      </div>-->
                     </div>
                   </div>
                   
