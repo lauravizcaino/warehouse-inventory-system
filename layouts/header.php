@@ -4,7 +4,7 @@
 <!DOCTYPE html>
   <html lang="en">
     <head>
-    <meta http-equiv="content-type" content="text/plain; charset=UTF-8">
+    <meta  charset="UTF-8">
     <title><?php if (!empty($page_title))
            echo remove_junk($page_title);
             elseif(!empty($user))
