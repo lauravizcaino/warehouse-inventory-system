@@ -69,7 +69,7 @@ if(!$product){
        } else {
        $p_car = remove_junk($db->escape($_POST['caracteristica']));
        }
-
+      
        $query   = "UPDATE products SET";     
        $query   .= " name ='{$p_name}', tipo ='{$p_tipo}',serial='{$p_ser}', codigo_inventario='{$p_cod}', custodio='{$p_cus}', ubicacion='{$p_ubi}', fecha_ingreso='{$p_ing}', fecha_compra='{$p_com}', fecha_ultimo_mantenimiento='{$p_man}', fecha_garantia='{$p_gar}', marca='{$p_mar}', procesador='{$p_pro}',estado='{$p_est}',caracteristica='{$p_car}'";
        $query  .=" WHERE id ='{$product['id']}'";
