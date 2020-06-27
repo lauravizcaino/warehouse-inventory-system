@@ -18,7 +18,7 @@
          </div>
         </div>
         <div class="panel-body"  style="overflow: scroll;">
-         <input type="button" onclick="tableToExcel('testTable', 'W3C Example Table')" value="Export to Excel">
+         <input type="button" onclick="tableToExcel('tableproducts', 'Inventario')" value="Exportar a Excel">
 
           <table class="table table-bordered" id="tableproducts">
             <thead>
