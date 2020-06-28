@@ -234,6 +234,22 @@ function tableExists($table){
     return find_by_sql($sql);
 
    }
+
+   /*--------------------------------------------------------------*/
+   /* Función para encontrar todos los nombres de la tabla custodios
+   /*--------------------------------------------------------------*/
+  function join_product_custodios(){
+     global $db;
+     $sql  =" SELECT c.`id`,
+     c.`nombre`,    
+     c.`codigoNFC`,
+     c.`custodio`";
+    
+    $sql  .=" FROM custodios c";   
+    $sql  .=" ORDER BY c.id ASC";
+    return find_by_sql($sql);
+
+   }
   /*--------------------------------------------------------------*/
   /* Función para encontrar tdos los nombres de productos
   /*  Solicitud proveniente de ajax.php para sugerencia automática
