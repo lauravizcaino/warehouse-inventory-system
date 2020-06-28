@@ -18,7 +18,7 @@
           <table class="table table-bordered" id="tableproducts">
             <thead>
               <tr>
-                <th class="text-center" style="width: 50px;">#</th>
+                <th class="text-center" style="width: 10%;">#</th>
                 <th class="text-center" style="width: 10%;"> Nombre</th>                
                 <th class="text-center" style="width: 10%;"> Código NFC </th>               
                 <th class="text-center" style="width: 10%;"> Custodio </th>                          
