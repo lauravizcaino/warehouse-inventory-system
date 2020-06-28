@@ -75,6 +75,10 @@ if(!$product){
        $query  .=" WHERE id ='{$product['id']}'";
        $result = $db->query($query);
                if($result && $db->affected_rows() === 1){
+                 $query1="INSERT INTO custodios (nombre, custodio) VALUES ('{$p_name}','{$p_cus}') ON DUPLICATE KEY UPDATE nombre='{$p_name}'";
+                
+                 $result1=$db->query($query1);
+
                  $session->msg('s',"Producto actualizado");
                  redirect('product.php', false);
                } else {
