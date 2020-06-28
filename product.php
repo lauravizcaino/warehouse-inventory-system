@@ -53,7 +53,12 @@
                 <td class="text-center"> <?php echo remove_junk($product['codigo_nfc']); ?></td>
                 <td class="text-center"> <?php echo remove_junk($product['serial']); ?></td>
                 <td class="text-center"> <?php echo remove_junk($product['codigo_inventario']); ?></td>
-                <td class="text-center" href="custodio.php"> <?php echo remove_junk($product['custodio']); ?></td>
+                
+                <td class="text-center"> 
+                  <a href="custodio.php">
+                    <?php echo remove_junk($product['custodio']); ?>
+                  </a>
+                </td>
                 <td class="text-center"> <?php echo remove_junk($product['ubicacion']); ?></td>
                 <td class="text-center"> <?php echo read_date($product['fecha_ingreso']); ?></td>
                 <td class="text-center"> <?php echo read_date($product['fecha_compra']); ?></td>
