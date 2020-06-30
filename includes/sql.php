@@ -37,6 +37,18 @@ function find_by_id($table,$id)
      }
 }
 /*--------------------------------------------------------------*/
+/* Función para buscar información de una tabla por su nombre
+/*--------------------------------------------------------------*/
+
+function find_custodio_by_name($custodio){
+     global $db;
+     $p_name = remove_junk($db->escape($custodio));
+     $sql = "SELECT custodio FROM custodios WHERE nombre like '%$p_name%'";
+     $result = find_by_sql($sql);
+     return $result;
+   }
+}
+/*--------------------------------------------------------------*/
 /* Función para borrar información de una tabla por id
 /*--------------------------------------------------------------*/
 function delete_by_id($table,$id)

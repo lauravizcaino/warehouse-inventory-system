@@ -6,6 +6,7 @@
    $custodios=join_custodios_table();
 ?>
 <?php include_once('layouts/header.php'); ?>
+<?php $name = find_by_name('custodios',(string)$_GET['nombre']);?>
 <div class="row">
      <div class="col-md-12">
        <?php echo display_msg($msg); ?>
