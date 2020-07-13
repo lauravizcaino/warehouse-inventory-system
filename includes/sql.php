@@ -252,13 +252,14 @@ function tableExists($table){
    /*--------------------------------------------------------------*/
   function join_custodios_table(){
      global $db;
-     $sql  =" SELECT c.`id`,
+     /*$sql  =" SELECT c.`id`,
      c.`nombre`,    
      c.`codigoNFC`,
-     c.`custodio`";
+     c.`custodio`";*/
+     $sql = "SELECT custodio FROM custodios WHERE nombre like '%$p_name%'";
     
-    $sql  .=" FROM custodios c";   
-    $sql  .=" ORDER BY c.id ASC";
+    //$sql  .=" FROM custodios c";   
+    //$sql  .=" ORDER BY c.id ASC";
     return find_by_sql($sql);
 
    }
