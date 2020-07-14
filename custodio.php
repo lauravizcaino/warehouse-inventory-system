@@ -21,7 +21,7 @@
               <tr>
                 <th class="text-center" style="width: 10%;">#</th>
                 <th class="text-center" style="width: 10%;"> Nombre</th>                
-                <th class="text-center" style="width: 10%;"> Código NFC </th>               
+                <!--<th class="text-center" style="width: 10%;"> Código NFC </th>-->               
                 <th class="text-center" style="width: 10%;"> Custodio </th>                          
 
               </tr>
@@ -31,7 +31,7 @@
               <tr>
                 <td class="text-center"><?php echo count_id(); ?></td>                
                 <td class="text-center"> <?php echo remove_junk($custodio['nombre']); ?></td>               
-                <td class="text-center"> <?php echo remove_junk($custodio['codigoNFC']); ?></td>
+                <!--<td class="text-center"> <?php/* echo remove_junk($custodio['codigoNFC']);*/ ?></td>-->
                 <td class="text-center"> <?php echo remove_junk($custodio['custodio']); ?></td>
                 
               </tr>

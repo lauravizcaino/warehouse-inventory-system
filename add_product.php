@@ -70,6 +70,8 @@
      $query .=")";
      $query .=" ON DUPLICATE KEY UPDATE name='{$p_name}'";
      if($db->query($query)){
+       $query1="INSERT INTO custodios (nombre, custodio) VALUES ('{$p_name}','{$p_cus}') ON DUPLICATE KEY UPDATE nombre='{$p_name}'";
+       $result1=$db->query($query1);
        $session->msg('s',"Añadido");
        redirect('add_product.php', false);
      } else {
