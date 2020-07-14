@@ -3,7 +3,7 @@
   require_once('includes/load.php');
   // Comprobar qué nivel de usuario tiene permiso para ver esta página
    page_require_level(2);
-   $custodios=join_custodios_table();
+   $custodios=join_custodios_table($product_name);
 ?>
 <?php include_once('layouts/header.php'); ?>
 <?php /*$name = find_custodio_by_name('custodios',(string)$_GET['nombre']);*/?>
