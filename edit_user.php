@@ -8,7 +8,7 @@
   $e_user = find_by_id('users',(int)$_GET['id']);
   $groups  = find_all('user_groups');
   if(!$e_user){
-    $session->msg("d","Missing user id.");
+    $session->msg("d","Falta la identificación del usuario");
     redirect('users.php');
   }
 ?>

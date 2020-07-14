@@ -48,7 +48,7 @@
               <tr>
                 <td class="text-center"><?php echo count_id(); ?></td>
                 
-                <td class="text-center"> <?php echo remove_junk($product['name']); ?></td>               
+                <td class="text-center"> <?php $nombre_ = echo remove_junk($product['name']); ?></td>               
                 <td class="text-center"> <?php echo remove_junk($product['tipo']); ?></td>
                 <td class="text-center"> <?php echo remove_junk($product['codigo_nfc']); ?></td>
                 <td class="text-center"> <?php echo remove_junk($product['serial']); ?></td>
