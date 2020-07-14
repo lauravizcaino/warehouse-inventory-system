@@ -269,7 +269,7 @@ function tableExists($table){
   /*  Solicitud proveniente de ajax.php para sugerencia automática
   /*--------------------------------------------------------------*/
 
-   function find_product_by_title($product_name){
+   function find_product_by_title(){
      global $db;
      $p_name = remove_junk($db->escape($product_name));
      $sql = "SELECT name FROM products WHERE name like '%$p_name%' LIMIT 5";
