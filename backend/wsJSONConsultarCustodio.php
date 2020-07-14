@@ -11,11 +11,11 @@ $json=array();
 				
 		$conexion = mysqli_connect($hostname_localhost,$username_localhost,$password_localhost,$database_localhost);
 
-		$consulta="SELECT custodio FROM custodios WHERE nombre like '%$nombre%'";
+		$consulta="SELECT nombre,custodio FROM custodios WHERE nombre like '%$nombre%'";
         $resultado=mysqli_query($conexion,$consulta);
 
         while($registro=mysqli_fetch_array($resultado)){
-			$json['products'][]=$registro;
+			$json['custodios'][]=$registro;
 		}
         
         mysqli_close($conexion);
@@ -29,12 +29,12 @@ $json=array();
 		}
 		
 		mysqli_close($conexion);
-		echo json_encode($json);
+		echo json_encode($json);*/
 	}
 	else{
 		$resultar["success"]=0;
 		$resultar["message"]='Ws no Retorna';
 		$json['products'][]=$resultar;
 		echo json_encode($json);
-	}*/
+	}
 ?>
