@@ -17,7 +17,9 @@ $json=array();
         while($registro=mysqli_fetch_array($resultado)){
 			$json['products'][]=$registro;
 		}
-			
+        
+        mysqli_close($conexion);
+	    echo json_encode($json/*,JSON_UNESCAPED_UNICODE*/);
 		/*if($registro=mysqli_fetch_array($resultado)){
 			$json['custodios'][]=$registro;		
 		}else{
