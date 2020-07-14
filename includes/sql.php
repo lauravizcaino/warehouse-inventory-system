@@ -250,13 +250,13 @@ function tableExists($table){
    /*--------------------------------------------------------------*/
    /* Función para encontrar todos los nombres de la tabla custodios
    /*--------------------------------------------------------------*/
-  function join_custodios_table($product_name)){
+  function join_custodios_table()){
      global $db;
      /*$sql  =" SELECT c.`id`,
      c.`nombre`,    
      c.`codigoNFC`,
      c.`custodio`";*/
-     $p_name = remove_junk($db->escape($product_name));
+     //$p_name = remove_junk($db->escape($product_name));
      $sql = "SELECT nombre, custodio FROM custodios WHERE nombre like '%$p_name%'";
     
     //$sql  .=" FROM custodios c";   
@@ -269,7 +269,7 @@ function tableExists($table){
   /*  Solicitud proveniente de ajax.php para sugerencia automática
   /*--------------------------------------------------------------*/
 
-   function find_product_by_title(){
+   function find_product_by_title($product_name){
      global $db;
      $p_name = remove_junk($db->escape($product_name));
      $sql = "SELECT name FROM products WHERE name like '%$p_name%' LIMIT 5";
