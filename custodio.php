@@ -5,8 +5,14 @@
    page_require_level(2);
    $custodios=join_custodios_table($product_name);
 ?>
+<?php
+$custodio = find_by_id('custodios',(int)$_GET['id']);
+if(!$custodio){
+  $session->msg("d","Falta la identificación del custodio");
+  redirect('product.php');
+}
+?>
 <?php include_once('layouts/header.php'); ?>
-<?php /*$name = find_custodio_by_name('custodios',(string)$_GET['nombre']);*/?>
 <div class="row">
      <div class="col-md-12">
        <?php echo display_msg($msg); ?>
