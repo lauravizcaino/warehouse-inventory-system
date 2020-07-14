@@ -7,7 +7,7 @@ $password_localhost ="flor.123";
 $json=array();
 
 	if(isset($_GET["nombre"])){
-		$codigo_nfc=$_GET["codigo_nfc"];
+		$nombre=$_GET["nombre"];
 				
 		$conexion = mysqli_connect($hostname_localhost,$username_localhost,$password_localhost,$database_localhost);
 
