@@ -11,7 +11,7 @@ $json=array();
 				
 		$conexion = mysqli_connect($hostname_localhost,$username_localhost,$password_localhost,$database_localhost);
 
-		$consulta="SELECT nombre, custodio FROM custodios WHERE nombre like '%$p_name%'";
+		$consulta="SELECT nombre, custodio FROM custodios WHERE nombre like '%$nombre%'";
 		$resultado=mysqli_query($conexion,$consulta);
 			
 		if($registro=mysqli_fetch_array($resultado)){
