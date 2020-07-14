@@ -250,7 +250,7 @@ function tableExists($table){
    /*--------------------------------------------------------------*/
    /* Función para encontrar todos los nombres de la tabla custodios
    /*--------------------------------------------------------------*/
-  function join_custodios_table()){
+  function join_custodios_table(){
      global $db;
      /*$sql  =" SELECT c.`id`,
      c.`nombre`,    
