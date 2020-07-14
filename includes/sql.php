@@ -256,7 +256,7 @@ function tableExists($table){
      c.`nombre`,    
      c.`codigoNFC`,
      c.`custodio`";*/
-     $sql = "SELECT custodio FROM custodios WHERE nombre like '%$name%'";
+     $sql = "SELECT nombre, custodio FROM custodios WHERE nombre like '%$p_name%'";
     
     //$sql  .=" FROM custodios c";   
     //$sql  .=" ORDER BY c.id ASC";
