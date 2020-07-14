@@ -11,10 +11,14 @@ $json=array();
 				
 		$conexion = mysqli_connect($hostname_localhost,$username_localhost,$password_localhost,$database_localhost);
 
-		$consulta="SELECT nombre, custodio FROM custodios WHERE nombre like '%$nombre%'";
-		$resultado=mysqli_query($conexion,$consulta);
+		$consulta="SELECT custodio FROM custodios WHERE nombre like '%$nombre%'";
+        $resultado=mysqli_query($conexion,$consulta);
+
+        while($registro=mysqli_fetch_array($resultado)){
+			$json['products'][]=$registro;
+		}
 			
-		if($registro=mysqli_fetch_array($resultado)){
+		/*if($registro=mysqli_fetch_array($resultado)){
 			$json['custodios'][]=$registro;		
 		}else{
 			$resultar["codigo_nfc"]=0;
@@ -30,5 +34,5 @@ $json=array();
 		$resultar["message"]='Ws no Retorna';
 		$json['products'][]=$resultar;
 		echo json_encode($json);
-	}
+	}*/
 ?>
