@@ -134,7 +134,7 @@ if(!$product){
                     <div class="form-group">
                       <label for="qty">Tipo de bien</label>
                       <div class="input-group">
-                        <input type="text" class="form-control" name="tipo" value="<?php/* echo remove_junk($product['tipo']); */?>">
+                        <input type="text" class="form-control" name="tipo" value="<?php echo remove_junk($product['tipo']); ?>">
                       </div>
                     </div>
                  </div>
